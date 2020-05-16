@@ -1,0 +1,13 @@
+What is the result?
+A. Values are : [EE, ME]
+B. Values are : [EE, EE, ME]
+C. Values are : [EE, ME, EE]
+D. Values are : [SE, EE, ME, EE]
+E. Values are : [EE, ME, SE, EE]
+
+[Answer]
+E.
+
+[Explain]
+remove
+Removes the first occurrence of the specified element from this list, if it is present. If the list does not contain the element, it is unchanged. More formally, removes the element with the lowest index i such that (o==null ? get(i)==null : o.equals(get(i))) (if such an element exists). Returns true if this list contained the specified element (or equivalently, if this list changed as a result of the call).

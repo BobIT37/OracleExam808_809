@@ -1,0 +1,22 @@
+45.
+class Block {
+String color;
+int size;
+Block(int size, String color){
+this.size = size;
+this.color = color;
+}
+}
+and the code fargment:
+List<Block> blocks = new ArrayList<>();
+blocks.add(new Block(10, “Green”));
+blocks.add(new Block(7, “Red”));
+blocks.add(new Block(12, “Blue”));
+Collections.sort(blocks, new ColorSorter());
+
+Which definition of the ColorSorter class sorts the block list?
+A) class ColorSorter implements Comparable<Block> {
+	public boolean compare(Block o1, Block o2) {
+		return o1.color.equals(o2.color);
+	}
+}

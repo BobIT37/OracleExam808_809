@@ -1,0 +1,42 @@
+47.
+
+class Product{
+	String name;
+	int qty;
+	
+	public String toString(){
+		return name;
+	}
+	
+	public Product(String name, int qty){
+		this.name = name;
+		this.qty = qty;
+	}
+	
+	static class ProductFilter{
+		public boolean isAvailable(Product p) { // line n1
+			return p . qty >= 10;
+		}
+	}
+}
+
+and the code fragment :
+
+	List <Product> products = Arrays.asList(
+	new Product(“MotherBoard”,5),
+	new Product(“Speaker”,20));
+	products.stream()
+		.filter(Product.ProductFilter::isAvailable ) // line n2
+		.forEach(p -> System.out.printIn(p));
+		
+which modification enables the code fragment to print speaker ?
+A) Replace line n2 with :
+	.filter(p -> Product :: ProductFilter :: isAvailable()) 
+B) Replace line n1 with : 
+	public static boolean isAvailable(Product p) {
+C) Replace line n2 with :
+	.filter(p -> p.ProductFilter :: isAvailable(p))
+D) Implement Predicate in the Product.ProductFilter Class and replace
+	.filter(p -> p.ProdictFilter.test(p))
+
+Answer: B

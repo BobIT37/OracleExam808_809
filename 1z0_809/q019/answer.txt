@@ -1,0 +1,7 @@
+[Answer]
+A
+
+[Explanation]
+B. is incorrect answer because program prints true
+C. is incorrect answer because of method equals(Object obj) is public in class Object, and overriding required equal or more accessibility
+D. is incorrect answer because of method equals(Object obj) has a parameter type Object then it works just fine.

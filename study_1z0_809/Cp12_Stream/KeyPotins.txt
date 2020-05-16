@@ -1,0 +1,45 @@
+Key Points
+
+- Streams can be defined as wrappers for collections and arrays. They wrap an existing collection (or another data source) to support operations expressed with lambdas, so you specify what you want to do, not how to do it.
+
+- These are the characteristics of a stream:
+	Streams work perfectly with lambdas.
+	Streams don't store its elements.
+	Streams are immutable.
+	Streams are not reusable.
+	Streams don't support indexed access to their elements.
+	Streams are easily parallelizable.
+	Stream operations are lazy when possible.
+
+- Stream operations can be chained to form a pipeline. To set up this pipeline you:
+	Create the stream.
+	Apply zero or more intermediate operations to transform the initial stream into new streams.
+	Apply a terminal operation to generate a result or a "side-effect".
+	
+- There are many ways to create a stream. The most popular are:
+
+// From an existing collection
+List<String> words = Arrays.asList(new String[]{"hello", "hola", "hallo", "ciao"});
+Stream<String> s1 = words.stream();
+
+// From individual elements
+Stream<String> s2 = Stream.of("hello", "hola", "hallo", "ciao");
+
+// From an array
+String[] words = {"hello", "hola", "hallo", "ciao"};
+Stream<String> s3 = Stream.of(words);
+
+Don't use Stream<T>.of() when working with primitives. Instead use Arrays.stream or the primitive versions of Stream:
+int[] nums = {1, 2, 3, 4, 5};
+IntStream s1 = Arrays.stream(nums);
+IntStream s2 = IntStream.of(nums);
+
+- Intermediate operations such as map or filter always return a new stream and are divided into stateless and stateful operations
+, and they are lazy, meaning that they are deferred until a terminal operation is invoked.
+
+- Terminal operations such as count or forEach always return something other than a stream.
+
+- Short-circuit operations cause intermediate operations to be processed until a result can be produced.
+
+- In such a way, because of lazy and short-circuit operations, streams don't execute all operations on all their elements
+, but until the point a result can be deduced or generated.

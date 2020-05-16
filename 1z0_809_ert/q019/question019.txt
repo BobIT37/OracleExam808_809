@@ -1,0 +1,25 @@
+19.
+class Product {
+String pname;
+public Product (String pname) {
+this.pname = pname;
+}
+}
+and the code fragment:
+Product p1 = new Product(“PowerCharger”);
+Product p2 = p1;
+System.out.println(p1.equals(p2));
+Product p3 = new Product(“PowerCharger”);
+System.out.println(p1.equals(p3));
+
+What is the result?
+A) false
+false
+B) true
+true
+C) true
+false
+D) false
+true
+
+Answer: C //object reference

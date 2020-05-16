@@ -1,0 +1,10 @@
+Given:public class Test {
+	static String args[] = {"lazy","lion","is","always"};
+	public static void main(String[] args) { 
+		System.out.println(args[1] + " " +args[2] + " " +args[3] + " jumping");
+	}
+}
+And the commands:Javac Jump.javaJava Jump crazy elephant is alwaysWhat is the result?
+A. Lazy lion is jumpingB. Lion is always jumpingC. Crazy elephant is jumping 
+D. Elephant is always jumping 
+E. Compilation fails

@@ -1,0 +1,14 @@
+1. Given:
+
+Path path1 = Paths.get("/projects/work/../fun");
+Path path2 = Paths.get("games");
+System.out.println(path1.resolve(path2));
+
+Which of the following is the result of executing the above lines?
+A. /project/work/fun/games
+B. /project/fun/games
+C. /project/work/../fun/games
+D. games
+
+The correct answer is C.
+Path.resolve() doesn't remove redundancy in paths (that's done with Path.normalize() or Path.toRealPath()), it just combines two paths.

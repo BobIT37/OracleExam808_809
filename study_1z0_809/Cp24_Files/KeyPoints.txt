@@ -1,0 +1,13 @@
+Key Points
+
+- The primary classes of java.nio.file are Path, Paths, and Files. They are intended to be a replacement of the java.io.File class.
+- The Path interface defines an object that represents the path to a file or a directory.
+- java.nio.files.Paths provides methods to create a Path object.
+- The absolute path representation of a Path object has a root component (either c:\ or /) and a sequence of names separated by a (forward or backward) slash.
+- The Path interface has methods get the elements of the path, normalize paths, and get attributes of the path (isAbsolute(), getFileSystem(), etc), among others. It also implements Comparable and equals() to test for equality.
+- The java.nio.file.Files class has static methods for common operations on files and directories. In contrast with the java.io.File class, all methods of Files work with Path objects.
+- Examples of these operations are checking the existence of a file, copying, moving, deleting, and reading.
+- You can also get attributes of a file individually (with methods like isHidden()) or in a group through views.
+- The three most common view classes are BasicFileAttributeView, DosFileAttributeView, and PosixFileAttributeView.
+- You can get a file attribute view of a given type to read or update a set of attributes with the method getFileAttributeView().
+- You can get a class that is a read-only version of the view with the method readAttributes().

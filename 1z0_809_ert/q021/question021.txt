@@ -1,0 +1,12 @@
+21. Given the code fragment:
+
+//line n1
+System.out.println(iP) ;
+
+Which code fragment, when inserted at line n1, enables the code to print /First.txt
+A) Path iP = new Paths(“/First.txt”);
+B) Path iP = new Path(“/First.txt”);
+C) Path iP = Paths.get(“/”, “First.txt”);
+D) Path iP = Paths.toPath(“/First.txt”);
+
+Answer: C

@@ -1,0 +1,60 @@
+public class Book {
+	private int id;
+	private String name;
+
+	public Book(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+}
+
+Which statement is true about the Book class?
+A) It is an immutable class.
+B) It demonstrates polymorphism.
+C) It demonstrates encapsulation.
+D) It is defined using the singleton design pattern.
+E) It is defined using the factory design pattern.
+
+Answer : C
+
+A Strategy for Defining Immutable Objects
+Don't provide "setter" methods — methods that modify fields or objects referred to by fields.
+Make all fields final and private.
+Don't allow subclasses to override methods. The simplest way to do this is to declare the class as final. 
+A more sophisticated approach is to make the constructor private and construct instances in factory methods.
+If the instance fields include references to mutable objects, don't allow those objects to be changed:
+Don't provide methods that modify the mutable objects.
+Don't share references to the mutable objects. Never store references to external, 
+mutable objects passed to the constructor; if necessary, create copies, and store references to the copies.
+Similarly, create copies of your internal mutable objects when necessary to avoid returning the originals in your methods.
+https://docs.oracle.com/javase/tutorial/essential/concurrency/imstrat.html
+------------------------------------------------------
+
+Java Singleton Pattern common concepts.
+1.Private constructor to restrict instantiation of the class from other classes.
+2.Private static variable of the same class that is the only instance of the class.
+3.Public static method that returns the instance of the class, 
+this is the global access point for outer world to get the instance of the singleton class.
+
+------------------------------------------------------
+
+Factory design pattern is used when we have a super class with multiple sub-classes and based on input,
+we need to return one of the sub-class.
+This pattern take out the responsibility of instantiation of a class from client program to the factory class.
+https://www.tutorialspoint.com/design_pattern/factory_pattern.htm

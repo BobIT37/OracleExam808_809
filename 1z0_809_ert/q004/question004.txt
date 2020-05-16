@@ -1,0 +1,16 @@
+4. Which code fragment is required to load a JDBC 3.0 driver?
+A) Connection con = DriverManager.getConnection("jdbc : xyzdata : //localhost:3306/EmployeeDB") ;
+B) Connection con = Connection.getDriver("jdbc : xyzdata : //localhotst:3306/EmployeeDB") ;
+C) Class.forName("org.xyzdata.jdbc.NetworkDriver");
+D) DriverManager.loadDriver("org.xyzdaga.jdbc.NetworkDriver");
+
+Answer : C
+Explanation:
+In previous versions(prior to 4.0)of JDBC, to obtain a connection,
+ you first had to initialize your JDBC driver by calling the method Class.forName. 
+ This methods required an object of type java.sql.Driver.
+Note:
+DriverManager: This fully implemented class connects an application to a data source, 
+which is specified by a database URL. When this class first attempts to establish a connection, 
+it automatically loads any JDBC 4.0 drivers found within the class path. 
+Note tha

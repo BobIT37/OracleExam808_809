@@ -1,0 +1,8 @@
+Answer
+C
+
+Explanation
+You cannot combine subclasses and their superclasses in the same multi-catch block
+
+more info : http://ocpj8.javastudyguide.com/ch19.html
+

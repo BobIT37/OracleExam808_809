@@ -1,0 +1,24 @@
+public class test {
+
+	public static void main(String[] args) {
+		Boolean a = new Boolean(Boolean.valueOf(args[0]));
+		Boolean b = new Boolean(args[1]);
+		System.out.println(a+" "+b);
+	}
+
+}
+
+javac test.java
+java test TRUE null
+
+what is the reasult
+
+A. false false
+B. true false
+C. false true
+D. false flase
+E. true null
+F. compile error
+
+
+answer : true false

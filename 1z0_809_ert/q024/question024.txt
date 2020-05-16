@@ -1,0 +1,46 @@
+24. Which class definition compiles? 
+
+A) class Computer {
+	private Card sCard = new SoundCard(); 
+	private abstract class Card { }
+	private class SoundCard extends Card { }
+}
+
+B) class Vehicle { 
+	int id;
+
+	public void start() {
+		class Engine {
+			int eNo = id;
+		}
+	}
+}
+
+C) class Product {
+	interface Moveable { 
+		void move() ; 
+	} 
+	Moveable mProduct = new Moveable() {
+		void move() { } 
+	};
+}
+
+D) class Block {
+	int bno ;
+	static class Counter {
+		int locator ;
+		Counter() { 
+			locator = bno; 
+		}
+	}
+}
+
+----------------------------
+
+Answer A, B
+
+Note:
+A. Correct 
+B. Correct (Inner class)
+C. Incorrect (You must mark the method as public when it's implemented.)
+D. Incorrect (The static inner class have access to the other members of the enclosing class, but only if they are STATIC.)

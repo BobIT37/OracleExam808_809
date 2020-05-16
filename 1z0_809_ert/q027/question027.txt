@@ -1,0 +1,36 @@
+27.
+class Resource implements AutoCloseable {
+	public void close() throws Exception {
+	System.out.print(“Close- “);
+	}
+	public void open() {
+	System.out.print(“Open-“) ;
+	}
+}
+
+and this code fragment :
+
+Resource res1 = new Resource() ;
+try {
+	res1.open() ;
+	res1.close() ;
+} catch(Exception e ) {
+System.out.println(“ Exception – 1 “ ) ;
+
+}
+try(res1 = new Resource()) { //line n1
+	res1.open() ;
+} catch(Exception e ) {
+	System.out.println(“ Exception – 2 “ ) ;
+}
+
+What is the result ?
+A)  Open-Close-Open- 
+B)  Open-Close-Open-Close-
+C)  Open-Close-
+	Exception –1
+	Open-Close-
+D) Compile error // line n1
+	
+-------------------------------
+Answer D

@@ -1,0 +1,48 @@
+1. Given the records from the STUDENT table:
+----------------------------
+sid | sname | semail
+----------------------------
+111 | James | james@uni.com
+112 | Jane  | Jane@uni.com
+114 | John  | john@uni.com
+----------------------------
+
+Given the code fragment:
+
+public static void mainString [] args) throws SQLException {
+	//code to load and register valid jdbc driver go here
+	Connection con = Drivermanager.getConnectionURL, username, password);
+	Statement st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE);
+	st.execute “ SELECT * FROM student ” );
+	ResultSet rs = st.getresultSet);
+	rs.absolute(3);
+	rs.moveToInsertRow();
+	rs.updateInt1, 113);
+	rs.updateString2, “ Jammet “);
+	rs.updateString3, “ jannet@uni.com “);
+	rs.updateRow();
+	rs.refreshRow();
+	System.out.println(rs.getInt(1) + “ : “ + rs.getString(2) + “ : “ + rs.getString(3));
+}
+
+Assume that the URL, username, and password are valid.
+What is the result?
+
+A) A SQLException is thrown at run time.
+
+B) The STUDENT table is not update and the program prints:
+114 : John : john@uni.com
+
+C) The STUDENT table is updated with the record:
+113 : Jannet : jannet@uni.com
+and the program prints:
+114 : John : john@uni.com 
+
+D) The STUDENT table is updated with the record: 
+113 : Jannet : jannet@uni.com 
+and the program prints : 
+113 : Jannet : jannet@uni .com
+
+----------------------------
+
+Answer A. (java.sql.SQLException: Invalid cursor state - no current row.)

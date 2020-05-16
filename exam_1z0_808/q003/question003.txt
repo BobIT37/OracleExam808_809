@@ -1,0 +1,39 @@
+public class test {
+
+	public static void main(String[] args) {
+
+		int[] array = { 10, 20, 30, 40, 50 };
+		int x = array.length;
+
+		/* code here */
+	}
+}
+
+
+
+A.
+	while (x > 0) {
+		System.out.println(array[--x]);
+	}
+
+B.
+	while (x > 0) {
+		x--;
+		System.out.println(array[x]);
+	}
+
+C.
+	do {
+		System.out.println(array[x]);
+		x--;
+	} while (x >= 0);
+
+D.
+	do {
+		x--;
+		System.out.println(array[x]);
+	} while (x >= 0);
+
+
+
+answer A B

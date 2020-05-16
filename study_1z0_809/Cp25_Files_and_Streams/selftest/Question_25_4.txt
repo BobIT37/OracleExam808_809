@@ -1,0 +1,10 @@
+4. Which is the behavior of Files.lines(Path) if the Path object represents a file that doesn't exist?
+A. It returns an empty stream.
+B. It creates the file.
+C. It throws an IOException when the method is called.
+D. It throws an IOException when the stream is first used.
+
+Answer C
+If the file doesn't exist, Files.line(Path) 
+throws an IOException (a java.nio.file.NoSuchFileException) when the method is called, before the stream is created.
+

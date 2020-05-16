@@ -1,0 +1,24 @@
+Key Points
+
+- Inner classes are declared inside another class. There are four types of them: static, non-static, local and anonymous classes.
+- Static classes are just inner classes marked with the static keyword. However, they behave more like a top-level class than an inner class.
+- You don't need an instance of the enclosing class to instantiate a static class:
+		EnclosingClass.StaticClass sc = new EnclosingClass.StaticClass();
+- A static class cannot access non-static members of the enclosing class since it doesn't require having an instance of the enclosing class to use it.
+- A (non-static) inner class is like any other member of the enclosing class so that it can be marked with any access modifier.
+- Outside the enclosing class' instance methods or blocks, to instantiate an inner class, you must first create an instance of the enclosing class and then:
+		EnclosingClass ec = new EnclosingClass();
+		EnclosingClass.InnerClass ic = ec.new InnerClass();
+- A local class is defined within a method or block of the enclosing class.
+- The only modifiers that apply to a local class are abstract and final (but not at the same time).
+- You can only use a local class in the method or block where you define it, and only after its declaration.
+- A local class can access the members of a class just like any other member of the class (static rules still apply).
+- However, a local class can only access the parameters and local variables of a method if they are final or effectively final.
+- Effectively final means that a variable cannot be modified after its initialization, even if it's not explicitly marked as final.
+- Anonymous classes have no name, and they either extend an existing class or implement an interface:
+		ExistingClass ac = new ExistingClass() {
+		   // Definition goes here
+		};
+- Anonymous classes cannot have constructors.
+- Anonymous classes have the same rules as local classes regarding accessing members of the enclosing class and local variables of a method.
+- The only methods you can call on an anonymous class are those defined in the reference type (the superclass or the interface), even though anonymous classes can define their own methods.

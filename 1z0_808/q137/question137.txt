@@ -1,0 +1,22 @@
+Question No: 137
+
+int x = 100;
+int a = x++;
+int b = ++x;
+int c = x++;
+int d = (a < b) ? (a < c) ? a : (b < c) ? b : c;
+
+System.out.println(d);
+
+What is the result?
+A. 100
+B. 101
+C. 102
+D. 103
+E. Compilation fails
+
+-------------------
+Answer: E
+-------------------
+
+Desc: mismatch syntax >> ขาด return ของ (b < c) ? b : _  

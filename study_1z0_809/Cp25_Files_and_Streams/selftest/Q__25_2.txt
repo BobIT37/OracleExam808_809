@@ -1,0 +1,12 @@
+2. Which of the following statements is true?
+A. Files.find() has a default subdirectory depth of Integer.MAX_VALUE.
+B. Files.find() follows symbolic links by default.
+C. Files.walk() follows symbolic links by default.
+D. Files.walk() traverses subdirectories recursively.
+
+
+Answer D
+Option A is false. Files.find() doesn't have a default subdirectory depth. This is passed as an argument to the method.
+Option B is false. Files.find() follows symbolic links only if FileVisitOption.FOLLOW_LINKS is passed as an argument.
+Option C is false. Files.walk() follows symbolic links only if FileVisitOption.FOLLOW_LINKS is passed as an argument.
+Option D is true. Files.walk() traverses subdirectories recursively.

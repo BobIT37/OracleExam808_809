@@ -1,0 +1,23 @@
+11.In 2015, daylight saving time in New York, USA, begins on March 8th at 2:00 AM to becomes 3:00 AM. 
+
+Given the code fragment:
+
+ZoneId zone = ZoneId.of(“America/New_York”);
+ZonedDateTime dt = ZonedDataTime.of(LocalDate.of(2015, 3, 8), Locale.zone); // ZonedDateTime dt = ZonedDateTime.of(LocalDate.of(2015, 3, 8),LocalTime.of(1, 0, 0, 0), zone);
+ZonedDateTime dt2 = dt.plusHours(2); 
+System.out.print(DateTimeFormatter.ofPattern(“H:mm – “).format(dt2)); 
+System.out.println(“Difference: “ + ChornoUnit.HOURS.between(dt,dt2)); Which is the result?
+
+A) 2:00 - difference: 1 
+B) 3:00 - difference: 2 
+C) 4:00 - difference: 3 
+D) 4:00 - Difference: 2
+
+----------------------------
+
+Answer B,D
+
+Note:
+	When localTime are (0, 0, 0, 0) answer is B) 3:00 - difference: 2 
+	When localTime are (1, 0, 0, 0) answer is B) 4:00 - difference: 2 
+	

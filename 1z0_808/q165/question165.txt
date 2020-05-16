@@ -1,0 +1,36 @@
+Question No: 165
+
+public static void main(String[] args) {
+	String[] planets = {"Murcury", "Venus", "Earth", "Mars"};
+	
+	System.out.println(planets.length);
+	System.out.println(planets[1].length());
+}
+
+What is the output?
+A. 	4
+	4
+
+B. 	3
+	5
+
+C. 	4
+	7
+
+D. 	5
+	4
+
+E. 	4
+	5
+
+F. 	4
+	21
+	
+--------------
+Answer: E
+--------------
+
+planets.length >> size of element in array
+planets[1].length() >> planets[1] is element index 1 (seq = 2) >> "Venus" contains 5 characters
+
+

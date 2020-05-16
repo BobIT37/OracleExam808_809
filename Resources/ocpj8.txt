@@ -1,0 +1,30 @@
+1. Encapsulation and Immutable Classes (Green)
+2. Inheritance and Polymorphism (Green)
+3. Inner Classes (Green)
+4. Interfaces (Green)
+5. Enumerations (Orange)
+6. Generics (Purple) 1
+7. Collections (Red)
+8. Functional Interfaces (Red) 3
+9. Lambda Expressions (Red) 4.1
+10. Java Built-In Lambda Interfaces (Red) 4.2
+11. Method References (Red) 5
+12. Streams (Blue) 6
+13. Iterating and Filtering Collections (Blue)
+14. Optional Class (Blue)
+15. Data Search (Blue)
+16. Stream Operations on Collections (Blue) 7
+17. Peeking, Mapping, Reducing and Collecting (Blue) 8
+18. Parallel Streams (Blue)
+19. Exceptions (Purple)
+20. Assertions (Purple) 2
+21. Core Date/Time Classes (Purple)
+22. Time Zones and Daylight Savings (Purple)
+23. Java I/O Fundamentals (Green) 9
+24. NIO.2 (Green) 10
+25. Files and Streams (Green) 11
+26. Thread Basics (Orange)
+27. Concurrency (Orange)
+28. Fork/Join Framework (Orange)
+29. JDBC API (Orange)
+30. Localization (Orange)

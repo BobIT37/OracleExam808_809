@@ -1,0 +1,17 @@
+Key Points
+
+- Encapsulation is the ability to hide or protect an object's data. Java supports four access modifiers: public, private, protected, default (when nothing is specified, also called package-level).
+- If something is declared as public, it can be accessed from any other class of our application. Any class, regardless of the package or the module it is defined.
+- If something is defined as private, it can only be accessed inside the class that defines it. Not from other classes in the same packages and not from classes that inherit the class. private is the most restrictive access modifier.
+- If something is defined as protected, it can be only accessed by the class that defines it, its subclasses and classes of the same package. It doesn't matter if the subclass is in another package, which makes this modifier, less restrictive than private.
+- If something doesn't have a modifier, it has default access also known as package access, because it can only be accessed by classes within the same package. If a subclass is defined in another package, it cannot see the default access attribute or method. That is the only difference with the protected modifier, making it more restrictive.
+- A singleton class guarantees that there's only one instance of the class during the lifetime of the application.
+- An immutable object cannot change its values after it is created.
+- An immutable object...
+	- Sets all of its properties through a constructor
+	- Does not define setter methods
+	- Declares all its attributes private (and sometimes final)
+	- Has a class declared final to prevent inheritance
+	- Protects access to any mutable state. For example, if it has a List member, either the reference cannot be accessible outside the object or a copy must be returned (the same applies if the object's content must change)
+- The static keyword can be applied to attributes, methods, blocks and classes. A static member belongs to the class where it is declared, not to a particular instance.
+- The final keyword can be applied to variables (so they cannot change their value after initialized), methods (so they cannot be overridden), and classes (so they cannot be subclassed).

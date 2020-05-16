@@ -1,0 +1,8 @@
+ข้อใดถูกต้อง(ตอบ 3 ข้อ)
+A. Error are check excetion and recoverable
+B. Exception except RuntimeException is checked exception
+C. Parameter in catch block is throwable type 
+D. (Subclass of RuntimeException are recoverable)
+E. Uncheck can be rethrown
+
+ตอบ B,C,E เพราะ B,C ถูกแน่นอน และ A,D ผิด เหลือ E ที่ไม่แน่ใจ (อันนี้ตอนสอบตอบ B C D ไปแต่ได้ suggest สรุปมา)

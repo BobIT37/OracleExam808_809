@@ -1,0 +1,9 @@
+What is the result?
+A. C B A
+B. C
+C. A B C
+D. Compilation fails at line n1 and line n2
+
+-----------------------------------------------
+Answer C. A B C
+-----------------------------------------------

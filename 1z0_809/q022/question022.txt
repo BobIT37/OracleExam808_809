@@ -1,0 +1,18 @@
+Given the code fragment:
+
+public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.print ("Enter GDP: ");
+		//line 1
+}
+
+Which code fragment, when inserted at line 1, enables the code to read the GDP from the
+user?
+A. int GDP = Integer.parseInt (br.readline());
+B. int GDP = br.read();
+C. int GDP = br.nextInt();
+D. int GDP = Integer.parseInt (br.next());
+
+Answer: A
+https://docs.oracle.com/javase/7/docs/api/java/io/BufferedReader.html
+http://www.doesystem.com/e1bf8f6240b5c23543a8ad029c450e62/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%9A%E0%B8%99%E0%B9%81%E0%B8%9B%E0%B9%89%E0%B8%99%E0%B8%9E%E0%B8%B4%E0%B8%A1%E0%B8%9E%E0%B9%8C-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-BufferedReader-.htm

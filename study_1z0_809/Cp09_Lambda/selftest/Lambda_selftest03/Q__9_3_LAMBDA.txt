@@ -1,0 +1,6 @@
+3. A lambda expression can be used...
+
+A. As a method argument
+B. As a conditional expression in an if statement
+C. In a return statement
+D. In a throw statement

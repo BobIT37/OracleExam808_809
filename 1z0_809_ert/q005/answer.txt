@@ -1,0 +1,19 @@
+[Answer]
+B.
+
+[Explanation]
+A. 
+Path.list(Path arg0), accept only directory then it will cause exception : NotDirectoryException. 
+Even correct the syntax it still be wrong anyway because this method will extract the path inside the given path
+
+B. 
+Correct answer
+
+C. and D. 
+Invalid syntax
+
+Path.find(Path start, int MaxDepth, BiPredicate<Path, BasicFileAttributes> matcher, FileVistOption... options)
+
+Path.walk(Path start, FileVistOption... options)
+Path.walk(Path start, int MaxDepth, FileVistOption... options)
+

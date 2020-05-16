@@ -1,0 +1,20 @@
+71. Given:
+class DataConverter{
+	public void copyFlatFilesToTables() { }
+	public void close() throws Exception {
+		throw new RuntimeException(); //line n1
+	}
+}
+and the code fragment:
+
+public static void main(String[] args)throws Exception {
+	try (DataConverter dc = new DataConverter()) //line n2
+	{ dc.copyFlatFilesToTavles(); }
+}
+What is the result?
+A) A compiltion error occurs because the try block doesn’t have a catch or final.
+B) A compiltaion error occurs at line n2.
+C) A compilation error occurs at line n1.
+D) The program compiles successfully.
+
+Answer: B

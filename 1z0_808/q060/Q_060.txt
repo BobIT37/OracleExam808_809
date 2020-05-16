@@ -1,0 +1,42 @@
+Given:
+	class Sports {
+			int num_players;
+			String name, ground_condition;
+			Sports(int np, String sname, String sground){ num_players = np;
+			name = sname;
+			ground_condition = sground;
+		}
+	}
+	class Cricket extends Sports {
+	int num_umpires;
+	int num_substitutes;
+	
+Which code fragment can be inserted at line //insert code here to enable the code to compile?
+A. Cricket() {
+	super(11, "Cricket", "Condidtion OK"); num_umpires =3;
+	num_substitutes=2;
+}
+B. Cricket() {
+	super.ground_condition = "Condition OK"; super.name="Cricket"; super.num_players = 11;
+	num_umpires =3;
+	num_substitutes=2;
+}
+C. Cricket() {
+	this(3,2);
+	super(11, "Cricket", "Condidtion OK");
+}
+	Cricket(int nu, ns) {
+		this.num_umpires =nu; this.num_substitutes=ns;
+	}
+D. Cricket() {
+	this.num_umpires =3; this.num_substitutes=2;
+	super(11, "Cricket", "Condidtion OK");
+}
+Answer: A
+Explanation:
+Incorrect:
+not C, not D: call to super must be the first statement in constructor.
+
+Java enforces that the call to super (explicit or not) must be the first statement in the constructor. 
+This is to prevent the subclass part of the object being initialized prior to the superclass part of the object being initialized.
+

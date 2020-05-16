@@ -1,0 +1,49 @@
+
+boolean log3 = ( 5.0 != 6.0) && ( 4 != 5);
+boolean log4 = (4 != 4) || (4 == 4);
+System.out.println("log3:"+ log3 + \nlog4" + log4);
+
+
+What is the result?
+
+A. log3:false
+log4:true
+
+B. log3:true
+log4:true
+
+C. log3:true
+log4:false
+
+D. log3:false
+log4:false
+
+--------------------
+
+Answer : B
+
+--- Modify ---
+boolean log3 = ( 5.0 != 6.0) && ( 4 != 5);
+boolean log4 = (4 != 4) || (4 == 4);
+System.out.println("log3:"+ log3 + "\nlog4:" + log4);
+
+
+------------------ Operator Precedence -----------------
+Operators				Precedence
+--------------------------------------------------------
+postfix					expr++ expr--
+unary					++expr --expr +expr -expr ~ !
+multiplicative			* / %
+additive				+ -
+shift					<< >> >>>
+relational				< > <= >= instanceof
+equality				== !=
+bitwise AND				&
+bitwise exclusive OR	^
+bitwise inclusive OR	|
+logical AND				&&
+logical OR				||
+ternary					? :
+assignment				= += -= *= /= %= &= ^= |= <<= >>= >>>=
+--------------------------------------------------------
+

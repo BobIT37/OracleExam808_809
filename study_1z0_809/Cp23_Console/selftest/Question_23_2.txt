@@ -1,0 +1,14 @@
+Given:
+
+try (Writer w = new FileWriter("/file.txt")) {
+    w.write('1');
+} catch(IOException e) { /** ... */ }
+
+Which of the following is the result of executing the above lines if the file already exists?
+A. It overwrites the file
+B. It appends 1 to the file
+C. Nothing happens since the file already exists
+D. An IOException is thrown
+
+The correct answer is A.
+The default behavior of FileOutputStream and FileWriter is to overwrite the file.

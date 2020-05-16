@@ -1,0 +1,56 @@
+Question No : 8
+Given the code fragment:
+
+public class Employee {
+	String name;
+	boolean contract ;
+	double salary;
+	Employee () { 
+	// line n1
+	}
+	public String toString () { 
+		return name + " : " + contract + " : " + salary;
+	}
+	public static void main (String[] args) { 
+		Employee e = new Employee () ; 
+		// line n2 
+		System.out.print(e) ;
+	}
+}
+
+
+Which two modifications, when made independently, enable the code to print joe:true:
+100.0?
+
+A) Replace line n2 with:
+	e.name = "Joe"; 
+	e.contract = true; 
+	e.salary  = 100;
+B) Replace line n2 with: 
+	this.name = "Joe"; 
+	this.contract = true; 
+	this.salary = 100;
+C) Replace line n1 with: 
+	this.name = new String("Joe"); 
+	this.contract = new Boolean(true); 
+	this.salary = new Double(100) ;
+D) Replace line n1 with: 
+	name = "Joe"; 
+	contract = TRUE ; 
+	salary = 100.0f;
+E) Replace line n1 with: 
+	this("Joe",true,100);
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+E. Option E
+
+Answer: A,C	
+
+A ถูก เพราะ new Employee แล้วสามารถ set ค่าลงในตัวแปร instance variable ได้
+B ผิด เพราะ ไม่สามารถใช้ this ใน method ที่เป็น static ได้
+C ถูก สามารถเอา type ที่เป็น primitive มารับค่า type ที่เป็น wrapper ได้
+D ผิด ที่ตัวแปร contract รับค่าไม่ตรงกับ type ของตัวเอง
+E ผิด เพราะ this("Joe",true,100) คือการเรียกคอนสตรัคเตอร์ที่รับพารามิเตอร์ (String,boolean,double) แต่ในคลาสนี้ไม่มีคอนสตรัคเตอร์ดังกล่าว

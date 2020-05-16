@@ -1,0 +1,41 @@
+Question No : 64
+Given the code fragment:
+
+Given:
+public class ComputeSum {
+	public int x;
+	public int y;
+	public int sum;
+	public ComputeSum (int nx, int ny) {
+		x = nx; y =ny;
+		updateSum();
+	}
+	public void setX(int nx) { x = nx; updateSum();}
+	public void setY(int ny) { x = ny; updateSum();}
+	void updateSum() { sum = x + y;}
+}
+
+This class needs to protect an invariant on the sum field.
+Which three members must have the private access modifier to ensure that this invariant is
+maintained?
+A. The x field
+B. The y field
+C. The sum field
+D. The ComputerSum ( ) constructor
+E. The setX ( ) method
+F. The setY ( ) method
+
+Answer: C,E,F
+Explanation: The sum field and the two methods (setX and SetY) that updates the sum
+field.
+
+*** ค่าคงที่ (constant) เป็นตัวแปรที่ไม่สามารถเปลี่ยนแปลงค่าในภายหลังได้ ค่าของตัวแปรค่าคงที่จะต้องถูกกำหนดพร้อมกับการประกาศตัวแปรเสมอ ค่าคงที่สามารถเป็นข้อมูลประเภทต่างๆ เหมือนประเภทข้อมูลพื้นฐานได้ เช่น integer, floating-point, characters, boolean ...
+
+จากโจทย์ถามว่าในคลาสนี้จำเป็นต้องปกป้อง(ป้องกัน)ค่าคงที่ของตัวแปร sum 
+ซึ่งจะมี 3 ตัวที่จะต้องใช้   modifier ที่เป็น private ในการรับประกันว่าค่าคงที่นี้จะไม่ถูกแปลี่ยนแปลง
+A. ผิด เพราะตัวแปร x ใส่ private ก็ไม่มีผลกับตัวแปร sum
+B. ผิด เพราะตัวแปร y ใส่ private ก็ไม่มีผลกับตัวแปร sum
+C. ถูก เพราะตัวแปร sum ใส่ private จะทำให้ไม่สามารถแก้ไขตัวแปร sum ได้
+D. ผิด เพราะถ้าใส่ private ComputerSum ( ) จะทำให้คลาสอื่นเรียก constructor ไม่ได้ เพราะ constructor มีเมทท็อด updateSum(); เพื่อเอาค่าผลรวมให้ตัวแปร sum
+E. ถูก เพราะเมทท็อท setX( ) มีเมทท็อด updateSum(); จะทำให้ตัวแปร sum เปลี่ยนแปลงหลังจากเรียกเมทท็อดนี้ที่ constructor แล้ว
+F. ถูก เพราะเมทท็อท setY( ) มีเมทท็อด updateSum(); จะทำให้ตัวแปร sum เปลี่ยนแปลงหลังจากเรียกเมทท็อดนี้ที่ constructor แล้ว

@@ -1,0 +1,38 @@
+Question No : 22
+Given the code fragment:
+
+import java.util.*;
+public class Ref {
+	public static void main(String[] args) {
+		StringBuilder s1 = new StringBuilder("Hello Java!");
+		String s2 = s1.toString();
+		List<String> lst = new ArrayList<String>();
+		lst.add(s2);
+		System.out.println(s1.getClass());
+		System.out.println(s2.getClass());
+		System.out.println(lst.getClass());
+	}
+}
+What is the result?
+
+A. 	class java.lang.String
+	class java.lang.String
+	class java.util.ArrayList
+B. 	class java.lang.Object
+	class java.lang. Object
+	class java.util.Collection
+C. 	class java.lang.StringBuilder
+	class java.lang.String
+	class java.util.ArrayList
+D. 	class java.lang.StringBuilder
+	class java.lang.String
+	class java.util.List
+
+Answer: C	
+
+Object.getClass(); คือการ return class ของ Object ออกมา 
+จากข้อบนจะได้ผลลัพธ์ คือ
+class java.lang.StringBuilder  เพราะ s1 new Object เป็น StringBuilder 
+class java.lang.String		         เพราะ s2 เอา s1 มาแปลงเป็น String โดยใช้เมทท็อด toString()
+class java.util.ArrayList      เพราะ lst มา new Object เป็น ArrayList
+ดังนั้นคำตอบที่ถูกต้องคือ C

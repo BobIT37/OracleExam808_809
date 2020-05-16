@@ -1,0 +1,22 @@
+59.
+Given the code fragment :
+List <String> nums = Arrays.asList(“EE” , “ SE”);
+String ans = nums
+.parallelStream ()
+.reduce(“Java”,(a,b) -> a.concat(b)) ;
+System.out.print (ans) ;
+
+What is the result ?
+A) The program prints either :
+Java EESE
+or
+Java SEEE
+B) The program prints either :
+Java EEJava SE
+or
+Java SEJava EE
+C) Java EESE 
+D) JavaEEJavaSE
+E) Java EEJava EESE
+
+Answer: D

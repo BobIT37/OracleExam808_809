@@ -1,0 +1,27 @@
+Question No : 111 
+
+Given the code fragment:
+
+public static void main(String[] args) {
+	int ii = 0;
+	int jj = 7;
+	for (ii = 0; ii < jj - 1; ii = ii + 2) {
+		System.out.print(ii + " ");
+	}
+}
+
+What is the result?
+
+A. 2 4
+B. 0 2 4 6
+C. 0 2 4
+D. Compilation fails
+
+Answer: C 
+
+round 1: ii=0, jj = 6, 0 < 6 --> print 0
+round 2: ii=2, jj = 6, 2 < 6 --> print 2
+round 3: ii=4, jj = 6, 4 < 6 --> print 4 
+round 4: ii=6, jj = 6, 6 == 6 --> not enter loop 
+
+Finally, it will print 0 2 4

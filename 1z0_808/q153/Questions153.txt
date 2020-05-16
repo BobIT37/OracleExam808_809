@@ -1,0 +1,31 @@
+Question No : 153 
+
+Given:
+
+public class App {
+	
+	// Insert code here
+	System.out.print("Welcome to the world of Java");
+	}
+	
+}
+
+Which two code fragments, when inserted independently at line // Insert code here, enable
+the program to execute and print the welcome message on the screen?
+
+A. static public void main (String [] args) {
+B. static void main (String [] args) {
+C. public static void Main (String [] args) {
+D. public static void main (String [] args) {
+E. public void main (String [] args) {
+
+Answer: A,D
+
+Explanation:
+
+A and D: access modifier can swap with static each other.
+
+Incorrect:
+Not B: No main class found.
+Not C: Main method not found.
+not E: Main method is not static.

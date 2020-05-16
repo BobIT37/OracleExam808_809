@@ -1,0 +1,8 @@
+Which code fragment cause a compilation error?
+A. flat flt = 100F;
+B. float flt = (float) 1_11.00; 
+C. float flt = 100;
+D. double y1 = 203.22; floatflt = y1
+E. int y2 = 100;
+floatflt = (float) y2;
+Answer: D

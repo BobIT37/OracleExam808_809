@@ -1,0 +1,16 @@
+A. Square square = new Square ("bar"); Square extends Shape จึงเข้าไปทำ constructure ของ Shape ก่อน ปริ้น shape : constructure แล้วค่อยเรียก constructure Square ที่รับ String ปริ้น Square : constructure 
+-square.foo("bar") เรียก method foo ที่รับ String ปริ้น Square : foo 
+-square.foo() เรียก method foo  และตรงนี้มีการเรียก super.foo() จึงไปเรียก method foo ที่อยู่ในคลาส Shape  จึงปริ้น Shape : foo
+
+B.Square square = new Square ("bar"); Square extends Shape จึงเข้าไปทำ constructure ของ Shape ก่อน ปริ้น shape : constructure แล้วค่อยเรียก constructure Square ที่รับ String ปริ้น Square : constructure
+-statement ที่ 2 กับ 3 เรียก method foo ที่รับ String ปริ้น Square: foo
+
+C. square.foo(bar) compile ไม่ผ่าน
+
+D. Square square = new Square (); เรียก constructure Square ใน Square มีการเรียก super() -> ปริ้น Shape: constructor
+- square.foo ();  เรียก method foo  และตรงนี้มีการเรียก super.foo() จึงไปเรียก method foo ที่อยู่ในคลาส Shape  จึงปริ้น Shape : foo
+-square.foo("bar") เรียก method foo ที่รับ String ปริ้น Square : foo 
+
+E. Square square = new Square (); เรียก constructure Square ใน Square มีการเรียก super() -> ปริ้น Shape: constructor
+- square.foo (); เรียก method foo  และตรงนี้มีการเรียก super.foo() จึงไปเรียก method foo ที่อยู่ในคลาส Shape  จึงปริ้น Shape : foo
+-square.foo() เรียก method foo  และตรงนี้มีการเรียก super.foo() จึงไปเรียก method foo ที่อยู่ในคลาส Shape  จึงปริ้น Shape : foo

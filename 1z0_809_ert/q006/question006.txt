@@ -1,0 +1,28 @@
+6. Given the content:
+	MessagesBundle.properties file:
+		username = Enter User Name
+		password = Enter Password
+	MessageBundle_fr_FR.properties file:
+		username = Entrez le nom d’utilisateur
+		password = Entrez le mot de passe
+		
+and the code fragment:
+
+Locale currentlocale = new Locale.Builder(). setRegion(“FR”), setLanguage(“fr”);
+ResourceBundle messages = ResourceBundle.getBundle(“MessagesBundle”, currentlocale);
+Enumeration<String> names = messages.getKeys();
+while(names.hasMoreElements()){
+String key = names.nextElement();
+String name = messages.getString(key);
+System.out.pritln(key + “ – “ + name);
+}
+
+What is the result?
+A) username = Enter User Name
+password = Enter Password
+B) username = Enterz le nom d’utilisateur
+password = Enterz le mot de passe
+C) A compilation error occurs.
+D) The program prints nothing.
+
+Answer: C complie error because return to Builder not Locale 

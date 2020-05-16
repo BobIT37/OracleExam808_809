@@ -1,0 +1,20 @@
+39. Given the code fragment
+	LocalTime now = LocalTime.now();
+	long timeToBreakfast = 0;
+	LocalTime office_start = LocalTime.of(7, 30);
+	If(office_start.isAfter(now)){
+		timeToBreakfast = now.until(office_start, MINUTES);
+	} else {
+		timeToBreakfast = now.until(office_start, HOURS);
+	}
+	System.out.println(timeToBreakfast);
+	
+Assume that the value of now is 6:30 in the morning.
+What is the result?
+
+A) An exception is thrown at run time.
+B) 0 
+C) 1
+D) 60
+
+Answer: C

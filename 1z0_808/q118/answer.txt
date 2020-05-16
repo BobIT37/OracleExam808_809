@@ -1,0 +1,15 @@
+What is the result?
+A. 	Shining Sun
+	Shining Sun
+	Shining Sun
+	
+B. 	Shining Sun
+	Twinkling Star
+	Shining Sun
+	
+C. Compilation fails
+
+D. A ClassCastException is thrown at runtime
+
+[Answer]
+A.

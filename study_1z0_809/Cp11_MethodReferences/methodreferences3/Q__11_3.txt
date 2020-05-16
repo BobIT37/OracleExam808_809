@@ -1,0 +1,5 @@
+Which of the following statements is true?
+	xA. You can have a method reference to a constructor.
+	B. Method references replace any lambda expression.
+	xC. Arguments of the method are never passed to a method reference.
+	D. The :: operator can be used in lambda expressions also.

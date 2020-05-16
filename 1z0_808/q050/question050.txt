@@ -1,0 +1,29 @@
+Question No : 50
+Given the code fragment:
+
+3.public static void main(String[] args) { 
+4. 		int x = 5;
+5. 		while (isAvailable(x)) {
+6. 			System.out.print(x);
+7.
+8. 		}
+9.}
+l0. 
+ll.public static boolean isAvailable(int x) { 
+12. 	return x-- > 0 ? true : false;
+13.}
+
+Which modification enables the code to print 54321?
+A. Replace line 6 with System,out.print(--x);
+B. At line 7, insert x--;
+C. Replace line 6 with --x; and, at line 7, insert system,out.print(x);
+D. Replace line 12 With return (x > 0) ? false: true;
+
+Answer: B
+
+(ถ้าไม่ได้เช็คเรื่อง Syntax)
+จากโจทย์คำถามจะแก้ไขที่ส่วนไหนเพื่อที่จะได้ผลลัพธ์ 54321
+A. ผิด เพราะแทนบรรทัดที่ 6 ด้วย System.out.print(--x) จะทำให้ได้ผลลัพธ์ 43210 
+B. ถูก ที่บรรทัดที 7 เพิ่ม x-- เข้าไปจะทำให้ได้ผลลัพธ์ 54321 
+C. ผิด เพราะแทนบรรทัดที่ 6 ด้วย --x และบรรทัดที่ 7 เพิ่ม System.out.print(x) จะได้ผลลัพธ์  43210
+D. ผิด เพราะแทนบรรทัดที่ 12 ด้วย return (x > 0) ? false: true; จะทำให้ ได้  loop while(false) ตั้งแต่แรก จะไม่ได้ผลลัพธ์ออกมา

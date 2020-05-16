@@ -1,0 +1,27 @@
+54.
+class Person {
+String name;
+int age;
+public Person(String name, int age){
+this.name = name;
+this.age = age;
+}
+public String getName() {return name;}
+public int getAge() {return age;}
+}
+and the code fragment:
+List<Person> sts = Arrays.asList(
+new Person(“Jack”, 30),
+new Person(“Mike Hill”, 21),
+new Person(“Thomas Hill”, 24));
+Stream<Person> resList = sts.stream().filter(s ->s.getAge()>=25);
+long count = resList.filter(s ->s.getName().contains(“Hill”)).count();
+System.out.print(count);
+
+What is the result?
+A) An Exception is thrown at run time.
+B) 2 
+C) 0
+D) A compilation error occurs at line n1.
+
+Answer: C

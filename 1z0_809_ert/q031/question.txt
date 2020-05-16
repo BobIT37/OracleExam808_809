@@ -1,0 +1,47 @@
+MyClass.java
+	
+	public class MyClass extends ListResourceBundle {
+		@Override
+		protected Object[][] getContents() {
+			return new Object[][] {
+				{ "1", "Hello, everyone! " },
+				{ "key" , "Goodbye everyone!" }
+			};
+		}
+	}
+	
+MyClass.properties
+
+	1=GOODBYE_MSG
+	key=GELLO_MSG
+
+Given code fragment :
+
+	import java.util.Enumeration; 
+	import java.util.Locale; 
+	import java.util.ResourceBundle; 
+	
+	public class ResourcesApp {
+		
+		public void loadResourceBuddle() {
+			ResourceBundle resource = ResourceBundle.getBundle("MyClass");
+			System.out.println(resource.getObject(1));
+		}
+	
+		public static void main(String[] args) {
+			new ResourcesApp().loadResourceBuddle();
+		}
+	
+	}
+
+What is the result? 
+
+A) Goodbye everyone! 
+
+B) Hello, everyone! 
+
+C) GOODBYE_MSG 
+
+D) Compilation fails. 
+
+E) GELLO_MSG 

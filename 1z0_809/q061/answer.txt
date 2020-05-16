@@ -1,0 +1,9 @@
+[Answer]
+D E
+
+[Explanation]
+A. is incorrect answer because of String cannot assign to Locale
+B. is incorrect answer because of there is no .getInstance with 1 parameter
+C. is incorrect answer because of locale doesn't have getLocaleFactory
+D. is constanct in locale
+E. is new locale

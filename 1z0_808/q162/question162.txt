@@ -1,0 +1,25 @@
+Question No : 162
+Which of the following can fill in the blank in this code to make it compile?
+
+public class Exam {
+	void method(){}
+}
+public class OCAJP extends Exam {
+	____ void method(){}
+}
+
+A. abstract
+B. final     <--
+C. private 
+D. default
+E. int
+
+Answer: C  (เฉลยน่าจะผิด)   ตอบ B
+Explanation:
+private | default > protected > public 
+
+A. ผิด เพราะถ้าใส่  abstract method ที่คลาสจะต้องเป็น  abstract class และไม่ควรมี body {} ด้วยไม่งั้นจะ compile ไม่ผ่าน
+B. ถูก เพราะสามารถใส่ final ได้ เผื่อไม่ให้ class อื่นเอาไป override ต่อได้
+C. ผิด เพราะไม่สามารถใส่ private กับ default method ที่  override มาได้
+D. ผิด เพราะ  เราจะสามารถใส่ default ได้ที่ Inteface class เท่านั้น ไม่งั้นจะ compile ไม่ผ่าน
+E. ผิด เพราะเพราะ return type ไม่ควรมี 2 ค่าใน method เดียว  ไม่งั้นจะ compile ไม่ผ่าน

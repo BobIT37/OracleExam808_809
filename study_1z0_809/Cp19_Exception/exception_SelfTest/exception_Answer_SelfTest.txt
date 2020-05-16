@@ -1,0 +1,35 @@
+1. The correct answer is B.
+The finally block is always executed before the returning of a method, even if the try or the catch blocks also have a return statement.
+
+
+
+2. The correct answer is D.
+The code correctly compiles as it is. In a normal try block, the catch and the finally block are optional but either one of the must be present.
+
+
+
+3. The correct answers are C and D.
+Option A is false. In a try-with-resources, the catch block is not required.
+Option B is false. The throws keyword is used to declare which exceptions a method could throw.
+Option C is true. In a try-with-resources block, if you declare more than one resource, they have to be separated by a semicolon.
+Option D is true. If a catch block is defined for an exception that couldn't be thrown by the code in the try block, a compile-time error is generated.
+
+
+
+4. The correct answer is E.
+This is the output of the program:
+
+Exception in thread "main" java.lang RuntimeException: RuntimeException
+at chapter.twenty.Question_19_4.main(Question_19_4.java:13) Suppressed:
+java.io.IOException: Close Exception at
+chapter.twenty.Connection.close(Question_19_4.java:7) at
+chapter.twenty.Question_19_4.main(Question_19_4.java:15)
+
+Catching the IOException thrown by the close method of the class Connection is required for the program to compile.
+
+However, the RuntimeException thrown inside the try block is not caught, so the default exception handler takes care of it.
+
+
+
+5. The correct answers are B and C.
+java.lang.ArithmeticException and java.lang.ClassCastException are subclasses of java.lang.RuntimeException.

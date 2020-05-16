@@ -1,0 +1,22 @@
+Key Points
+
+- java.util.Comparator is implemented by a class you use to sort ANOTHER class' objects. java.lang.Comparable is implemented by the SAME object you want to sort.
+
+- The main methods of both interfaces return an int. Their rules are very similar:
+	When ZERO is returned, it means that the object (or first argument) is EQUAL to the (second) argument.
+	When a number GREATER than zero is returned, it means that the object (or first argument) is GREATER than the (second) argument.
+	When a number LESS than zero is returned, it means that the object (or first argument) is LESS than the (second) argument.
+
+- comparing(), thenComparing(), and reverse() are helper methods of the Comparator interface added in Java 8.
+
+- The sorted() method of the Stream interface returns a stream with the elements sorted according to its natural order. You can also pass a Comparator as an argument.
+
+- count() returns the number of elements in the stream or zero if the stream is empty.
+
+- min() returns the minimum value in the stream wrapped in an Optional or an empty one if the stream is empty.
+
+- max() returns the maximum value in the stream wrapped in an Optional or an empty one if the stream is empty.
+
+- sum() returns the sum of the elements in the stream or zero if the stream is empty.
+
+- average() returns the average of the elements in the stream wrapped in a OptionalDouble or an empty one if the stream is empty.

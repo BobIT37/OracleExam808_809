@@ -1,0 +1,4 @@
+ข้อใดถูกต้องเกี่ยวกับ Error(ตอบ 2 ข้อ)
+Error is Throwable
+Error is Extendable
+

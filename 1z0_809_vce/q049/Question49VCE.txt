@@ -1,0 +1,15 @@
+QUESTION 49
+Which two code blocks correctly initialize a Locale variable?
+
+A. Locale loc1 = "UK";
+B. Locale loc2 = Locale.getInstance("ru");
+C. Locale loc3 = Locale.getLocaleFactory("RU");
+D. Locale loc4 = Locale.UK;
+E. Locale loc5 = new Locale ("ru", "RU");
+
+Answer: D, E
+
+There are three main ways of creating a Locale
+1. Locale.UK -> it's mean language only or both language or country
+2. new Locale("ru") -> it's mean language only
+3. new Locale("ru", "RU") -> it's mean both language or country

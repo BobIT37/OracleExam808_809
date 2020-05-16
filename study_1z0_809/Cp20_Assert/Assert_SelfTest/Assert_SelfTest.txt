@@ -1,0 +1,56 @@
+1. Given:
+
+public class Question_20_1 {
+    public static void main(String[] args) {
+        int x = 0;
+        assert ++x > 0 : x;
+    }
+}
+
+What is the result when this program is executed with assertions enabled?
+A. 0
+B. 1
+C. Nothing is printed
+D. An exception is thrown at runtime
+
+2. Which of the following statements is true?
+A. You can disable assertion at the command-line.
+B. Assertions are enabled by default in system classes.
+C. Even if assertions are disabled, if the boolean expression evaluates to false, a runtime error is thrown.
+D. Depending on the syntax, assertions can throw either a checked or a runtime exception.
+
+3. Given:
+
+java -esa -ea:com.example MainClass
+
+Which of the following statements is true?
+A. This command enables assertions in all classes of our program.
+B. This command enables assertions in system classes in all classes of our program.
+C. This command enables assertions in system classes in just MainClass.
+D. This command enables assertions in system classes of the packages com.example.
+
+4. Given:
+
+public class Question_20_4 {
+    public static void main(String[] args) {
+        assert isValid();
+    }
+    public static boolean isValid() {
+        return false;
+    }
+}
+
+What is the result when this program is executed with assertions enabled?
+A. false
+B. Nothing is printed
+C. A compile time error
+D. An AssertionError is thrown at runtime
+
+5. Which of the following statements is equivalent to:
+
+assert false : "Assertion is false";
+
+A. throw new Assertion("Asssertion is false");
+B. throw new AssertionError("Asssertion is false");
+C. if(false) throw new AssertionError("Asssertion is false");
+D. if(false) throw new RuntimeException("Asssertion is false");

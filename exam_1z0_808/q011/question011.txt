@@ -1,0 +1,10 @@
+Array
+
+|O|O| |
+| |X|O|
+| |X|X|
+
+Fill X on array index ?
+
+Answer [2,0]
+

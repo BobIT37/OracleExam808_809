@@ -1,0 +1,21 @@
+Question: 36
+
+Which two statements are true about the Fork/Join Framework?  
+
+A) The Fork/Join framework can help ouo take advantage of multicore hardware. 
+B) The Fork/Join solution when ren on multicore hardware always performs faster and sequential solution. 
+C) The Fork/Join framework implements a work-stealing algorithm. 
+D) The RecursiveTask subclass is used when a task does not need to return. 
+
+
+===================
+Answer: A, C
+===================
+
+
+Fork/Join
+- Multi-Core
+- Work-Stealing Algorithm
+- Recursive 
+	1. RecursiveTask need to return
+	2. RecursiveAction no need to return.

@@ -1,0 +1,13 @@
+69. Given the code fragment:
+Path source = Paths.get("/data/december/log.txt");
+Path destination = Paths.get("/data");
+Files.copy(source, destination);
+and assuming that the file /data/december/log.txt is accessible and contain contents
+10-Dec-2014 - Executed successfully
+what is the result?
+A) The program executes successfully and does NOT change the file system.
+B) A file with the name log.txt is created int the /data directory and the content the
+/data/december/log.txt file is copied to it.
+C) A FileNotFoundException is thrown at run time.
+D) A FileAlreadyExistsException is therown at ren time.
+Answer : D

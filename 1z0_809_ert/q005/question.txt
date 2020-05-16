@@ -1,0 +1,14 @@
+Assume customers.txt is accessible and contains multiple lines. 
+Which code fragment prints the contents of the customers.txt file?
+
+A)	Stream<Path> stream = Files.list(Paths.get(“customers.txt”));  
+	stream.forEach(c -> System.out.println(c)); 
+	
+B)  Stream<String> lines = Files.lines(Paths.get(“custoners.txt”)); 
+	lines.forEach(c -> System.out.println(c)); 
+	
+C)	Stream<Path> stream = Files.find(Paths.get(“customers.txt”)); 
+	stream.forEach(c -> System.out.println(c)); 
+	
+D)	Stream<String> stream = Files.find(Paths.get(“customers.txt”)); 
+	stream.forEach((String c) -> System.out.println(c)); 

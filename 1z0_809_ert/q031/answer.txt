@@ -1,0 +1,5 @@
+[Answer]
+D.
+
+[Explanation]
+<ResourceBundle>.getObject(String key) don't accept integer

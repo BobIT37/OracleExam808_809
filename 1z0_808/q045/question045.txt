@@ -1,0 +1,41 @@
+Question No : 45
+
+Given:
+
+abstract class X{
+	public abstract void methodX();
+}
+interface Y {
+	public void methodY();
+}
+
+Which two code fragments are valid?
+
+A) class Z extends X implements Y{
+	public void methodZ() {}
+}
+B) abstract Z extends X implements Y{
+	public void methodZ() {}
+}
+C) class Z extends X implements Y{
+	public void methodX() {}
+}
+D) abstract class Z extends X implements Y{
+}
+E) class Z extends X implements Y{
+	public void methodY() {}
+}
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+E. Option E
+
+Answer: B,D
+
+Explanation: When an abstract class is subclassed, the subclass usually provides
+implementations for all of the abstract methods in its parent class (C). However, if it does
+not, then the subclass must also be declared abstract (B).
+Note: An abstract class is a class that is declared abstract—it may or may not include
+abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.

@@ -1,0 +1,15 @@
+58.
+Given the code fragment
+Path path1 = Paths.get("/software/././sys/readme.txt");
+Path path2 = path1 . normalize() ;
+Path path3 = path2 . relativize(path1) ;
+System.out.print (path1.getNameCount());
+System.out.print (":" + path2.getNameCount());
+System.out.print (":" + path3.getNameCount());
+what is the result ?
+A) 3 : 3 : 4
+B) 5 : 3 : 6
+C) 6 : 5 : 6
+D) 4 : 4 : 4
+
+Answer: B

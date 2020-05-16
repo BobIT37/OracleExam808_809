@@ -1,0 +1,10 @@
+[Answer]
+A
+
+[Explanation]
+maxDepth	0 /sports
+			1 /sports/info.txt
+			1 /sports/cricket/
+			2 /sports/cricket/players.txt
+			2 /sports/cricket/data
+			3 /sports/cricket/data/ODI.txt

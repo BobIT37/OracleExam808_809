@@ -1,0 +1,21 @@
+Duplicate 808 question 69
+Given:
+
+Class A { }
+Class B { }
+Interface X { }
+Interface Y { }
+
+Which two definitions of class C are valid?
+
+A. Class C extends A implements X { }
+B. Class C implements Y extends B { }
+C. Class C extends A, B { }
+D. Class C implements X, Y extends B { }
+E. Class C extends B implements X, Y { }
+
+Answer: A,E
+
+Explanation: extends is for extending a class.
+implements is for implementing an interface.
+Java allows for a class to implement many interfaces.

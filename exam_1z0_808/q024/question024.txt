@@ -1,0 +1,27 @@
+public class Question024 {
+
+	public static void main(String[] args) {
+		int x = 1;
+		int y = 0;
+		
+		if (x++ < ++y) {
+			System.out.println("Hello");
+		} else {
+			System.out.println("World");
+		}
+		System.out.println("Log " + x + " : " + y);
+	}
+}
+
+What is the result?
+
+A. Hello
+   Log 2 : 1
+   
+B. World
+   Log 2 : 1
+   
+C. ...
+D. ...
+
+Answer: B

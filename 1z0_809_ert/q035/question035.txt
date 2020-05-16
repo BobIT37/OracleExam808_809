@@ -1,0 +1,16 @@
+35. Given the code fragment:
+
+	
+	List<String> li = Arrays.asList(“Java”, “J2EE”, “J2ME”, “JSTL”, “JSP”, “Hello”);
+	Predicate<String> val = p -> p.contains(“J”);
+	List<String> neLi = li.stream().filter(x -> x.length()>3)
+	.filter(val).collect(Collectors.toList());
+	System.out.println(neLi);
+
+
+What is the result?
+
+A) null
+B) A compilation error occurs. 
+C) [Java, J2EE, J2MF, JSTL]
+D) [Java, J2EE, J2MR, JSTL, JSP]

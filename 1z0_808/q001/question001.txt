@@ -1,0 +1,36 @@
+Which two are Java Exception classes?
+A. SercurityException
+B. DuplicatePathException
+C. IllegalArgumentException
+D. TooManyArgumentsException
+
+----------------------
+
+Answer: C
+
+---------------------
+
+Type of exception
+- checked exception
+- unchecked exceptions
+
+
+java.lang.Throwable
+ - Error (unchecked exceptions)
+ - Exception
+ 	- ...
+ 	- RuntimeException (unchecked exceptions)
+ 		- ...
+ 		- IndexOutOfBoundsException
+ 		- ClassCastException
+ 		- SecurityException
+ 		- IllegalArgumentException
+ 			- ...
+ 			- NumberFormatException
+	- IOException (checked exception)
+		- ...
+		- FileNotFoundException
+	- SQLException (checked exception)
+	
+		
+---------------------		

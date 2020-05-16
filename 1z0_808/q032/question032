@@ -1,0 +1,22 @@
+Which of the following data types will allow the following code snippet to compile?
+
+
+float i = 4;
+float j = 2;
+_____ z = i + j;
+
+
+A. long 
+B. double 
+C. int
+D. float 
+E. byte
+Answer: B,D
+Explanation:
+Option B and D are the correct answer.
+Since the variables I and j are floats, resultant will be float type too. 
+So we have to use float or primitive type which can hold float, 
+such a primitive type is double, it has wider range and also can hold floating point numbers,
+hence we can use double or float for the blank. As explained above options B and D are correct.
+long and int can't be used with floating point numbers so option A is incorrect.
+Option E is incorrect as it have smaller range and also can't be used with floating point numbers.

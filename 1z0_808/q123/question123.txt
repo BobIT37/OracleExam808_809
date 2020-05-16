@@ -1,0 +1,46 @@
+Question No: 123
+
+Given: 
+
+class X {
+	public void mX() {
+		System.out.println("Xm1");
+	}
+}
+
+class Y extends X {
+	public void mX() {
+		System.out.println("Xm2");
+	}
+	public void mY() {
+		System.out.println("Ym");
+	}
+}
+
+public class Question123 {
+	public static void main(String[] args) {
+		X xRef = new Y();
+		Y yRef = (Y) xRef;
+		yRef.mY();
+		xRef.mX();
+	}
+}
+
+A. 	Ym
+	Xm2
+B. 	Ym
+	Xm1
+C. 	Compilation fails
+D. 	A ClassCastException is thrown at runtime
+
+--------------
+Answer: A
+--------------
+
+Desc: คุณสมบัติการถ่ายทอด  Inheritance
+
+- ถ้า Superclass new Subclass >> instance ที่เรียกจะเรียกใช้งานได้เฉพาะ ของ Superclass เท่านั้น 
+แต่ถ้า Subclass มีการ Override Method instance จะทำการเรียกใช้งานตัวของ Subclass ทันที 
+
+
+

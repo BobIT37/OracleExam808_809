@@ -1,0 +1,30 @@
+[Question]
+Given the fragment:
+
+	float var1 = (12_345.01 >= 123_45.00) ? 12_456 : 124_56.02f;
+	float var2 = var1 + 1024;
+	System.out.println(var2);
+
+What is the result?
+A. 13480.0 
+B. 13480.02 
+C. Compilation fails 
+D. An exception is thrown at runtime 
+
+[Answer]
+A
+
+[Explanation]
+
+Widening Primitive Conversion
+byte > short > *char > int > long > float > double
+http://docs.oracle.com/javase/specs/jls/se8/html/jls-5.html#jls-5.1.2
+
+Narrowing Primitive Conversion
+http://docs.oracle.com/javase/specs/jls/se8/html/jls-5.html#jls-5.1.3
+
+*char cannot initialize with negative value. [compile error]
+
+[Console log]
+13480.0
+

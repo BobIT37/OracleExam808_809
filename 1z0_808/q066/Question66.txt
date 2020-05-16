@@ -1,0 +1,28 @@
+
+static void doubling(Integer ref, int pv) {
+	ref = 20;
+	pv = 20;
+}
+
+public static void main(String[] args) {
+	Integer iObj = new Integer(10);
+	int iVar = 10;
+	doubling(iObj++, iVar++);
+	System.out.println(iObj + ", " + iVar);
+
+}
+
+What is the result?
+
+A. 11, 11
+B. 10, 10
+C. 21, 11
+D. 20, 20
+E. 11, 12
+
+---------------------------
+Answer: A
+Explanation: The code doubling(iObj++, iVar++); increases both variables from to 10 to
+11.
+
+---------------------------

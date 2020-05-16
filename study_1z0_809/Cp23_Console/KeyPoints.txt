@@ -1,0 +1,18 @@
+Key Points
+
+- An I/O Stream is a sequence of data that represents the content of a file.
+- An input stream is for reading and an output stream is for writing.
+- In the java.io package, we can find classes to work with byte and character streams.
+- There are four main abstract classes from which the rest of the classes extend from InputStream, OutputStream, Reader, Writer.
+- java.io classes can be classified as:
+	- Either for byte streams or character streams
+	- Either for input or for output
+	- Either wrappers or non-wrappers
+- Java initializes and provides three stream objects as public static fields of the java.lang.System class:
+	- InputStream System.in
+		The standard input stream (typically the input from the keyboard)
+	- PrintStream System.out
+		The standard output stream (typically the default display output)
+	- PrintStream System.err
+		The standard error output stream (typically the default display output)
+- The following table summarizes the classes reviewed in this chapter:

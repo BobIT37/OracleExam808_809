@@ -1,0 +1,30 @@
+QUESTION 1
+
+Given the code fragment:
+
+Path file = Paths.get (“courses.txt”);
+// line n1
+
+Assume the courses.txt is accessible.
+Which code fragment can be inserted at line n1 to enable the code to print the content of the courses.txt file?
+
+A. List<String> fc = Files.list(file);
+fc.stream().forEach (s -> System.out.println(s));
+
+B. Stream<String> fc = Files.readAllLines(file);
+fc.forEach (s -> System.out.println(s));
+
+C. List<String> fc = readAllLines(file);
+fc.stream().forEach (s -> System.out.println(s));
+
+D. Stream<String> fc = Files.lines (file);
+fc.forEach (s -> System.out.println(s));
+
+Correct Answer: D
+
+
+Files.list  return Stream<Path> --> Return a lazily populated Stream, the elements of which are the entries in the directory. The listing is not recursive.
+
+Files.readAllLines return List<String> --> Read all lines from a file. This method ensures that the file is closed when all bytes have been read or an I/O error
+
+Files.lines return Stream<String> --> Read all lines from a file as a Stream. Unlike readAllLines, this method does not read all lines into a List, but instead populates lazily as the stream is consumed.

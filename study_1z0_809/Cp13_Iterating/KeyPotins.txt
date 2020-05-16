@@ -1,0 +1,51 @@
+Key Points
+
+- Java 8 adds the following method to the Iterable interface as another option to iterate the implementations of this interface (like lists):
+
+default void forEach(Consumer<? super T> action)
+For example:
+	List<String> words = Arrays.asList("hello", "world");
+	words.forEach(t -> System.out.println(t));
+
+- The Stream interface also has this method:
+	void forEach(Consumer<? super T> action)
+
+- This is a terminal operation. Here's an example:
+Stream<String> words = Stream.of("hello", "world");
+	words.forEach(t -> System.out:println(t));
+
+- Of course, the advantage of using streams is that you can chain operations, for example:
+	words.sorted()
+	    .limit(2)
+	    .forEach(System.out::println);
+
+- But as a terminal operation, you can't do things like this:
+	words.forEach(t -> System.out.println(t.length()));
+	words.forEach(System.out::println);
+
+- For filtering, on the side of collections, we have a new method:
+	default boolean removeIf(Predicate<? super E> filter)
+
+- That removes all of the elements of the collection that satisfy the given predicate.
+
+- On the Stream interface, we have:
+	Stream<T> filter(Predicate<? super T> predicate)
+
+- That returns a new stream consisting of the elements that satisfy the given predicate.
+
+- Since this method returns a stream, it represents an intermediate operation, which means that you can chain any number of filters or other intermediate operations:
+	List<String> words = Arrays.asList("hello", null, "");
+	words.stream()
+	    .filter(t -> t != null) // ["hello", ""]
+	    .filter(t -> !t.isEmpty()) // ["hello"]
+	    .forEach(System.out::println);
+
+- The Stream interface also has the distinct method to filter duplicate elements, according to the Object.equals(Object) method.
+	Stream<T> distinct()
+
+- This is an intermediate operation, and because it has to know the values of the elements to find out which ones are duplicates, this operation is also stateful. Here's an example:
+	List<String> words = Arrays.asList("hello", null, "hello");
+	words.stream()
+	    .filter(t -> t != null) // ["hello", "hello"]
+	    .distinct() // ["hello"]
+	    .forEach(System.out::println);

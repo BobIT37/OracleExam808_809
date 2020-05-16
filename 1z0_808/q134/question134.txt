@@ -1,0 +1,31 @@
+Question No : 134
+
+Given:
+
+public class Test2{
+	public static void doChange(int[] arr){
+		for(int pos = 0; pos < arr.length; pos++){
+			arr[pos] = arr[pos] + 1; 
+		}
+	}
+	public static void main(String[] args){
+		int[] arr = {10, 20, 30};
+		doChange(arr);
+		for(int x: arr){
+			System.out.print(x + ", ");
+		}
+		doChange(arr[0], arr[1], arr[2]);
+		System.out.print(arr[0] + ", " + arr[1] + ", " + arr[2]);
+	}
+}
+
+What is the result?
+A. 11, 21, 31, 11, 21, 31
+B. 11, 21, 31, 12, 22, 32
+C. 12, 22, 32, 12, 22, 32
+D. 10, 20, 30, 10, 20, 30
+
+Answer: A
+จริงๆ จะ compile error บรรทัดที่ doChange(arr[0], arr[1], arr[2]); 
+เพราะเมทท็อด doChange(int[] arr) รับพารามิเตอร์เป็น array 
+ถ้าเปลี่ยนให้ รับพารามิเตอร์เป็น Variable-Length Arguments(VarArgs) จะรันได้ ซึ่งจะตรงกับคำตอบ A

@@ -1,0 +1,27 @@
+63. class R implements 
+	Runnable {
+		public void run() { System.out.println(“Run...”); }
+	}
+	
+	class C implements Callable<String> {
+		public String call() throws Exception { return “call...”;}
+	}
+and
+
+	ExecutorService es = Executors.newSingleThreadExecutor();
+	es.execute(new R()); // line n1 
+	Future<String> f1 = es.submit(new C()); // line n2
+	try{
+		System.out.println(f1.get()); 
+	}catch(Exception e){}
+	es.shutdown();
+	
+What is the result?
+A) Run... Call...
+B) A compilation error occurs at line n1.
+C) The program prints Run... and throws an exception. 
+D) A compilation error occurs at line n2.
+
+----------------------------
+
+Answer A. Run... Call...

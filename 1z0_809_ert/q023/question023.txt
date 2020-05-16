@@ -1,0 +1,34 @@
+Question: 23 
+
+class MyClass implements AutoCloseable {
+	int test;
+
+	public void close() {
+		
+	}
+
+	public MyClass copyObject() {
+		return this;
+	}
+}
+
+and the code fragment: 
+
+	MyClass obj = null;
+	try (MyClass obj1 = new MyClass()) {
+		obj1.test = 100;
+		obj = obj1.copyObject(); // line n1 
+	}
+	System.out.println(obj.test); //line n2 
+
+
+What is the result? 
+  A) An exception is thrown at line n2. 
+  B) A compilation error occurs because the try block is declared with 
+  C) A compilation error occurs at line n1. 
+  D) 100 
+  
+
+===================
+Answer: D
+===================

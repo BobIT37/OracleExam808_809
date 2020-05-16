@@ -1,0 +1,12 @@
+ArrayList<Vehicle> vehicles = new ArrayList<>();
+vehicles.add(new MotorCycle());
+
+which two statement below is true
+
+A. Vehicle is a superclass of MotorCycle
+B. Vehicle is an inteface which is implemented by MotorCycle
+C ....
+D ....
+E ....
+
+Answer A,B

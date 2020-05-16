@@ -1,0 +1,8 @@
+7. How is the this keyword handled inside a lambda expression?
+
+A. You can't use this inside a lambda expression
+B. this refers to the functional interface of the lambda expression
+C. this refers to the lambda expression itself
+D. this refers to the enclosing class of the lambda expression
+
+Reference : LambdaThis.java

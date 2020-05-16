@@ -1,0 +1,17 @@
+Question No : 12 
+
+Which two methods from the java.util.stream.Stream interface perform?
+A) distinct() 
+B) filter()
+C) count() 
+D) collect()
+E) peek()
+
+Answer C, D (perform mean make stream are executed. Let's say terminal operation)
+
+long	count()
+	Returns the count of elements in this stream.
+
+<R,A> R	collect(Collector<? super T,A,R> collector)
+	Performs a mutable reduction operation on the elements of this stream using a Collector.
+  

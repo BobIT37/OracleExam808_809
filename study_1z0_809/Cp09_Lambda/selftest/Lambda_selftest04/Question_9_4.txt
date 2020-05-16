@@ -1,0 +1,27 @@
+4. Given:
+
+() -> 7 * 12.0;
+
+Which of the following interfaces can provide the functional descriptor for the above lambda expression?
+
+A. 
+interface A {
+     default double m() {
+         return 4.5;
+     }
+}
+
+B.
+interface B {
+     Number m();
+}
+
+C.
+interface C {
+     int m();
+}
+
+D.
+interface D {
+     double m(Integer... i);
+}

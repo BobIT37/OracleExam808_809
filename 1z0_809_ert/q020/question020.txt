@@ -1,0 +1,12 @@
+20. Given the code fragment:
+//line n1
+Double d = str.average().getAsDouble();
+System.out.println(“Average = “ + d);
+
+Which should be inserted into line n1 to print Average = 2.5?
+A) IntStream str = IntStream.of(1, 2, 3, 4);
+B) IntStream str = Stream.of(1, 2, 3, 4) ;
+C) DoubleStream str = Stream.of(1.0, 2.0, 3.0, 4.0) ; 
+D) Stream str = Stream.of(1, 2, 3, 4) ;
+
+Answer: A

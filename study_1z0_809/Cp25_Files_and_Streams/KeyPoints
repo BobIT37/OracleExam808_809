@@ -1,0 +1,10 @@
+Key Points
+-	In Java 8, new methods that return implementations of the Stream interface have been added to java.nio.file.Files.
+-	The returned streams are LAZY, which means that the elements are not loaded (or read) until they are used.
+-	The use of a try-with-resources with these methods is recommended so that the stream's close method can be invoked to close the file system resources.
+-	Files.list() iterates over a directory to return a stream whose elements are Path objects that represent the entries of that directory.
+-	This method lists directories and files of the specified directory. However, it is not recursive, in other words, it DOESN'T traverse subdirectories.
+-	Files.walk() also iterates over a directory in a depth-first strategy to return a stream whose elements arePath objects that represent the entries of that directory.
+-	The difference with Files.list() is that Files.walk() DOES recursively traverse the subdirectories. You can also pass the maximum traversal depth and an option to follow symbolic links.
+-	Files.find() is similar to Files.walk(), but takes an additional argument of type BiPredicate<Path,BasicFileAttributes> that is used to filter the files and directories.
+-	Files.lines() reads all the lines of a file as a stream of Strings without loading them all into memory.

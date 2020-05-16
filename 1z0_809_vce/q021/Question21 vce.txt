@@ -1,0 +1,34 @@
+Question 21
+Given:
+
+Class Vehicle {
+   	int vno;
+   	String name;
+	
+	public Vehicle (int vno, String name){
+		this.vno = vno;
+		this.name = name;
+	}
+	public String toString(){
+		return vno + ":" + name;
+	}
+}
+
+and this code fragment:
+
+Set<Vehicle> vehicles = new TreeSet<>();
+vehicles.add(new Vehicle (10123, "Ford"));
+vehicles.add(new Vehicle (10124, "BWM"));
+System.out.println(vehicles);
+
+What is the result?
+A. 10123 Ford
+     10124 BWM
+B. 10124 BWM
+     10123 Ford
+C. A compliation error occurs.
+D. A ClassCastException is thrown at run time.
+
+Correct Answer: B x D 
+Reference : https://www.programcreek.com/2009/02/implement-comparable-for-a-treeset/
+

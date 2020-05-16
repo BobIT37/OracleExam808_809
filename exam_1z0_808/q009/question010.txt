@@ -1,0 +1,25 @@
+String[] arr = { "sun" , "mon" ,"wed" ,"sat" };
+int wd = 0;
+for(String d : arr)
+{
+	switch(d)
+	{
+		case "sat":
+		case "sun":
+			wd -= 1;
+			break;
+		case "mon":
+			wd++;
+		case "wed":
+			wd += 2;
+	}
+}
+System.out.println(wd);
+
+A. compile error
+B. throw exception at runtime
+C. -1
+D. 3
+E. 4
+
+answer 3

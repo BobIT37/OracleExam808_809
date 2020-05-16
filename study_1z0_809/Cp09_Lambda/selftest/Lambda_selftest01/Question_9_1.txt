@@ -1,0 +1,6 @@
+1. Which of the following are valid lambda expressions?
+
+A. String a, String b -> System.out.print(a+ b);
+B. () -> return;
+C. (int i) -> i;
+D. (int i) -> i++; return i;

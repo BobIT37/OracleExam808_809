@@ -1,0 +1,33 @@
+
+public class Foo<K, V> {
+	private K key;
+	private V value;
+	public Foo (K key, V value) (this.key = key; this value = value;)
+	public static <T> Foo<T, T> twice (T value) (return new Foo<T, T> (value, value); )
+	public K getKey () (return key;)
+	public V getValue () (return value;)
+}
+
+Which option fails?
+
+A. Foo<String, Integer> mark = new Foo<String, Integer> ("Steve", 100);
+B. Foo<String, String> pair = Foo.<String>twice (“Hello World!”);
+C) Foo<Object, Object> percentage = new Foo<String, Integer>("Steve",1);
+D. Foo<String, String> grade = new Foo <> ("John", "A");
+
+========================
+Answer: C
+
+
+A Steve 100
+B Hello World! Hello World!
+C Steve 1
+D John A
+
+
+
+=========================
+A à»ç¹¡ÒÃ¡ÓË¹´èÇèÒ ã¹¡ÒÃ New Instance ¢Í§ Foo ¨ÐÃÑºà©¾ÒÐ String ¡Ñº Interger à·èÒ¹Ñé¹
+B à»ç¹¡ÒÃàÃÕÂ¡ Method Static «Öè§ÁÕ¡ÒÃ·Ó Method Generic äÇéà»ç¹¡ÒÃºÑ§¤ÑºÇèÒ ¨ÐÃÑºà©¾ÒÐ Type ÍÐäÃ «Öèè§¶éÒäÁèãÊè Generic type µÍ¹àÃÕÂ¡¨Ð·Ó¡ÒÃ´ÙµÒÁ parameter ·ÕèÊè§à¢éÒä»
+C à»ç¹¡ÒÃÊÃéÒ§ Object ÁÒÃÑº¤èÒ «Öè§ Object ÁÕ Generic Type à»ç¹ Wildcard ¤×Í Object ÍÐäÃ¡çä´é «Öè§äÁè¨Óà»ç¹µéÍ§àËÁ×Í¹¡Ñ¹¡çä´é
+D à»ç¹¡ÒÃ¡ÓË¹´ Generic ¢Í§  Class ÇèÒ¨ÐµéÍ§ÃÑºà»ç¹ <String,String> à·èÒ¹Ñé¹ÊèèÇ¹ËÅÑ§¨Ò¡ new ¨ÐãÊè <> (mirror) ¨ÐÁÍ§ÇèÒà»ç¹ Type àËÁ×Í¢éÒ§Ë¹éÒ 

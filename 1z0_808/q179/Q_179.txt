@@ -1,0 +1,40 @@
+Question No: 179
+
+A.java
+public class A {
+	public void a() { 	}
+	int a;
+}
+
+B.java
+public class B {
+	public int doStuff() { 	
+		private int x = 100;
+		return x++;
+	}
+}
+
+C.java
+import java.io.*;
+package p1;
+
+public class A {
+	public void main(String fileName) throws IOException { 	}
+}
+
+Which statement is true?
+A. Only the A.Java file compiles successfully.
+B. Only the B.java file compiles successfully.
+C. Only the C.java file compiles successfully.
+D. The A.Java and B.java files compile successfully.
+E. The B.java and C.java files compile successfully.
+F. The A.Java and C.java files compile successfully.
+	
+--------------
+Answer: A
+--------------
+
+Desc:
+ - In class B.java doStuff() has access modifier with variable name which is not allowed. 
+ - C.java: order of import and package is incorrect.	
+ 	>> C.java class name is different than file name. Only private classes can have different names than file names

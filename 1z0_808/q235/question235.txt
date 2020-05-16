@@ -1,0 +1,27 @@
+Question: 235
+
+Class StaticField {
+static int i = 7;
+public static void main(String[] args) {
+StaticFied obj = new StaticField();
+obj.i++;
+StaticField.i++;
+obj.i++;
+System.out.println(StaticField.i + " "+ obj.i);
+}
+}
+
+What is the result?
+A. 10 10
+B. 8 9
+C. 9 8
+D. 7 10
+	
+--------------
+Answer: A
+--------------
+
+Desc: 
+
+ - i from obj.i and StaticField.i is the same each other 
+ - static field can access with <ClassName>.<static_field_name>

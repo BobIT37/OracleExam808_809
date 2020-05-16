@@ -1,0 +1,22 @@
+Which statement is/are true?
+I. Default constructor only contains "super();" call.
+II. We can't use any access modifier with a constructor.
+III. A constructor should not have a return type.
+
+A. Only I.
+B. Only II.
+C. Only I and II.
+D. Only I and III.
+E. ALL
+
+------------------------
+
+Answer : D
+
+Statement I is correct as the default constructor only contains super() call
+
+Statement II is incorrect as we can use any access modifier with a constructor.
+
+Statement III is correct as constructor can't have return type, even void.
+
+

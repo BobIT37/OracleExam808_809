@@ -1,0 +1,5 @@
+Exam Objectives
+
+Develop code that uses Stream data methods and calculation methods.
+Use java.util.Comparator and java.lang.Comparable interfaces.
+Sort a collection using Stream API.

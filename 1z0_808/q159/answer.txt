@@ -1,0 +1,40 @@
+[Question]
+
+public class Test {
+
+	public static void main(String[] args) {
+		String[] strs = new String[2];
+		int idx = 0;
+		for (String str : strs) {
+			strs[idx].concat(" element " + idx);
+		}
+		for (idx = 0; idx < strs.length; idx++) {
+			System.out.println(strs[idx]);
+		}
+	}
+
+}
+
+What is the result?
+
+A. 
+	Element 0
+	Element 1
+	
+B. 
+	Null element 0
+	Null element 1
+	
+C. 
+	Null
+	Null
+	
+D. 
+	A NullPointerException is thrown at runtime. 
+
+[Answer]
+D.
+
+[Console log]
+Exception in thread "main" java.lang.NullPointerException
+	at com.wealth.certificate.dumps_1z0_808.question159.Test.main(Test.java:9)

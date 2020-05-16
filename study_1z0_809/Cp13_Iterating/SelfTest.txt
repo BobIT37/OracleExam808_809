@@ -1,0 +1,56 @@
+1. Given:
+
+public class Question_13_1 {
+    public static void main(String[] args) {
+        List<Integer> l = Arrays.asList(1,2,3,4,5,6);
+        Stream.of(l)
+            .forEach(i -> System.out.print(i-1));
+    }
+}
+
+What is the result?
+A. 123456
+B. 012345
+C. 543210
+D. Compilation error
+E. An exception is thrown
+
+2. Which of the following statements is true?
+A. filter is a terminal operation.
+B. filter is a stateful operation.
+C. Stream.forEach takes an implementation of the Consumer functional interface as an argument.
+D. You can chain more than one forEach operation in a stream pipeline.
+
+3. Given:
+
+public class Question_13_2 {
+    public static void main(String[] args) {
+        Arrays.asList(1,2,3,4,5,6).stream()
+            .filter(i -> i%2 == 0).filter(i -> i > 3)
+            .forEach(System.out::print);
+    }
+}
+
+What is the result?
+A. 246
+B. 46
+C. 1
+D. 5
+E. Compilation error
+
+4. Given:
+
+public class Question_13_3 {
+    public static void main(String[] args) {
+        Arrays.asList(1,1,1,1,1,1).stream()
+            .filter(i -> i > 1).distinct()
+            .forEach(System.out::print);
+    }
+}
+
+What is the result?
+A. 1
+B. 0
+C. Nothing is printed
+D. Compilation error
+E. An exception is thrown

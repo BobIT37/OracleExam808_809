@@ -1,0 +1,20 @@
+Question No : 199
+
+Given the code fragment:
+
+StringBuilder sb = new StringBuilder ( ) ;
+Sb.append (“world”);
+
+
+Which code fragment prints Hello World?
+
+A. sb.insert(0,"Hello ");
+System.out.println(sb);
+B. sb.append(0,"Hello ");
+System.out.println(sb);
+C. sb.add(0,"Hello ");
+System.out.println(sb);
+D. sb.set(0,"Hello ");
+System.out.println(sb);
+
+Answer: A

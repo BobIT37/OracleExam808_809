@@ -1,0 +1,15 @@
+48.
+Given the code fragment :
+
+	final String str1 = “Java”;
+	StringBuffer strBuf = new StringBuffer(“Course”);
+	UnaryOperator<String> u = (str2) -> str1.concat(strBuf); //line n1
+	UnaryOperator<String> c = (str3) -> str3.toLowerCase(u); //line n2
+	System.out.printIn(u.apply(c.apply(strBuf)));
+	
+What is the result ?
+
+A) A Compilation Error occurs at line n2.
+B) A Compilation Error occurs at line n1.
+C) courseJava
+D) Javacourse

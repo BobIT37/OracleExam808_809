@@ -1,0 +1,17 @@
+Key Points
+
+- The java.util.Optional<T> class ENCAPSULATES an optional value, i.e. an object that can be null.
+
+- An empty value is represented by the method Optional.empty().
+
+- You can wrap an object in an Optional with the method of(), however, a NullPointerException will be thrown if the object is null.
+
+- The method ofNullable() returns an Optional instance with the specified value if it is non-null. Otherwise, it returns an empty Optional.
+
+- To get the value of an Optional use the method get(), but it will throw a java.util.NoSuchElementException if the Optional doesn't contain a value, so it's better to use the ifPresent() method that takes a Consumer<T> as an argument that is executed only if the Optional contains a value.
+
+- The orElse() method returns the argument when the Optional is empty, otherwise, it returns the encapsulated value.
+
+- The orElseGet() method takes a Supplier that returns a value when the Optional is empty. Otherwise, it returns the encapsulated value.
+
+- The orElseThrow() method takes a Supplier that returns an exception when the Optional is empty. Otherwise, it returns the encapsulated value.

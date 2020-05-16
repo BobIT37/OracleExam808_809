@@ -1,0 +1,25 @@
+Question No : 3
+
+Given the code fragment:
+
+public class Test {
+public static void main(String[] args) {
+boolean isChecked = false;
+int arry[] = {1,3,5,7,8,9};
+int index = arry.length;
+while ( <code1> ) {
+if (arry[index-1] % 2 ==0) {
+isChecked = true;
+}
+<code2>
+}
+System.out.print(arry(index]+", "+isChecked));
+}
+}
+Which set of changes enable the code to print 1, true?
+A. Replacing <code1> with index > 0 and replacing <code2> with index--;
+B. Replacing <code1> with index > 0 and replacing <code2> with --index;
+C. Replacing <code1> with index > 5 and replacing <code2> with --index ;
+D. Replacing <code1> with index and replacing <code2> with --index ;
+
+Answer: A, B

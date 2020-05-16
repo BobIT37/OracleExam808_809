@@ -1,0 +1,34 @@
+Question No : 64 (Duplicate with 1z0-809 at Question No : 34)
+
+public class Country {
+	public enum Continent {ASIA, EUROPE}
+	String name;
+	Continent region;
+	
+	public Country(String na,Continent reg){
+		name = na; region = reg;
+	}
+	public String getName() {return name;}
+	public Continent getRegion() {return region;}
+}
+and the code fragment:
+List<Country> couList = Arrays.asList(
+new Country("Italy", Country.Continent.EUROPE),
+new Country("Japan", Country.Continent.ASIA),
+new Country("Germany", Country.Continent.EUROPE));
+Map<Country.Continent, List<String>> regionNames = couList.stream()
+.collect(Collectors.groupingBy(Country:: getRegion,
+Collectors.mapping(Country::getName, Collectors.toList())));
+System.out.println(regionNames);
+
+what is the output?
+
+A) {EUROPE=[Germany], EUROPE=[Italy], ASIA=[Japan] }
+B) {EUROPE=[Germany, Italy], ASIA=[Japan] }
+C) {ASIA=[Japan], EUROPE=[Italy, Germany] } 
+D) {EUROPE=[Italy, Germany], ASIA=[Japan] }
+
+Answer D
+
+
+  

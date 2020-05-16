@@ -1,0 +1,28 @@
+2. 
+Given the code fragment:
+Deque<String> queue = new ArrayDeque<>();
+queue.add(“Susan”);
+queue.add(“Allen”);
+queue.add(“David”);
+System.out.println(queue.pop());
+System.out.println(queue.remove());
+System.out.println(queue);
+
+What is the result?
+A) 	David
+	David
+	[Susan, Allen]
+B) 	Susan
+	Susan
+	[Susan, Allen]
+C) 	Susan
+	Allen
+	[Susan, David] 
+D) 	Susan 
+	Allen 
+	[David]
+E) 	David
+	Allen
+	[Susan]
+
+Answer: D

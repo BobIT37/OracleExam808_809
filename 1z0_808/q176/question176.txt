@@ -1,0 +1,32 @@
+Question No : 176
+Given:
+
+1. public class Whizlabs {
+2. 
+3. 		public static void main (String[] args) { 
+4. 			String s = "A"; 
+5. 
+6. 			switch (s) { 
+7. 				case "a": 
+8. 					System.out.print("simaple A "); 
+9. 				default: 
+10. 				System.out.print("default "); 
+11. 			case "A": 
+12. 				System.out.print("Capital A "); 
+13. 		} 
+14 		}
+15.}
+
+
+What is the result?
+A. simaple A
+B. Capital A  <--
+C. simaple A default Capital A
+D. simaple A default
+E. Compilation fails.
+
+Answer: C (เฉลยน่าจะผิด)  ที่ถูกคือ B
+Explanation:
+จากโค้ดให้ s="A" แล้วส่งค่า s เข้าไปใน switch-case ตัว switch จะมองหา "A" ว่าตรงกับ case: ไหน ซึ่งตรงกับ case "A": พอดีทำให้ปลิ้น   Capital A  ออกมา 
+*หมายเหตุถ้าไม่มีเงื่อนไขใดใน case ที่ตรงตัว switch จะไปทำที่ default แทนไม่ว่า default จะอยู่ก่อนหรือหลัง case: ระบบจะเช็ค default สุดท้ายเสมอ
+

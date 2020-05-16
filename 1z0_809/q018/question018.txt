@@ -1,0 +1,38 @@
+class Caller implements Callable<String> {
+String str;
+public Caller (String s) {this.str=s;}
+public String call()throws Exception { return str.concat (“Caller”);} }
+class Runner implements Runnable {
+String str;
+public Runner (String s) {this.str=s;}
+public void run () { System.out.println (str.concat (“Runner”));} }
+and
+public static void main (String[] args) InterruptedException, ExecutionException { 
+ExecutorService es = Executors.newFixedThreadPool(2);
+Future f1 = es.submit (new Caller (“Call”));
+Future f2 = es.submit (new Runner (“Run”));
+String str1 = (String) f1.get();
+String str2 = (String) f2.get();//line n1 System.out.println(str1+ “:” + str2);
+}
+What is the result?
+A. The program prints:
+Run Runner
+Call Caller : null
+And the program does not terminate.
+B. The program terminates after printing: Run Runner
+Call Caller : Run
+C. A compilation error occurs at line n1.
+
+
+
+The Callable interface is similar to Runnable, 
+in that both are designed for classes whose instances are potentially executed by another thread. 
+A Runnable, however, does not return a result and cannot throw a checked exception.
+
+https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ExecutorService.html
+
+Callables can be submitted to executor services just like runnables. 
+But what about the callables result? Since submit() doesn't wait until the task completes, 
+the executor service cannot return the result of the callable directly. 
+Instead the executor returns a special result of type 
+Future which can be used to retrieve the actual result at a later point in time.

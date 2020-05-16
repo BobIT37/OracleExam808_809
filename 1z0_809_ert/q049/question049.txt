@@ -1,0 +1,44 @@
+Question: 49
+
+Operator.java
+public abstract class Operator {
+	protected void turnON();
+	protected void turnOFF();
+}
+
+EngineOperator.java
+public class EngineOperator extends Operator {
+	public final void turnON() {
+		System.out.print("ON");
+	}
+
+	public final void turnOFF() {
+		System.out.println("OFF");
+	}
+}
+
+Engine.java
+public class Engine {
+	Operator m = new EngineOperator();
+
+	public void operate() {
+		m.turnON();
+		m.turnOFF();
+	}
+}
+
+
+and the code fragment: 
+
+Engine carEngine = new Engine();
+carEngine.operate();
+	
+What is the result? 
+A) The Operator.java file fails to compile. 
+B) The EngineOperator.Java file fails to compile. 
+C) The Engine.java File fails to compile. 
+D) ON OFF
+
+===================
+Answer: A
+===================

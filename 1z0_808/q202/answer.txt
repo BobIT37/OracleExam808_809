@@ -1,0 +1,11 @@
+What is the result?
+A. 1
+B. 2
+C. 4
+D. 0
+
+[Answer]
+A.
+
+[Explanation]
+Counter++ will be executed only once because of the else if constructs.

@@ -1,0 +1,31 @@
+
+
+public static void main(String[] args) {
+	try {
+		String[] arr =new String[4];
+		arr[1] = "Unix";
+		arr[2] = "Linux";
+		arr[3] = "Solarios";
+		for (String var : arr) {
+			System.out.print(var + " ");
+		}
+	} catch(Exception e) {
+		System.out.print (e.getClass());
+	}
+}
+
+What is the result?
+
+A. Unix Linux Solaris
+B. Null Unix Linux Solaris
+C. Class java.lang.Exception
+D. Class java.lang.NullPointerException
+
+
+-------------------------------------------
+
+Answer: B
+Explanation: null Unix Linux Solarios
+The first element, arr[0], has not been defined.
+Default of String is null.
+-------------------------------------------

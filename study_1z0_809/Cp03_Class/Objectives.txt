@@ -1,0 +1,3 @@
+Exam Objectives
+
+Create inner classes including static inner class, local class, nested class, and anonymous inner class.

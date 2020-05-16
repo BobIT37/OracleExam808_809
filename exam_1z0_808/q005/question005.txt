@@ -1,0 +1,13 @@
+Class declare (compile fail)
+
+A. 
+	public static final int f;
+	public void something() {}
+
+B.
+	final abstract class {
+		void run() {}
+		int doSomething() {}
+	}
+	
+	

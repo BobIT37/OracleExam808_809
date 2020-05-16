@@ -1,0 +1,26 @@
+﻿Stream<T>
+- Stream elements Type: T
+
+IntStream
+- Stream elements Type: Int
+
+IntFunction<R> 
+- Argument Type: Int
+- Return Type: R
+
+UnaryOperator<T>
+- Argument Type: T
+- Return Type: T
+
+IntUnaryOperator
+- Argument Type: Int
+- Return Type: Int
+
+BiFunction<T, U, R>
+- First Argument Type: T
+- Second Argument Type: U
+- Return Type: R
+
+map(IntUnaryOperator mapper)
+- จากโจทย์ IntStream newStream = stream.map(inFu.apply(10)); 10 ไปใส่ใน x
+- จากโจทย์ newStream.forEach(System.out::print); จะเริ่มวนลูปแล้วเอาค่า 1, 2, 3 ไปใส่ใน y และทำการปริ้นทีละตัว

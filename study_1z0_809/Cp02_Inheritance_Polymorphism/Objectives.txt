@@ -1,0 +1,6 @@
+Exam Objectives
+
+Implement inheritance including visibility modifiers and composition.
+Override hashCode, equals, and toString methods from Object class.
+Implement polymorphism.
+Develop code that uses abstract classes and methods.

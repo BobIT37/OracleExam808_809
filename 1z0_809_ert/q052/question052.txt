@@ -1,0 +1,13 @@
+52.Given the code fragment:
+	List<String> cs = Arrays.asList("Java", "Java EE", "Java ME");
+	//line n1
+	System.out.print(b);
+	
+Which code fragment, when inserted at line n1, ensures false is print?
+
+A) boolean b = cs.stream() .findAny() .get() .equals("Java");
+B) boolean b = cs.stream() .anyMatch (w -> w.equals("Java")); 
+C) boolean b = cs.stream() .allMatch (w -> w.equals("Java");
+D) boolean b = cs.stream() .findFirst() .get() .equals("Java");
+
+Answer: C

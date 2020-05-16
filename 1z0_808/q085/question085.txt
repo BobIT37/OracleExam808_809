@@ -1,0 +1,33 @@
+Which three are advantages of the Java exception mechanism?
+
+A. Improves the program structure because the error handling code is separated from the
+normal program function
+
+B. Provides a set of standard exceptions that covers all the possible errors
+
+C. Improves the program structure because the programmer can choose where to handle
+exceptions
+
+D. Improves the program structure because exceptions must be handled in the method in
+which they occurred
+
+E. Allows the creation of new exceptions that are tailored to the particular program being created
+
+---------------------
+
+Answer : A,C,E
+
+---------------------
+
+https://docs.oracle.com/javase/tutorial/essential/exceptions/advantages.html
+Advantage 1: Separating Error-Handling Code from "Regular" Code
+Advantage 2: Propagating Errors Up the Call Stack
+Advantage 3: Grouping and Differentiating Error Types
+
+
+A - correct sperated error handling in catch block (Advantage 1)
+B - incorrect because not cover all the posible errors
+C - correct you can choose where to handle exception catch block or throws to caller (Advantage 2)
+D - incorrect you can throws exception to caller
+E - correct you can create new exception for particular program (Advantage 3)
+

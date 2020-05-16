@@ -1,0 +1,21 @@
+Given that these files exist and are accessible: 
+
+	/sports/info.txt 
+	/sports/cricket/players.txt 
+	/sports/cricket/data/ODI.txt 
+ 
+and given the code fragment: 
+
+		int maxDepth = 2;
+		Stream<Path> paths = Files.find(Path.get("/sports"),
+				maxDepth, 
+				(p,a) -> p.getFileName().toString().endsWith("txt"),
+				FileVisitOption.FOLLOW_LINKS);
+		long fCount = paths.count();
+		System.out.println(fCount);
+ 
+Assuming that there are NO soft-link/symbolic links to any of the files the result? 
+A) 2 
+B) 3 
+C) 1 
+D) An Exception is thrown at runtime. 

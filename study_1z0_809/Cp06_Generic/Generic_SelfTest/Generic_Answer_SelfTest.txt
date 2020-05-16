@@ -1,0 +1,21 @@
+Answers
+
+1. The correct answer is A.
+You can modify a list typed as List<?>, but when you call m2(), inside that method, the list has a different type, List<T>, which allows you to change the value of the second element.
+
+
+
+2. The correct answer is A.
+<T extends Number> means that you can assign a Number or one of its subclasses to the generic type. This applies to both, the type argument of the class Question_6_2 and to the variable t.
+
+
+
+3. The correct answer is C.
+Option C doesn't compile because you can only assign a list of type Object to l3, the lower-bounded wildcard doesn't allow you to assign a subclass (like String).
+
+
+
+4. The correct answer is C.
+<? super Number> allows you to assign a List of type Number or its superclass, which is done in line // 1.
+
+The list can contain instances of Number or one of its subclasses. Since line // 3 tries to add an instance of the superclass of Number (Object), this line generates a compile-time error.

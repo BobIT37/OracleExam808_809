@@ -1,0 +1,36 @@
+QUESTION 15 ***** duplicate dumps_1z0_809.question043
+
+Given:
+
+public class Emp {
+	String fName;
+	String lName;
+	
+	public Emp (String fn, String ln) {
+		fName = fn;
+		lName = ln;
+	}
+	
+	public String getfName() { return fName; }
+	public String getlName() { return lName; }
+}
+
+
+and the code fragment:
+
+List<Emp> emp = Arrays.asList (
+new Emp (“John”, “Smith”),
+new Emp (“Peter”, “Sam”),
+new Emp (“Thomas”, “Wale”));
+emp.stream()
+//line n1
+.collect(Collectors.toList());
+
+Which code fragment, when inserted at line n1, sorts the employees list in descending order of fName and then ascending order of lName?
+
+A. .sorted (Comparator.comparing(Emp::getfName).reserved().thenComparing(Emp::getlName))
+B. .sorted (Comparator.comparing(Emp::getfName).thenComparing(Emp::getlName))
+C. .map(Emp::getfName).sorted(Comparator.reserveOrder())
+D. .map(Emp::getfName).sorted(Comparator.reserveOrder().map(Emp::getlName).reserved
+
+Answer A

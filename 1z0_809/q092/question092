@@ -1,0 +1,29 @@
+You have been asked to create a ResourceBundle which uses a properties file to localize
+an application.
+
+Which code example specifies valid keys of menu1 and menu2 with values of File Menu
+and View Menu?
+
+A. 	<key name = "menu1">File Menu</key>
+	<key name = "menu2">View Menu</key>
+B. 	<key>menu1</key><value>File Menu</value>
+	<key>menu2</key><value>View Menu</value>
+C. 	menu1, File Menu, menu2, View Menu
+D. 	menu1 = File Menu
+	menu2 = View Menu
+
+Answer: D
+https://docs.oracle.com/javase/tutorial/i18n/resbundle/propfile.html
+
+ResourceBundle is Resource bundles contain locale-specific objects. When your program needs a locale-specific resource,
+คือ การจัดกลุ่มของ Object locale-specific เมื่อโปรแกรมของคุณต้องการ locale-specific resource
+
+This allows you to write programs that can:
+- be easily localized, or translated, into different languages
+- handle multiple locales at once
+- be easily modified later to support even more locales
+
+นี้ช่วยให้คุณสามารถเขียนโปรแกรม:
+- สามารถแปลถาษาหรือแปลเป็นภาษาต่างๆได้อย่างง่ายดาย
+- จัดการหลายภาษาพร้อมกัน
+- สามารถแก้ไขได้อย่างง่ายดายในภายหลังเพื่อสนับสนุน locales มากยิ่งขึ้น

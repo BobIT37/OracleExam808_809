@@ -1,0 +1,48 @@
+Question No : 55
+
+int[] intArr = {8, 16, 32, 64, 128};
+
+Which two code fragments, independently, print each element in this array?
+
+A) for (int i : intArr) {
+		System.out.print(intArr[i] +" ")
+   }
+B) for (int i : intArr) {
+		System.out.print(i + " ");
+   }
+C) for (int i=0 : intArr) {
+		System.out.print(intArr[i] +" ");
+		i++;
+   }
+D) for (int i=0; i < intArr.length; i++) {
+		System.out.print(i +" ");
+   }
+E) for (int i=0; i < intArr.length; i++) {
+		System.out.print(intArr[i] +" ");
+   }
+F) for (int i; i < intArr.length; i++) {
+		System.out.print(intArr[i] +" ");
+   }
+   
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+E. Option E
+F. Option F   
+   
+Answer B,E
+
+Explanation: 
+
+A --> wrong, it will throws ArrayIndexOutOfBoundsException 
+
+B --> correct cause print 8 16 32 64 128 
+
+C --> wrong cause syntax error cannot initialize in for each
+
+D --> wrong cause incorrect printing 0 1 2 3 4
+
+E --> correct cause print 8 16 32 64 128
+
+F --> wrong cause syntax error, the local variable i may not have been initialized

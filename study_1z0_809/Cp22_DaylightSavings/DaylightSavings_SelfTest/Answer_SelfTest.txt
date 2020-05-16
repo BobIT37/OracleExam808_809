@@ -1,0 +1,66 @@
+1. The correct answer is C.
+Option A is invalid. Method ofHours(int) belongs to ZoneOffset, not to ZoneId.
+Option B is invalid. The format of the offset is incorrect. It has to start with a sign (+ or -).
+Option C is valid for the above reason.
+Option D is invalid. The format for zone regions is area/city not area/country. A valid example would be America/Montreal.
+
+
+
+2. The correct answer is D.
+The instantiation of ZoneOffset is valid, Z correspond to UTC, but ChronoField.OFFSET_SECONDS is the only accepted value for the method get, so a runtime exception is thrown.
+
+
+
+3. The correct answer is A.
+The local time zone has no effect here. From a ZonedDateTime, you can get a LocalDate, a LocalTime, or a LocalDateTime just without the time zone part.
+
+
+
+4. The correct answer is C.
+On October, 4, 2015 at 0:00:00, the clock turned forward 1 hour. A ZonedDateTime is created at that time and added one hour, setting it at 1:00, but since the clock is already forwarded, that time becomes 2:00.
+
+
+
+5. The correct answer is B.
+Period subtracts one conceptual day, making up for any daylight saving variation and leaving the same time. However,
+
+ZonedDateTime zdt =
+    ZonedDateTime.of(2015,3,22,0,0,0,0,ZoneId.of("America/Asuncion"))
+    .minus(Duration.ofDays(1));
+System.out.println(zdt);
+
+It's different. The result will be:
+
+2015-03-21T01:00-03:00[America/Asuncion]
+
+Because 0:00 it's actually 1:00 (when DST ended at 0:00, the clock was set at 23:00 of the previous day) and Duration subtracts exactly 24 hours.
+
+
+
+6. The correct answers are A and B.
+Option A is true. java.time.ZoneOffset is a subclass of java.time.ZoneId.
+Option B is true. A java.time.Instant instance can be obtained from java.time.ZonedDateTime.
+Option C is false. java.time.ZoneOffset cannot manage DST.
+Option D is false. java.time.Instance is the one that represents a point in time in the UTC time zone, java.time.OffsetDateTime represents a point in time from UTC.
+
+
+
+7. The correct answer is C.
+A DateTimeFormatter for time is created with the style FormatStyle.SHORT:
+
+DateTimeFormatter formatter =
+    DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT);
+
+So only the time part of the LocalDateTime is formatted. Option D is the result of applying FormatStyle.MEDIUM.
+
+
+
+8. The correct answer is D.
+Option A is false. The pattern is valid:
+
+HH represents hours (0-23)
+mm represents minutes
+ss represents seconds
+X represents a zone offset (with support for Z)
+Option B is false. An OffsetDateTime is not created because the string to parse is missing the date part, so an exception is thrown.
+Option C is false. Z represents a zero offset (Zulu time, the same as UTC).

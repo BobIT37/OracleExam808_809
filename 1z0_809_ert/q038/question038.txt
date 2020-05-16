@@ -1,0 +1,23 @@
+Question No : 38
+
+MessagesBundle.properties file:
+inquiry = How are you?
+MessagesBundle_de_DE.properties file:
+inquiry = Wie geht’s ?
+and given the code fragment :
+Locale CurrentLocale;
+// line 1
+ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle", CurrentLocale);
+System.out.printIn(messages.getString("inquiry"));
+
+Which two code fragments, when inserted at lone 1 independently, enable the code to "Wie geht’s?"
+A) currentLocale = Locale.getInstance(Locale.GERMAN,Locale.GERMANY) ;
+B) currentLocale = Locale.GERMAN; 
+C) currentLocale = new Locale.Builder().setLanguage("de").setRegion("DE");
+D) currentLocale = new Locale("de","DE"); 
+E) currentLocale = new Locale(); currentLocale.setLanguage("de"); currentLocale.setRegion("DE");
+
+Answer C, D
+
+
+  

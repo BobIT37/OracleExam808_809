@@ -1,0 +1,35 @@
+QUESTION 22
+Given that course.txt is accessible and contains:
+
+Course::Java
+
+and given the code fragment:
+public static void main (String[ ] args) {
+	int i;
+	char c;
+	try (
+			FileInputStream fis = new FileInputStream ("course.txt");
+			InputStreamReader isr = new InputStreamReader(fis);
+		) {
+		
+		while (isr.ready()) { //line n1
+			isr.skip(2);
+			i = isr.read ();
+			c = (char) i;
+			System.out.print(c);
+		}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+}
+
+What is the result?
+A. ur :: va
+B. ueJa
+C. The program prints nothing.
+D. A compilation error occurs at line n1.
+
+Correct Answer: B (duplicate 1Z0-809 Question no.117)
+Section: (none)
+Explanation
+Explanation/Reference:

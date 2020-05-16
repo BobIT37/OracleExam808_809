@@ -1,0 +1,60 @@
+1. Given:
+
+public class Question_6_1 {
+    public static void main(String[] args) {
+        Question_6_1 q = new Question_6_1();
+        List<Integer> l = new ArrayList<>();
+        l.add(20);
+        l.add(30);
+        q.m1(l);
+    }
+    private void m1(List<?> l) {
+        m2(l); // 1
+    }
+    private <T> void m2(List<T> l) {
+        l.set(1, l.get(0)); // 2
+        System.out.println(l);
+    }
+}
+
+What is the result?
+A. [20, 20]
+B. Compilation fails on the line marked as // 1
+C. Compilation fails on the line marked as // 2
+D. An exception occurs at runtime
+
+2. Given:
+
+public class Question_6_2 <T extends Number> {
+    T t;
+    public static void main(String[] args) {
+        Question_6_2 q =
+           new Question_6_2<Integer>(); // 1
+        q.t = new Float(1); // 2
+        System.out.println(q.t);
+    }
+}
+
+What is the result?
+A. 1.0
+B. Compilation fails on the line marked as // 1
+C. Compilation fails on the line marked as // 2
+D. An exception occurs at runtime
+
+3. Which of the following declarations don't compile?
+A. List<?> l1 = new ArrayList<>();
+B. List<String> l2 = new ArrayList();
+C. List<? super Object> l3 = new ArrayList<String>();
+D. List<? extends Object> l4 = new ArrayList<String>();
+
+4. Given
+
+List<? super Number> list = new ArrayList<Object>(); // 1
+list.add(new Integer(2)); // 2
+list.add(new Object()); // 3
+
+Which line will generate a compile-time error?
+A. Line marked as // 1
+B. Line marked as // 2
+C. Line marked as // 3
+D. No compile-time error is generated

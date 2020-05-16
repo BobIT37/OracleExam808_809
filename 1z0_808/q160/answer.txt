@@ -1,0 +1,9 @@
+What could expression1 and expression2 be, respectively, in order to produce output –8,
+16?
+A. ++a, --b
+B. ++a, b--
+C. A++, --b
+D. A++, b--
+
+[Answer]
+B.

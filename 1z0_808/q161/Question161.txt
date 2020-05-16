@@ -1,0 +1,27 @@
+Given the classes:   
+
+* AssertionError 
+* ArithmeticException 
+* ArrayIndexOutofBoundsException 
+* FileNotFoundException 
+* IllegalArgumentException 
+* IOError 
+* IOException 
+* NumberFormatException 
+* SQLException  
+
+Which option lists only those classes that belong to the unchecked exception category?  
+A. AssertionError, ArrayIndexOutOfBoundsException, ArithmeticException 
+B. AssertionError, IOError, IOException 
+C. ArithmeticException, FileNotFoundException, NumberFormatException
+D. FileNotFoundException, IOException, SQLException 
+E. ArrayIndexOutOfBoundException, IllegalArgumentException, FileNotFoundException  
+
+Answer: A 
+Explanation: Not B: IOError and IOException are both checked errors. Not C, not D, not E: FileNotFoundException is a checked error.  Note:  Checked exceptions:
+ * represent invalid conditions in areas outside the immediate control of the program (invalid user input, database problems, network outages, absent files)
+ * are subclasses of Exception * a method is obliged to establish a policy for all checked exceptions thrown by its implementation (either pass the checked exception further up the stack, or handle it somehow)  
+Note:  Unchecked exceptions: * represent defects in the program (bugs) - often invalid arguments passed to a non-private method. To quote from The Java Programming Language, by Gosling, Arnold, and Holmes:
+ "Unchecked runtime exceptions represent conditions that, generally speaking, reflect errors in your program's logic and cannot be reasonably recovered from at run time." 
+* are subclasses of RuntimeException, and are usually implemented using IllegalArgumentException, NullPointerException, or IllegalStateException 
+* method is not obliged to establish a policy for the unchecked exceptions thrown by its implementation (and they almost always do not do so)

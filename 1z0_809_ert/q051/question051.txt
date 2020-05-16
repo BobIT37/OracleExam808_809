@@ -1,0 +1,22 @@
+Question No : 51
+
+Given the code fragment:
+Stream<List<String>> strs = Stream.of(
+Arrays.asList(“text1”, “text2”),
+Arrays.asList(“text2”, “text3”));
+Stream<String> bs2 = strs
+.filter (b -> b.contains(“text1”))
+.flatMap (rs -> rs.stream());
+bs2.forEach(b -> System.out.print(b));
+
+What is the result?
+
+A) [text1, text2]
+B) text1text2text2text3
+C) text 
+D) text1text2
+
+Answer D
+
+
+  

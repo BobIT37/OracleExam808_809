@@ -1,0 +1,26 @@
+41. 
+Given that version.txt is accessible and contains:
+1234567890
+and given the code fragment:
+try(
+FileInputStream fis = new FileInputStream(“Version.txt”);
+InputStreamReader isr = new InputStreamReader(fis);
+BufferedReader br = new BufferedReader(isr);){
+If(br.markSupported()) {
+System.out.print((char) br.read());
+br.mark(2);
+System.out.print((char) br.read());
+br.reset();
+System.out.print((char) br.read());
+}
+} catch(Exception e) {
+e.printStackTrace();
+}
+
+What is the result?
+A) The program prints nothing. 
+B) 122
+C) 135
+D) 121
+
+Answer: B

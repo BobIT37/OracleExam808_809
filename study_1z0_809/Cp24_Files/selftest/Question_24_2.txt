@@ -1,0 +1,17 @@
+2. Given:
+
+Path path = Paths.get("c:\\Users\\mark");
+
+Which of the following will return Users?
+A. path.getRoot()
+B. path.getName(0)
+C. path.getName(1)
+D. path.subpath(0, 0);
+
+The correct answer is B.
+path.getRoot() returns c:\
+path.getName(0) returns Users
+path.getName(1) returns mark
+path.subpath(0,0) throws an exception
+
+getName() returns the element parts of a path. The first element is at index zero (the root doesn't count as an element).

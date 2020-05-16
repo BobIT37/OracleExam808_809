@@ -1,0 +1,43 @@
+Question 80
+
+class MarksOutOfBoundsException extends IndexOutOfBoundsException {
+}
+
+public class Question80 {
+
+	void verify(int marks) throws IndexOutOfBoundsException {
+		if (marks > 100) {
+			throw new MarksOutOfBoundsException();
+		}
+		if (marks > 50) {
+			System.out.print("Pass");
+		} else {
+			System.out.print("Fail");
+		}
+	}
+
+	public static void main(String[] args) {
+		int marks = Integer.parseInt(args[2]);
+		try {
+			new Question80().verify(marks);
+		} catch (Exception e) {
+			System.out.print(e.getClass());
+
+		}
+
+	}
+}
+
+
+What is the result?
+A. Pass
+B. Fail
+C. Class MarketOutOfBoundsException
+D. Class IndexOutOfBoundsException
+E. Class Exception
+
+-----------------
+Answer: C
+-----------------
+
+Explanation: The value 104 will cause a MarketOutOfBoundsException

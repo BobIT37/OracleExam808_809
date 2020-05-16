@@ -1,0 +1,73 @@
+Question No : 106
+Which two items can legally be contained within a java class declaration? (สองรายการใดที่มีในกฎของการประกาศ java class declaration)
+
+A. An import statement
+B. A field declaration
+C. A package declaration
+D. A method declaration
+
+Answer: B,D
+
+Reference:
+http://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html
+http://docs.oracle.com/javase/tutorial/java/javaOO/variables.html
+http://docs.oracle.com/javase/tutorial/java/javaOO/methods.html
+
+---------------------------------------------------------------------------------
+กฎการประกาศ java class declaration
+[ modifiers ] ClassName [ extends SuperClassName ] [ implements InterfaceNames ] {
+    // field, constructor, and
+    // method declarations
+}
+
+1. Modifiers such as public, private, and a number of others that you will encounter later.
+2. The class name, with the initial letter capitalized by convention.
+3. The name of the class's parent (superclass), if any, preceded by the keyword extends. A class can only extend (subclass) one parent.
+4. A comma-separated list of interfaces implemented by the class, if any, preceded by the keyword implements. A class can implement more than one interface.
+5. The class body, surrounded by braces, {}.
+
+- modifiers ของคลาสจะเป็น public, abstract, or final ถ้าไม่ใส่ถือว่าเป็น public
+- ตั้งชื่อคลาสที่ประกาศตามหลักสากล
+- ถ้า subclass มีการอ้างอิงถึง superclass ให้ใช้   extend ตามด้วยชื่อของ superclass ซึ่งจะอ้างได้แค่คลาสเดียวเท่านั้น
+- ถ้ามีการอ้างถึง interfaces ให้ใช้  implements ตามด้วยชื่อของ class interface ซึ่งสามารถใส่ได้หลายคลาสโดยใช้ , คั่น
+- ส่วนในคลาสจะเปิดปิดด้วย {}  ซึ่งด้านในใว้สำหรับ ประกาศตัวแปร constructor หรือเมทท็อดได้
+http://docs.oracle.com/javase/tutorial/java/javaOO/classdecl.html
+
+------------------------------------------------------------------------
+
+กฎการประกาศ Declaring Member Variables
+-> Member variables in a class—these are called fields.
+-> Variables in a method or block of code—these are called local variables.
+-> Variables in method declarations—these are called parameters.
+		[ modifiers ] [ field's type ] [ field's name ];
+		public int gear;
+		private int speed;
+		
+Field declarations are composed of three components, in order: (การประกาศประกอบด้วย 3 ส่วน)
+- Zero or more modifiers, such as public or private.
+- The field's type.
+- The field's name.
+http://docs.oracle.com/javase/tutorial/java/javaOO/variables.html
+
+------------------------------------------------------------------------
+
+กฎการประกาศ Defining Methods
+[ modifiers ] [ return type ] [ method name ](parameter){
+	//body
+	[  return type ];
+} 
+public double calculateAnswer(double wingSpan, int numberOfEngines,
+                              double length, double grossTons) {
+    //do the calculation here
+}
+
+More generally, method declarations have six components, in order: (โดยทั่วไปการประกาศของเมธอดมีส่วนประกอบ 6 ประการดังนี้:)
+1. Modifiers—such as public, private, and others you will learn about later.
+2. The return type—the data type of the value returned by the method, or void if the method does not return a value.
+3. The method name—the rules for field names apply to method names as well, but the convention is a little different.
+4. The parameter list in parenthesis—a comma-delimited list of input parameters, preceded by their data types, enclosed by parentheses, (). If there are no parameters, you must use empty parentheses.
+5. An exception list—to be discussed later. (Method in Inteface Class)
+6. The method body, enclosed between braces—the method's code, including the declaration of local variables, goes here.
+
+
+***static method นั้นจะทำให้เราสามารถเรียกใช้ method นั้นโดยไม่ต้องสร้าง object ของ class ขึ้นมา 

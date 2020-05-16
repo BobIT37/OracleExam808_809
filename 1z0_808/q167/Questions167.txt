@@ -1,0 +1,59 @@
+Question No : 167 
+
+Given:
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Whizlabs {
+
+	public static void main(String[] args) {
+		List<Integer> list = new ArrayList<>();
+		list.add(21); list.add(15);
+		list.add(30); list.add(11);
+		list.add(2);
+		//insert here
+		System.out.println(list);
+	}
+}
+
+Which inserted at line 11, will provide the following output?
+
+[21, 15, 11]
+
+A. list.removelf(e > e%2 != 0); --> list.removeIf(e > e%2 != 0);
+B. list.removelf(e -> e%2 != 0); --> list.removeIf(e -> e%2 != 0);
+C. Ust.removelf(e -> e%2 = 0); --> list.removeIf(e -> e%2 == 0);
+D. list.remove(e -> e%2 = 0); --> list.remove(e -> e%2 == 0);
+E. None of the above.
+
+Answer: C
+
+Explanation:
+
+// A. list.removelf(e > e%2 != 0); --> wrong cause syntax error lambda expression
+//list.removeIf(e > e%2 != 0); // Fixed A by using > instead of ->
+		
+// B. list.removelf(e -> e%2 != 0); --> wrong cause remove odd number
+//list.removeIf(e -> e%2 != 0); // Fixed B by using != instead of ==
+		
+// C. list.removelf(e -> e%2 = 0); --> correct due to remove even number
+list.removeIf(e -> e%2 == 0); 
+		
+// D. list.remove(e -> e%2 = 0); --> wrong cause remove method receive object not predicate
+//list.remove(e -> e%2 == 0); // Fixed D by using remove instead of removeIf
+		
+// E. None of the above. --> wrong cause choice c is correct
+
+In output we can see that only odd numbers present, so we need to remove only even
+numbers to get expected output. From Java SE 8, there is new method call removelf which
+takes predicate object and remove elements which satisfies predicate condition.
+Predicate has functional method call take object and check if the given condition met or
+not, if met it returns true, otherwise false. Option C we have passed correct lambda
+expression to check whether the number is odd or even that matches to the functional
+method of predicate interface.
+Option A is incorrect as it is invalid lambda expression. Option B is incorrect as it removes
+all odd numbers.
+Option D is incorrect as there is no remove method that takes predicate as argument.
+141
+https://docs.oracle.eom/javase/8/docs/api/java/util/ArrayList.html

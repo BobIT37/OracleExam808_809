@@ -1,0 +1,13 @@
+โจทย์ประมาณว่ามี thread งาน
+แล้วงาน High Priority ได้ทำตลอดเลย
+งาน Low Priority ไม่ได้ทำ แบบนี้เรียกว่าอะไร
+
+priority
+thread
+
+A. livelock
+B. Starvation
+C. Race Condition
+D. Deadlock
+
+Answer: Stravation

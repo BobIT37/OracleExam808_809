@@ -1,0 +1,33 @@
+Which two are benefits of polymorphism?
+A. Faster code at runtime
+B. More efficient code at runtime
+C. More dynamic code at runtime
+D. More flexible and reusable code
+E. Code that is protected from extension by other classes
+
+Answer: C,D
+---------------------------------------------------------
+Explanation:
+A. Faster code at runtime
+	<< not relevant
+B. More efficient code at runtime
+	<< Polymorphism ไม่ได้ทำให้โค้ดมีประสิทธิภาพดีขึ้นอะไร เพราะฉะนั้นผิดครับ
+C. More dynamic code at runtime
+	<< การใช้ Polymorphism ทำให้โค้ดมีความยืดหยุ่นมากขึ้นตอนรันไทม์ก็ถูกต้องครับ ยกตัวอย่างเช่น ใน Java EE 
+	<< เรามีการขอ Connection object จาก Connection Pool ซึ่งเป็นการขอตอนรันไทม์ แปลว่าเราแค่ประกาศตัวแปรชนิด Connection ไว้เท่านั้น 
+	<< ตอนรันไทม์เราจะเปลี่ยนการเซ็ต Pool อย่างไรก็ได้โดยไม่ต้องแก้โค้ด เป็นต้น
+D. More flexible and reusable code
+E. Code that is protected from extension by other classes
+	<< final class or private constructor
+
+
+Example :
+public interface Vegetarian{}
+public class Animal{}
+public class Deer extends Animal implements Vegetarian{}
+
+Deer d = new Deer();
+Animal a = d;
+Vegetarian v = d;
+Object o = d;
+---------------------------------------------------------

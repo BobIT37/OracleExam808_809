@@ -1,0 +1,13 @@
+2. Which of the following is a method of java.lang.Object that can be overridden?
+A. public String toString(Object obj)
+B. public int equals(Object obj)
+C. public int hashCode(Object obj)
+D. public int hashCode()
+
+Answer: D
+
+The proper signatures of the methods are:
+
+public int hashCode()
+public boolean equals(Object obj)
+public String toString()

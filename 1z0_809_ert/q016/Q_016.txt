@@ -1,0 +1,11 @@
+16. What is true about the java.sql.Statement interface?
+
+A) It provides a session with the database. 
+B) It provides a class for executing SQL statements and returning the result.
+C) It is used to get an instance of a Connection object by using JDBC driver.
+D) It Provides a cursor to fetch the resulting data.
+
+Answer B
+
+Statement stat = conn.createStatement();
+ResultSet rs = stat.executeQuery(sql);

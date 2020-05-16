@@ -1,0 +1,26 @@
+Question No: 11
+
+Consider following method
+
+default void print(){
+
+}
+
+Which statement is true?
+A. This method is invalid.
+B. This method can be used only in an interface.
+C. This method can return anything.
+D. This method can be used only in an interface or an abstract class.
+E. None of above.
+
+-------------
+Answer: B
+-------------
+
+Explanation:
+
+Given method is declared as default method so we can use it only inside an interface.
+Hence option B is correct and option D is incorrect.
+Option A is incorrect as it is valid method. Option C is incorrect as return type is void, which
+means we can't return anything.
+

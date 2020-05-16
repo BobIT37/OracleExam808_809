@@ -1,0 +1,13 @@
+What is the result?
+A. 	Initialized
+	Started
+B. 	Initialized
+	Started
+	Initialized
+C. 	Compilation fails
+D. 	An exception is thrown at runtime
+
+[Answer]
+C.
+
+cannot call private method from another class

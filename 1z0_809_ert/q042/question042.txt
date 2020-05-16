@@ -1,0 +1,36 @@
+42.
+
+class Person {
+	private String firstName;
+	private int salary;
+	
+	public Person(String fN, int sal){
+		this.firstName = fN;
+		this.salary = sal;
+	}
+	public int getSalary() { return salary;}
+	
+	public String getFirstName() {return firstName;}
+	
+}
+
+and the code fragment:
+
+List<Person> prog = Arrays.asList(
+new Person("Smith", 1500),
+new Person("John", 2000),
+new Person("joe", 1000));
+double dVal = prog.stream()
+.filter(s -> s.getFirstName().startsWith("J") )
+.mapToInt(Person :: getSalary)
+.average()
+.getAsDouble();
+System.out.print(dVal);
+
+What is the result?
+A) 1500.0
+B) 0.0 
+C) 2000.0
+D) A compilation error occurs.
+
+Answer B

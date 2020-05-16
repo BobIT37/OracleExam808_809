@@ -1,0 +1,5 @@
+Which of the following interfaces of the Java API can be considered functional?
+	xA. java.util.concurrent.Callable
+	B. java.util.Map
+	C. java.util.Iterator
+	xD. java.lang.Comparable

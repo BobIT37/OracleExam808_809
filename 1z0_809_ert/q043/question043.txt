@@ -1,0 +1,28 @@
+43. Given the definition of the Runner interface, and Vehicle, Car,and Jeep classes
+interface Runner {}
+abstract class Vehicle{ abstract void start();}
+class Car extends Vehicle implements Runner{
+public void start(){
+	System.out.println(getClass().getName() + " Started");
+}
+}
+Given:
+class TestRunner{
+	public static void check(Runner r){
+	if(r instanceof Vehicle) {
+	Vehicle v = (Vehicle) r;
+	v.start();
+	}
+}
+public static void main(String [] args){
+	Runner v = new Car();
+	check(v);
+	}
+}
+What is the result?
+A) A ClassCastException is thrown at runtime.
+B) Car Started
+C) Vehicle started
+D) Runner Started
+
+Answer : B

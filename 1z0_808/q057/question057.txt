@@ -1,0 +1,22 @@
+Which of the following can fill in the blank in this code to make it compile? (Select 2options.)
+
+public void method() ______ Exception {
+
+	________ Exception();
+}
+
+A. On line 1, fill in throws
+B. On line 1, fill in throws new
+C. On line 2, fill in throw new
+D. On line 2, fill in throws
+E. On line 2, fill in throws new
+
+--------------------------------
+
+Answer : A,C
+
+public class ExceptionTest {
+	public void method() throws Exception {
+		throw new Exception();
+	}	
+}

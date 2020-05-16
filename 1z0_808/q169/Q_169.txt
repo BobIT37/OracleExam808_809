@@ -1,0 +1,42 @@
+Given the code fragment:
+
+
+int row = 10;
+for(;row>0;) {
+	int col = row;
+	while(col >= 0) {
+		System.out.println(col + " ");
+		col -= 2;
+	}
+	row = row / col;
+}
+		
+		
+What is the result?
+
+A. 10 8 6 4 2 0
+
+B. 10 8 6 4 2
+
+C. AnArithmeticException is thrown at runtime
+
+D. The program goes into an infinite loop outputting: 10 8 6 4 2 0. . .
+
+E. Compilation fails
+
+--------------------------
+Answer : A
+
+For Statement
+
+for (initialization; termination; increment) {
+    statement(s)
+}
+
+When using this version of the for statement, keep in mind that:
+
+1. The initialization expression initializes the loop; it's executed once, as the loop begins.
+2. When the termination expression evaluates to false, the loop terminates.
+3. The increment expression is invoked after each iteration through the loop; it is perfectly acceptable for this expression to increment or decrement a value.
+
+

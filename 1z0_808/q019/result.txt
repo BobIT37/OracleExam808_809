@@ -1,0 +1,44 @@
+[Question]
+Given the following class: 
+
+And given the following main method, located in another class: 
+
+	public class CheckingAccount {
+		public int amount;
+	
+		public CheckingAccount(int amount) {
+			this.amount = amount;
+		}
+	
+		public int getAmount() {
+			return amount;
+		}
+	
+		public void changeAmount(int x) {
+			amount += x;
+		}
+	}
+
+Which three lines, when inserted independently at line n1, cause the program to print a 0 balance?
+
+	public static void main(String[] args) {
+		CheckingAccount acct = new CheckingAccount((int) (Math.random() * 1000));
+		// line n1
+		System.out.println(acct.getAmount());
+	}
+ 
+A. this.amount = 0; 
+B. amount = 0; 
+C. acct (0) ; 
+D. acct.amount = 0; 
+E. acct. getAmount () = 0; 
+F. acct.changeAmount(0); 
+G. acct.changeAmount(-acct.amount); 
+H. acct.changeAmount(-acct.getAmount()); 
+
+[Answer] D. G. H.
+A. Cannot use this in a static context
+B. amount cannot be resolved to a variable
+C. The method acct(int) is undefined for the type Main
+E. The left-hand side of an assignment must be a variable
+F. working fine but not correct dues to amount has already been set to random number by constructor

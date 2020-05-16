@@ -1,0 +1,37 @@
+public class Question15 {
+	public int numA;
+	
+	public void A(int a) {
+		a = a * a;
+	}
+	
+	public void B(StringBuilder s) {
+		s.append(" " + s);
+	}
+	
+	public void C(int numA) {
+		numA = numA * numA;
+	}
+	
+	public static void main(String[] args) {
+		Question15 obj = new Question15();
+		int i = 10;
+		StringBuilder sb = new StringBuilder("Hello");
+		obj.numA = 2;
+		
+		obj.A(i);
+		obj.B(sb);
+		obj.C(obj.numA);
+		System.out.println(i + " " + sb + " " + obj.numA);
+	}
+}
+
+What is the result?
+
+A. 10 Hello Hello 2
+B. 10 Hello 2
+C. 100 Hello 4
+D. 10 Hello Hello 4
+E. 100 Hello Hello 4
+
+Answer: A

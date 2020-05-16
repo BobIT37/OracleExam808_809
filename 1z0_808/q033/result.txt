@@ -1,0 +1,28 @@
+[Question]
+Which of the following can fill in the blank in this code to make it compile?
+ 
+	interface CanFly {
+		
+		String type = "A";
+		
+		void fly();
+		
+		____ String getType() {
+			
+			return type;
+		}
+	
+	}
+	
+A. abstract 
+B. public 
+C. default 
+D. It will not compile with any as interfaces cannot have non abstract methods. 
+E. It will compile without filling the blank. 
+
+[Answer] 
+C.
+
+[Additional]
+Thanks to JAVA 8 -_- , we currently can implement concrete method in interface (Oh god...) 
+by declare method as default or implement method as static

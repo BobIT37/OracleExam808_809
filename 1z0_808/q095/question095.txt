@@ -1,0 +1,25 @@
+Question No: 95
+
+List colors = new ArrayList();
+colors.add("green");
+colors.add("red");
+colors.add("blue");
+colors.add("yellow");
+colors.remove(2);
+colors.add(3,"cyan");
+System.out.print(colors);
+
+What is the result?
+A. [green, red, yellow, cyan]
+B. [green, blue, yellow, cyan]
+C. [green, red, cyan, yellow]
+D. Am IndexOutOfBoundsException is thrown at runtime
+
+-------------
+Answer: A
+-------------
+
+Explanation: 
+1. First the list >> [green, red, blue, yellow] is build.
+2. The blue element is removed: >> [green, red, yellow]
+3. Finally the element cyan is added at then end of the list (index 3). >> [green, red, yellow, cyan]

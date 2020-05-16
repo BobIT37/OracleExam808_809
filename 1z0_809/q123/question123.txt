@@ -1,0 +1,49 @@
+QUESTION: 109
+
+public class Msg {
+	
+	public static String doMsg(char x) {
+		return "Good Day!";
+	}
+	
+	public static String doMsg(int y) {
+		return "Good luck!";
+	}
+
+	public static void main(String[] args)
+	{
+		char x = 8;
+		byte z = '8';
+		
+		System.out.println(doMsg(x));
+		System.out.print(doMsg(z));
+	}
+}
+
+What is the result?
+
+A. 	Good Day! 
+	Good Luck! 
+	
+B. 	Good Day! 
+	Good Day!
+	
+C. 	Good Luck! 
+	Good Day! 
+	
+D. 	Good Luck! 
+	Good Luck! 
+	
+E. 	Compilation fails 
+
+--------------
+Answer: A
+--------------
+
+[Additional
+Widening Primitive Conversion
+https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html#jls-5.1.2]
+
+Narrowing Primitive Conversion
+https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html#jls-5.1.3]
+ 

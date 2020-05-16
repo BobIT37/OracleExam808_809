@@ -1,0 +1,5 @@
+Exam Objectives
+
+Develop code to extract data from an object using peek() and map() methods including primitive versions of the map() method.
+Save results to a collection using the collect method and group/partition data using the Collectors class.
+Use of merge() and flatMap() methods of the Stream API.

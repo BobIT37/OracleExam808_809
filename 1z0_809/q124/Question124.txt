@@ -1,0 +1,39 @@
+Given :
+String course, name, city;
+
+	public Student(String name, String course, String city) {
+		this.course = course;
+		this.name = name;
+		this.city = city;
+	}
+
+	public String toString() {
+		return course + ":" + name + ":" + city;
+	}
+
+and the code fragment:
+	public class Question124 {
+		public static void main(String[] args) {
+			List<Student> stds = Arrays.asList(
+				new Student ("Jessy", "Java ME", "Chicago"),
+				new Student ("Helen", "Java EE", "Houston"),
+				new Student ("Mark", "Java ME", "Chicago")); 
+				stds.stream().
+				collect(Collectors.groupingBy(Student::getCourse))
+				.forEach((src, res) -> System.out.println(src));
+		}
+	}
+
+What is the result?
+
+A. 	[Java EE: Helen:Houston]
+	[Java ME: Jessy:Chicago, Java ME: Mark:Chicago]
+B. 	Java EE
+	Java ME
+C. 	[Java ME: Jessy:Chicago, Java ME: Mark:Chicago] 
+	[Java EE: Helen:Houston]
+D. 	A compilation error occurs.
+
+
+Answer: D. 	A compilation error occurs. because line 22 doesn't have a getCourse() method.
+			When modified result is B. Java EE Java ME 

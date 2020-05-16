@@ -1,0 +1,4 @@
+content of courses.txt line 1
+content of courses.txt line 2
+content of courses.txt line 3
+

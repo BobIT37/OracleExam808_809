@@ -1,0 +1,31 @@
+Key Points
+-	An interface is a data type that just defines (abstract) methods that one class must implement.
+-	An interface is defined with the interface keyword. If a class wants to implement an interface, it has to specify it with the implements keyword.
+-	An interface has either public or default accessibility and is abstract by default.
+-	The methods defined in an interface are by default public and abstract. The compiler will treat them as such even if you don't specify it.
+-	Fields declared in an interface are by default public, static, and final. Like methods, the compiler will treat them as such even if you don't specify it.
+-	This means that fields are constants instead of variables.
+-	A class can implement (not extend from) any number of interfaces.
+-	An interface can extend any number of interfaces, but it cannot extend from a class.
+-	@Override indicates that a method overrides a method declaration in a supertype, either in an interface or a parent class.
+-	If the annotated method doesn't override or implement the method correctly, the compiler will generate an error.
+-	Java 8 introduced default methods in interfaces to support interface evolution, adding new functionality to interfaces and at the same time, ensuring compatibility with the code written for older versions.
+-	Default methods are methods marked with the default keyword, and they must have a body. The implemented classes can use and optionally redefine these methods.
+-	Default methods are always public, but not static.
+-	Default methods cannot be synchronized or final.
+-	You cannot define default methods with the same signature as the Objectclass methods:
+boolean equals(Object o);
+int hashCode();
+String toString();
+-	In an inheritance hierarchy, the most specific method is the one called.
+-	One case is if a class redefines a default method, the class method is the one that gets called.
+-	Another case is if an interface redefines a default method inherited from a super interface, the method of the subinterfaces is the one called.
+-	If a class implements two different interfaces with the same default method (same method signature), the class must redefine the method. Otherwise, a compiler error is generated.
+-	If you want to call the default method of the interface from the implementing class (or extending interface), do it this way:
+NameOfTheInteface.super.defaultMethod();
+-	Java 8 also introduced static methods in interfaces so they can contain helper or utility methods.
+-	Static methods are marked with the static keyword, and they also must have a body.
+-	Static methods in interfaces have the same meaning that static methods in classes, so they are not inherited.
+-	If you want to call a default method from a particular interface, do it this way:
+NameOfTheInteface.staticMethod();
+

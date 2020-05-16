@@ -1,0 +1,40 @@
+QUESTION 71
+
+Given the code fragment:
+
+Path path1 = Paths.get("/app/./sys/");
+Path res1 = path1.resolve("log");
+Path path2 = Paths.get("/server/exe/");
+Path res1 = path1.resolve("/readme/");
+System.out.println(res1);
+System.out.println(res2);
+
+What is the result?
+
+A. /app/sys/log
+/readme/server/exe
+
+B. /app/log/sys
+/server/exe/readme
+
+C. /app/./sys/log
+/readme
+
+D. /app/./sys/log
+/server/exe/readme
+
+Answer: C
+
+
+We can combine two paths. There are two cases.
+
+First case. If we have an absolute path and we want to combine it with a second path that doesn't have a root element (a partial path), the second path is appended:
+
+Path path = Paths.get("/temp");
+System.out.println(path.resolve("newDir")); // /temp/newDir
+
+Second case. If we have a partial or relative path, and we want to combine it with an absolute path, this absolute path is returned:
+
+Path path = Paths.get("newDir");
+System.out.println(path.resolve("/temp")); // /temp
+

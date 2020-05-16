@@ -1,0 +1,32 @@
+Duplicate 1z0-808 q.152 & 1z0-809 q.021Given:
+interface Z {
+}
+
+public class X implements Z {
+	public String toString() {
+		return "X ";
+	}
+
+	public static void main(String[] args) {
+		Y myY = new Y();
+		X myX = myY;
+		Z myZ = myX;
+
+		System.out.print(myX);
+		System.out.print((Y) myX);
+		System.out.print(myZ);
+
+	}
+
+}
+
+class Y extends X {
+	public String toString() {
+		return "Y ";
+	}
+}
+
+What is the result?A. X X X 
+B. X Y X 
+C. Y Y X 
+D. Y Y YAnswer. Y Y Y

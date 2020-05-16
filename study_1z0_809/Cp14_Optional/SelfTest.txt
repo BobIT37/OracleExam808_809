@@ -1,0 +1,62 @@
+Self Test
+
+1. Given:
+
+public class Question_14_1 {
+    public static void main(String[] args) {
+        Optional opt = Optional.of("1");
+        String s = opt.orElseGet(
+            () -> new RuntimeException()
+        );
+        System.out.println(s);
+    }
+}
+
+What is the result?
+A. 1
+B. Nothing is printed
+C. Compilation fails
+D. An exception occurs at runtime
+
+2. Which of the following statements is true?
+A. The method Optional.isPresent() takes a Consumer<T> as an argument that is executed only if the Optional contains a value.
+B. The method Optional.of() can create an empty Optional.
+C. The method Optional.of() can throw a NullPointerException.
+D. The method Optional.ifPresent() takes a Function<T,U> as an argument.
+
+3. Given:
+
+public class Question_14_3 {
+    public static void main(String[] args) {
+        System.out.println(ToInt("a").get());
+    }
+    private static Optional<Integer> ToInt(String s) {
+        try {
+            return Optional.of(Integer.parseInt(s));
+        } catch(Exception e) {
+            return Optional.empty();
+        }
+    }
+}
+
+What is the result?
+A. a
+B. Optional.empty
+C. Compilation fails
+D. An exception occurs at runtime
+
+4. Given:
+
+public class Question_14_4 {
+    public static void main(String[] args) {
+        System.out.println(
+            Optional.of(0).orElse(1)
+        );
+    }
+}
+
+What is the result?
+A. 0
+B. 1
+C. Compilation fails
+D. An exception occurs at runtime

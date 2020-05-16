@@ -1,0 +1,48 @@
+Question No: 151
+
+class Base {
+// insert code here
+}
+
+public class Derived extends Base {
+
+public static void main(String[] args) {
+
+Derived obj = new Derived();
+
+obj.setNum(3);
+		
+System.out.println("Square = " + obj.getNum() * obj.getNum());
+	
+}
+
+}
+
+
+Which two options, when inserted independently inside class Base, ensure that the class is
+being properly encapsulated and allow the program to execute and print the square of the
+number?
+
+A. 	private int num; public int getNum() { return num; }public void setNum(int num) { 
+	this.num = num;}
+B. 	public int num; protected public int getNum() { return num; }protected public void
+	setNum(int num) { this.num = num;}
+C. 	private int num;public int getNum() {return num;} private void setNum(int num) {
+	this.num = num;}
+D. 	protected int num; public int getNum() { return num; } public void setNum(int num) {
+	this.num = num;}
+E. 	protected int num; private int getNum() { return num; } public void setNum(int num) {
+	this.num = num;}
+
+-------------------
+Answer: A, D
+-------------------
+
+Desc.
+
+B. >> only one of public / protected / private
+C, E. >> if private then cannot access this method from another class
+
+
+
+

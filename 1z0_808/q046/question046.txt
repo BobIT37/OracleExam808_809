@@ -1,0 +1,53 @@
+Given the code fragment:
+int num[][] = new int[1][3];
+		for(int i=0;i<num.length;i++) {
+			for(int j=0;j<num[0].length;j++) {
+				num[i][j] = 10;
+			}
+		}
+		
+Which option represents the state of the num array after successful completion of outer loop?
+A) 	num[0][0]=10
+   	num[0][1]=10
+   	num[0][2]=10
+   	
+B) 	num[0][0]=10
+	num[1][0]=10
+	num[2][0]=10
+	
+C) 	num[0][0]=10
+	num[0][1]=0
+	num[0][2]=0
+	
+D) 	num[0][0]=10
+	num[0][1]=10
+	num[0][2]=10
+	num[0][3]=10
+	num[0][0]=0
+	num[0][1]=0
+	num[0][2]=0
+	num[0][3]=0
+	
+A. Option A 
+B. Option B 
+C. Option C 
+D. Option D
+Answer: A
+
+In Java, a two-dimensional array can be declared as the same as 
+one-dimensianl array. In a one-dimensional array you can write like
+
+	int array[] = new int[5];
+
+Like that, you can write a two-dimensional array as the following.
+	int array[][] = new int[3][4]
+
+Here array is an int data type. It's have firstly declared on a one-dimensional array of the type
+then a 3 row and 4 column array in created.
+
+In your code
+	int[][] multD = new int[5][];
+	multD[0] = new int[10];
+
+means that It's have created a two-dimensional array , with five rows in the first row there are 10 columns.
+In Java you can select the column size for every row as you desire.

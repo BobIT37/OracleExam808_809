@@ -1,0 +1,7 @@
+2. Which of the following state the correct order from the more restricted modifier to the more unrestricted?
+A. private, default, public, protected
+B. protected, private, default, public
+C. default, protected, private, public
+D. private, default, protected, public
+
+Answer: D.

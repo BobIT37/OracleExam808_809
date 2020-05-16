@@ -1,0 +1,9 @@
+what is true about switch
+
+A. it evaluates with single value
+B. case can literly change in runtime
+C. break is switch mendatory 
+D. default is required
+
+
+answer A.

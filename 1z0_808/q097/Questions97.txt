@@ -1,0 +1,44 @@
+Question No : 97 
+
+Given: 
+
+public class Natural {
+
+	private int i;
+	
+	void disp() {
+		
+		while (i <= 5) {
+			for (int i=1; i <= 5;) {
+				System.out.print(i + " ");
+				i++;
+			}
+			i++;
+		}
+	
+	}
+	
+	public static void main(String[] args) {
+		new Natural().disp();
+	}
+	
+}
+
+What is the result?
+
+A. Prints 1 2 3 4 5 once
+B. Prints 1 3 5 once
+C. Prints 1 2 3 4 5 five times
+D. Prints 1 2 3 4 5 six times
+E. Compilation fails
+
+Answer: D 
+
+Explanation: 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5 
+
+variable i in each scope will not update each other (They are independent variables)
+
+// while loop will run about 6 times
+while (i <= 5) { // this is private variable i as global scope 
+// for loop will run about 5 times and print [1 2 3 4 5] 
+for (int i=1; i <= 5;) { // this is local variable scope in for loop

@@ -1,0 +1,49 @@
+Answers
+1. The correct answer is C.
+Option A is invalid since the parameter list doesn't have parenthesis.
+Option B is invalid since an empty return statement is invalid.
+Option C is valid. The body doesn't need to use the return keyword if it only has one statement.
+Option D is invalid since the body has two statements and they must be enclosed in curly brackets.
+
+2. The correct answer is D.
+Option A is invalid because a is already used as the variable identifier.
+Option B is invalid because the lambda expression must return an int value.
+Option C is invalid because you can't pass a constant value in the parameter list of the lambda expression.
+Option D is valid because it takes a String argument and returns an int value.
+
+3. The correct answers are A and C.
+Lambda expressions can be used in:
+
+A variable declaration
+An assignment
+A return statement
+An array initializer
+As a method or constructor arguments
+A ternary conditional expression
+A cast expression
+
+4. The correct answer is B.
+Option A is invalid because the interface is not functional (it doesn't have an abstract method).
+Option B is correct because the interface method doesn't take an argument and the type of the lambda expression can be cast to a java.lang.Number object.
+Option C is invalid because a double can't be cast to an int.
+Option D is invalid because the lambda expression's signature doesn't match the signature of the functional interface method m(Integer[]).
+
+5. The correct answer is C.
+A lambda expression cannot access the default methods of its functional interface (aMethod() in this case).
+
+Since Question_9_4 implements AnInterface, this class does have that method, but it can be accessed from main() because it's a static method.
+
+6. The only correct answer is A.
+A return keyword is not always required (or optional) in a lambda expression. It depends on the signature of the functional interface method.
+
+Curly brackets are required whenever the return keyword is used in a lambda expression. Both can be omitted if the lambda expression's body is just one statement:
+
+() -> 2 * 3; // Valid
+() -> { return 2 * 3; }; // Valid
+() -> return 2 * 3; // Not Valid!
+
+7. The correct answer is D.
+For a lambda expression, this resolves to the enclosing class where the lambda is written.
+
+8. The correct answer is C.
+Lambda expressions can access instance and static variables, but in this case, the parameter of the lambda expression shadows the instance variable i, so the value of 6 is used.

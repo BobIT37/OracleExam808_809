@@ -1,0 +1,41 @@
+Given the definitions of the MyString class and the Test class:
+MyString.java
+
+class MyString {
+	String msg;
+	MyString(String msg){
+		this.msg = msg;
+	}
+}
+
+Test.java
+
+public class Test {
+	public static void main(String[] args) {
+		System.out.println("Hello "+ new StringBuilder("Java SE 8"));
+		System.out.println("Hello "+ new MyString("Java SE 8"));
+	}
+}
+
+A. Hello Java SE 8
+   Hello Java SE 8
+   
+B. Hello java.lang.StringBuilder@<<hashcode1>>
+   Hello p1.MyString@<<hashcode2>>	
+   
+C. Hello Java SE 8
+   Hello p1.MyString@<<hashcode2>>
+   
+D. Compilationfails at the Test class.
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+
+-------------------
+
+Answer : C
+
+default convert object to String call method toString(); if not override java print class name and address
+   

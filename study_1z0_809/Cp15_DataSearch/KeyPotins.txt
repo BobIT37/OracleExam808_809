@@ -1,0 +1,26 @@
+Key Points
+
+- The Stream API has two types of operation for searching. Methods starting with Find:
+	Optional<T> findAny()
+	Optional<T> findFirst()
+
+- And method ending with Match:
+	boolean allMatch(Predicate<? super T> predicate)
+	boolean anyMatch(Predicate<? super T> predicate)
+	boolean noneMatch(Predicate<? super T> predicate)
+
+- Both types are considered TERMINAL operations.
+
+- findAny() and findFirst() practically do the same, they return the first element they find in a stream. If the stream is empty, they return an empty Optional.
+
+- When working with parallel streams, it's harder to find the first element, so in this case, it's better to use findAny() if you don't really mind which element is returned.
+
+- anyMatch() returns true if any of the elements in a stream matches the given predicate. If the stream is empty or if there's no matching element, it returns false.
+
+- allMatch() returns true only if ALL elements in the stream match the given predicate.
+
+- noneMatch() returns true if NONE of the elements in the stream match the given predicate.
+
+- Both allMatch() and noneMatch() return true if the stream is empty.
+
+- All of these operations are short-circuiting, meaning that the evaluation stops once a result is found.

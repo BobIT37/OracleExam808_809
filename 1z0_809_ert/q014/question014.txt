@@ -1,0 +1,23 @@
+14. Given the information:
+--------------------------------------------
+Locale 	| Currency Symbol 	| Currency code
+US		| $					|USD
+--------------------------------------------
+
+and the code fragment:
+double d = 15;
+Locale l = new Locale(“en”, “US”);
+NumberFormat formatter = NumberFormat.getCurrencyInstance();
+System.out.println(formatter.format(d));
+
+What is the result?
+
+A) USD $15
+B) USD 15.00
+C) 15 $ 
+D) $15.00
+
+---------------------------------
+
+Answer 
+

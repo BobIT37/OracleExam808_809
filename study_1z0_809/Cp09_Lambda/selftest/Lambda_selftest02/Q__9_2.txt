@@ -1,0 +1,11 @@
+Given:
+
+interface A {
+     int aMethod(String s);
+}
+
+Which of the following are valid statements?
+A. A a = a -> a.length();
+B. A x = y -> {return y;};
+C. A s = "2" -> Integer.parseInt(s);
+D. A b = (String s) -> 1;

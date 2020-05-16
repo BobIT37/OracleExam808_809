@@ -1,0 +1,35 @@
+QUESTION 15
+Given:
+
+interface Rideable {Car getCar(String name); }
+
+class Car {
+	private String name;
+		public Car(String name) {
+		this.name = name;
+	}
+}
+
+Which code fragment creates an instance of Car?
+
+A.  Car auto = Car("MyCar")::new;
+
+B. 	Car auto = Car::new;
+	Car vehicle = auto::getCar("MyCar");
+
+C.  Rideable rider = Car::new;
+	Car vehicle = rider.getCar("MyCar");
+
+D.  Car vehicle = Rideable::new::getCar("MyCar");
+
+Answer: C
+
+Rideable is FunctionInterface  (1 arg and 1 return is Function<Car,String>)
+
+Car constructor is public Car(String name)
+
+Car::new is Function interface
+
+
+//Rideable lambdaRider = (c) -> new Car(c);
+

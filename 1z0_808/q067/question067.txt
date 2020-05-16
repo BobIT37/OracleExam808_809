@@ -1,0 +1,28 @@
+Question No: 67
+
+Given:
+
+Test.java
+
+public class Test {
+	public static void main(String[] args) {
+		Integer num = new Integer.perseInt(args[1]);
+		System.out.println("Number is : " + num);
+	}
+}
+
+And the commands:
+Javac Test.java
+Java Test 12345
+
+What is the result?
+A. Number us : 12345
+B. A NullPointerException is thrown at runtime
+C. A NumberFormatException is thrown at runtime
+D. AnArrayIndexOutOfBoundException is thrown at runtime.
+
+-------------
+Answer: D 
+-------------
+
+>> index start at 0, param send to Test contain array size 1 (only index 0)

@@ -1,0 +1,51 @@
+Answers
+
+1. The correct answer is D.
+Option A is not valid. The method of() takes the year, month and day as arguments.
+Option B is not valid. The method with() is not a static method.
+Option C is not valid. Valid month values are from 1 to 12.
+Option D is valid. The methods now() and plusDays() are valid and can be chained.
+
+
+
+2. The correct answer is C.
+The method atTime() of LocalDate returns a LocalDateTime object with the combined values of the LocalDate instance which calls the method and the time parameters passed.
+
+
+
+3. The correct answers are B and D.
+LocalTime doesn't store information about years and (complete) days.
+
+
+
+4. The correct answers are B and C.
+Option A is incorrect. Period implements TemporalAmount.
+Option B is correct. java.time.Instant implements java.time.temporal.Temporal.
+Option C is correct. LocalDate and LocalTime are immutable. Therefore, they are thread-safe.
+Option D is incorrect. LocalDateTime doesn't store zone time information, it just returns the current date-time of the system.
+
+
+
+5. The correct answer is A.
+The valid ways to get the nanoseconds part of an Instant object are:
+
+int nanos = i.getNano();
+
+Or:
+
+int nanos = now.get(ChronoField.NANO_OF_SECOND);
+
+
+
+6. The correct answer is D.
+Since the first argument is greater than the second, the result is a negative period. A Period counts complete months first, then days.
+
+
+
+7. The correct answer is D.
+If the parameters types are different, the second parameter is converted to the type of the first parameter. In this case, a LocalTime cannot be converted to a LocalDateTime (it misses the year, month, day part) and an exception is thrown.
+
+
+
+8. The correct answers are A and C.
+A LocalDate stores the year, month, days and related information. It doesn't store hours or milliseconds.

@@ -1,0 +1,25 @@
+60.
+
+public interface LengthValidator{
+	public boolean checkLength(String str);
+}
+
+	and
+	
+public class Txt {
+	public static void main(String[] args){
+		boolean res = new LengthValidator(){
+			public boolean checkLength(String str){
+				return str.length()>5 && str.length() < 10;
+			}
+		}.checkLength(“Hello”);
+	}
+}
+
+Which interface from the java.util.function package should you use that?
+A) Supplier
+B) Predicate
+C) Function
+D) Consumer
+
+Answer: B

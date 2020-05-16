@@ -1,0 +1,14 @@
+7. Which two are elements of a singleton class?
+A) a public method to instantiate the single instance
+B) a public reference to point to the single instance
+C) a transient reference to point to the single instance
+D) a public static method to return a copy of the singleton reference 
+E) a private constructor to the class
+
+Answer: D, E
+
+Key
+-- singleton class เป็นคลาสที่บังคับใช้กฎว่าสามารถมีได้เพียงวัตถุเดียวและมักจะสามารถเข้าถึงวัตถุนั้นได้ตลอดโปรแกรม
+-- single instance ในทางกลับกันหมายความว่าชั้นเองไม่ใช่ singleton แต่ (ในระดับที่สูงกว่า) คุณเพียงแค่ตรวจสอบให้แน่ใจว่ามีเพียงหนึ่งอินสแตนซ์เท่านั้น
+-- transient ใช้ระบุว่าแอททริบิวท์นี้ไม่ต้อง serialize คือ ตัวแอททริบิวท์ที่เป็น transient เวลาเขียนลงไฟล์ จะไม่เขียนแอททริบิวท์นี้ลงไป  --> https://wannik.wordpress.com/2009/10/12/transient/
+-- 

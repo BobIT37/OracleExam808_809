@@ -1,0 +1,16 @@
+26. Given the code fragment:
+	Map<Integer, Integer> mVal = new HashMap<>() ;
+	mVal.put(1, 10) ;
+	mVal.put(2, 20) ;
+	//line n1
+	c.accept(1, 2) ;
+	mVal.forEach(c) ;
+	
+Which statement can be inserted into line n1 to print 1, 2; 1, 10; 2, 20; ?
+
+A) BiConsumer<Integer, Integer, String> c = (i, j) -> { System.out.print(i + "," + j + " ; " ); } ;
+B) BiFunction<Interger, Integer, String> c = (i, j) -> { System.out.print(i + "," + j + " ; " ); } ; 
+C) BiConsumer<Integer, Integer> c = (i, j) -> { System.out.print(i + "," + j + " ; " ); } ;
+D) BiConsumer<Integer, Integer, Integer> c = (i, j) -> { System.out.print(i + "," + j + " ; " ) ;} ;
+	
+Answer: C

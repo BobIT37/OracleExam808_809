@@ -1,0 +1,8 @@
+5. What does the flush() method do?
+A. It marks the stream as ready to be written.
+B. It closes the stream.
+C. It writes the data stored in disk to a cache.
+D. It writes the data stored in a cache to disk.
+
+The correct answer is D.
+The flush() method writes to the disk the data cached in memory.

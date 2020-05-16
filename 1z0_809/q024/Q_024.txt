@@ -1,0 +1,56 @@
+Which statement is true about java.time.Duration?
+Question No : 24
+
+
+
+A. It tracks time zones.
+B. It preserves daylight saving time.
+C. It defines time-based values.
+D. It defines date-based values.
+
+Answer : C
+
+=========================================
+ Period เป็นระยะเวลานับเป็นวัน สามารถคำนวนหาเป็นเดือน หรือปีได้ด้วย
+ Duration เป็นระยะเวลานับเป็นวินาที สามารถเอาไปคำนวนเป็นระยะอื่น ๆ ได้
+ 
+มี  api ให้ใช้มากมาย ตัวอบ่าง เช่น
+
+getNano()
+getSeconds()
+
+toNanos()
+toMillis()
+toMinutes()
+toHours()
+toDays()
+
+plusNanos()
+plusMillis()
+plusSeconds()
+plusMinutes()
+plusHours()
+plusDays()
+minusNanos()
+minusMillis()
+minusSeconds()
+minusMinutes()
+minusHours()
+minusDays()
+
+
+P คือตัวกำหนดระยะเวลา (แต่ก่อนเรียกว่า period ปัจจุบันใช้ duration) ซึ่งวางไว้ที่จุดเริ่มต้นของการนำเสนอระยะเวลา
+Y คือตัวกำหนดปี ซึ่งตามหลังค่าสำหรับจำนวนปี
+M คือตัวกำหนดเดือน ซึ่งตามหลังค่าสำหรับจำนวนเดือน
+W คือตัวกำหนดสัปดาห์ ซึ่งตามหลังค่าสำหรับจำนวนสัปดาห์
+D คือตัวกำหนดวัน ซึ่งตามหลังค่าสำหรับจำนวนวัน
+T คือตัวกำหนดเวลา ซึ่งจะนำหน้าองค์ประกอบเวลาในการนำเสนอ
+H คือตัวกำหนดชั่วโมง ซึ่งตามหลังค่าสำหรับจำนวนชั่วโมง
+M คือตัวกำหนดนาที ซึ่งตามหลังค่าสำหรับจำนวนนาที (จะเห็นว่าซ้ำกับตัวกำหนดเดือน)
+S คือตัวกำหนดวินาที ซึ่งตามหลังค่าสำหรับจำนวนวินาที
+
+Answer: C
+Reference: http://tutorials.jenkov.com/java-date-time/duration.html#accessing-the-time-ofa-
+duration
+
+https://stackoverflow.com/questions/32437550/java-8-whats-the-difference-between-instant-and-localdatetime

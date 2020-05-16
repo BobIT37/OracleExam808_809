@@ -1,0 +1,60 @@
+Question No : 31
+
+Which three statements are true about the structure of a Java class?
+
+A. A class can have only one private constructor.
+B. A method can have the same name as a field.
+C. A class can have overloaded static methods.
+D. A public class must have a main method.
+E. The methods are mandatory components of a class.
+F. The fields need not be initialized before use.
+
+Answer: A, B,C
+
+
+
+
+
+Explanation: 
+
+A: Private constructors prevent a class from being explicitly instantiated by its
+callers.
+If the programmer does not provide a constructor for a class, then the system will always
+provide a default, public no-argument constructor. To disable this default constructor,
+simply add a private no-argument constructor to the class. This private constructor may be
+empty.
+
+B: The following works fine:
+int cake() {
+int cake=0;
+return (1);
+}
+
+C: We can overload static method in Java. In terms of method overloading static method
+are just like normal methods and in order to overload static method you need to provide
+another static method with same name but different method signature.
+
+Incorrect:
+
+Not D: Only a public class in an application need to have a main method.
+
+Not E:
+Example:
+class A
+{
+public string something;
+public int a;
+}
+Q: What do you call classes without methods?
+Most of the time: An anti pattern.
+Why? Because it faciliates procedural programming with "Operator" classes and data
+structures. You separate data and behaviour which isn't exactly good OOP.
+Often times: A DTO (Data Transfer Object)
+Read only datastructures meant to exchange data, derived from a business/domain object.
+Sometimes: Just data structure.
+Well sometimes, you just gotta have those structures to hold data that is just plain and
+simple and has no operations on it.
+
+Not F: Fields need to be initialtized. If not the code will not compile.
+Example:
+Uncompilable source code - variable x might not have been initialized

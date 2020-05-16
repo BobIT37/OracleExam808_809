@@ -1,0 +1,6 @@
+6. Which of the following statements are true?
+
+A. Curly brackets are required whenever the return keyword is used in a lambda expression
+B. A return keyword is always required in a lambda expression
+C. A return keyword is always optional in a lambda expression
+D. Lambda expressions don't return values

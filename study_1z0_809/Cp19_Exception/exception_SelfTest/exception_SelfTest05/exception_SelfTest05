@@ -1,0 +1,5 @@
+5. Which of the following exceptions are direct subclasses of RuntimeException?
+A. java.io.FileNotFoundException
+B. java.lang.ArithmeticException
+C. java.lang.ClassCastException
+D. java.lang.InterruptedException

@@ -1,0 +1,31 @@
+
+Given:
+1. abstract class Shape {
+2. Shape ( ) { System.out.println (“Shape”); }
+3. protected void area ( ) { System.out.println (“Shape”); }
+4. }
+5.
+6. class Square extends Shape { 
+7. int side;
+8. Square int side {
+9./* insert code here */
+10. this.side = side;
+11. }
+12. public void area ( ) { System.out.println (“Square”); } 
+13. }
+14. class Rectangle extends Square {
+15. int len, br;
+16. Rectangle (int x, int y) {
+17. /* insert code here */
+18. len = x, br = y;
+19. }
+20. void area ( ) { System.out.println (“Rectangle”); } 
+21. }
+Which two modifications enable the code to compile?
+A. At line 1, remove abstract
+B. At line 9, insert super ( );
+C. At line 12, remove public
+D. At line 17, insert super (x);
+E. At line 17, insert super (); super.side = x; 
+F. At line 20, use public void area ( ) {
+Answer: D , F

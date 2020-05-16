@@ -1,0 +1,12 @@
+3. Given the code fragment:
+
+List<Integer> li = Arrays.asList(10, 20, 30);
+Function<Integer, Integer> fn = f1 -> f1 + f1;
+Consumer<Integer> conVal = s -> System.out.print( "Val : " + s + " " );
+li.stream().map(fn).forEaeh(conVal);
+
+What is the result ?
+A) Val : 10 Val : 20 Val : 30 
+B) Val : 20 Val : 40 Val : 60
+C) Val : Val : Val :
+D) A Compilation error occurs.

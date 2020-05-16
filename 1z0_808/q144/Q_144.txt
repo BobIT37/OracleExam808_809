@@ -1,0 +1,30 @@
+Given:
+public class ColorTest {
+public static void main(String[] args) {
+	String[] colors = {"red", "blue","green","yellow","maroon","cyan"}; 
+	int count = 0;
+	for (String c : colors) {
+		if (count >= 4) {
+			break;
+		}else {
+			continue;
+		}
+		if (c.length() >= 4) {
+			colors[count] = c.substring(0,3);
+		}
+		count++;
+	}
+	System.out.println(colors[count]);
+	}
+}
+What is the result?
+A. Yellow
+B. Maroon
+C. Compilation fails
+D. A StringIndexOutOfBoundsException is thrown at runtime.
+Answer: C
+Explanation: The line, if (c.length() >= 4) {, is never reached. This causes a compilation
+ error.
+Note: The continue statement skips the current iteration of a for, while , or do-while loop. 
+An unlabeled break statement terminates the innermost switch, for, while, or do-while statement, 
+but a labeled break terminates an outer statement.

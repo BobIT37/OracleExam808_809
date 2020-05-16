@@ -1,0 +1,21 @@
+28. 
+Given the code fragment :
+List<String> words = Arrays.asList(“win”, “try”, “best”, “luck”);
+Predicate<String> test1 = w -> {
+System.out.println(“Checking . . . “);
+return w.equals(“do”) ; // line n1
+} ;
+Predicate test2 = (String w ) -> w.length() > 3 ; //line n2
+words.stream()
+.filter(test2 )
+.filter(test1 )
+.count() ;
+
+What is the result ?
+A) 	Checking . . .
+	Checking . . .
+B) 	Checking . . .
+C) 	A compilation errer occurs at line n1. 
+D) 	A compilation error occurs at line n2.
+
+Answer: D

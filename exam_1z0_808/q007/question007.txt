@@ -1,0 +1,12 @@
+int[] arr = { 10, 20, 30, 40, 50 };
+List list = Arrays.asList(arr);
+if(list.removeIf(e -> {
+	if (e % 2 == 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
+});
+
+answer : compile error

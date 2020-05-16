@@ -1,0 +1,20 @@
+Which statement is true about Java byte code?
+A. It can run on any platform.
+B. It can run on any platform only if it was compiled for that platform.
+C. It can run on any platform that has the Java Runtime Environment.
+D. It can run on any platform that has a Java compiler.
+E. It can run on any platform only if that platform has both the Java Runtime Environment
+and a Java compiler.
+
+Answer: C
+---------------------------------------------------------
+Explanation:
+
+Java bytecode is already the compiled form of the Java source code, 
+and the Java compiler is only available with the Java Software Development Kit (SDK). 
+Once code has been compiled, it does not need to be compiled again.
+
+All the system needs is the Java Runtime Environment (JRE) 
+because the JRE is able to interpret the bytecode and run it on the system.
+
+ref: https://stackoverflow.com/questions/34032954/running-java-bytecode

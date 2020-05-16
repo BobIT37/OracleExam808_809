@@ -1,0 +1,22 @@
+5. Given:
+
+interface AnInterface {
+     default int aMethod() { return 0; }
+     int anotherMethod();
+}
+public class Question_9_5 implements AnInterface {
+     public static void main(String[] args) {
+         AnInterface a = () -> aMethod();
+         System.out.println(a.anotherMethod());
+     }
+     @Override
+     public int anotherMethod() {
+         return 1;
+     }
+}
+
+What is the result?
+A. 0
+B. 1
+C. Compilation fails
+D. An exception occurs at runtime

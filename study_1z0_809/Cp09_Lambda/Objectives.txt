@@ -1,0 +1,8 @@
+Exam Objectives
+
+- What is a lambda expression?
+- Benefits of lambda expressions
+- Understanding Lambda Syntax
+- Lambda Expression and Method
+- How are functional interfaces related to Lambda Expression 
+- Lambda expressions VS Anonymous classes

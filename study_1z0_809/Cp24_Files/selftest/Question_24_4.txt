@@ -1,0 +1,17 @@
+4. Given:
+
+Path path =
+  Paths.get("c:\\.\\temp\\data\\..\\.\\dir\\..\\file.txt");
+try {
+   path = path.toRealPath();
+} catch (IOException e) { }
+System.out.println(path.subpath(1,2));
+
+Which is the result?
+A. temp
+B. data
+C. dir
+D. file.txt
+
+The correct answer is D.
+. means the current directory and .. means the parent directory. The method toRealPath() turns the redundant path into C:\temp\file.txt. path.subpath(1,2) give us the element at index 1, file.txt.

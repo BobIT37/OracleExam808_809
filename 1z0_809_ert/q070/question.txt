@@ -1,0 +1,48 @@
+	public class Vehicle {
+		
+		int vId;
+		String vName;
+		
+		public Vehicle(int vIdArg, String vNameArg) {
+			this.vId = vIdArg;
+			this.vName = vNameArg;
+		}
+	
+		public int getVId() {
+			return vId;
+		}
+	
+		public String getVName() {
+			return vName;
+		}
+		
+		public String toString() {
+			return vName;
+		}
+	}
+
+
+and the code fragment:
+
+	List<Vehicle> vehicle = Arrays.asList(
+				new Vehicle(2, "Car"),
+				new Vehicle(3, "Bike"),
+				new Vehicle(1, "Truck"));
+		
+		vehicle.stream()
+			// Line n1
+			.forEach(System.out::print);
+	
+
+Which two code fragments, when inserted at line n1 independently, enable the code print  TruckCarBike? 
+
+A)	.sorted((v1,v2) -> Integer.compare(v1.getVId(), v2.getVId()))
+
+B)	.sorted(Comparator.comparing( (Vehicle v) -> v.getVId()))
+
+C)	.map(v -> v.getVId())
+	.sorted()
+
+D) 	.map(v -> v.getVId())
+	.sorted()
+	.compare(v1.getVId(), v2.getVId())

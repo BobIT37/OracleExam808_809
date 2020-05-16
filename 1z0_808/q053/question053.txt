@@ -1,0 +1,37 @@
+Question No: 53
+
+Given:
+
+1.	public class Whizlabs {
+2.		private String name;
+3.		private boolean pass;
+4.		
+5.		public static void main(String[] args) {
+6.			Whizlabs wb = new Whizlabs();
+7.			System.out.print("name = " + wb.name);
+8.			System.out.print(", pass = " + wb.pass);
+9.		}
+10.	}
+
+What would be the output, if it is executed as a program?
+A. name =, pass =
+B. name = null, pass = null
+C. name = null, pass = false
+D. name = null pass = true
+E. Compile error.
+
+-------------
+Answer: C
+-------------
+
+Explanation:
+
+Both name and pass variables are instance variables, and we haven't given them any
+values, so they take their default values. For Boolean default value is false and for string
+which is not a primitive type default is null So at line 7, null will printed as the value of the
+variable name, and at line 8 false will be printed. Hence Option C is correct.
+As explained above options A, B and D are incorrect.
+Code compiles fine so option E is incorrect.
+
+Reference:
+https://docs.oracle.com/javaseAutorial/java/javaOOAariables.html

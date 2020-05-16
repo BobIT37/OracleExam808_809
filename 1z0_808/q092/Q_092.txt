@@ -1,0 +1,15 @@
+Question No : 92
+Which statement will empty the contents of a StringBuilder variable named sb?
+
+A. sb.deleteAll();
+B. sb.delete(0, sb.size());
+C. sb.delete(0, sb.length());
+D. sb.removeAll();
+
+Answer: C
+
+จากโจทย์ถามว่าข้อใดจะได้ผลลัพธ์เป็นค่าว่าง ของ StringBuilder ตัวแปร sb
+A. ผิดเพราะ StringBuilder ไม่มีเมทท็อด deleteAll() จะทำให้ compile error
+B. ผิดเพราะ StringBuilder ไม่มีเมทท็อด size() จะทำให้ compile error
+C. ถูกเพราะ StringBuilder จะลบข้อมูลจาก index 0-sb.length() คือลบข้อมูลจากตัวเลขจนไปถึงตัวสุดท้าย
+D. ผิดเพราะ StringBuilder ไม่มีเมทท็อด removeAll()

@@ -1,0 +1,62 @@
+Self Test
+
+1. Given:
+
+public class Question_15_1 {
+    public static void main(String[] args) {
+        Stream<Integer> s = Stream.of(100, 45, 98, 33);
+        s.anyMatch(i -> i > 50)
+            .findAny()
+            .ifPresent(System.out::println);
+    }
+}
+
+What is the result?
+A. 100
+B. 98
+C. Nothing is printed
+D. Compilation fails
+
+2. Which of the following methods of the Stream interface returns an Optional type?
+A. filter()
+B. findMatch()
+C. findAny()
+D. anyMatch()
+
+3. Given:
+
+public class Question_15_3 {
+    public static void main(String[] args) {
+        IntStream stream = IntStream.of(1, 2, 3, 4, 5, 6, 7);
+        stream.allMatch(i -> {
+            System.out.print(i);
+            return i % 3 == 0;
+        });
+    }
+}
+
+What is the result?
+A. 1234567
+B. 36
+C. 1
+D. Compilation fails
+
+4. Given:
+
+public class Question_15_4 {
+    public static void main(String[] args) {
+        IntStream stream = IntStream.of(1, 2, 3, 4, 5, 6, 7);
+        stream.filter(i -> {
+                return i > 3;
+        }).anyMatch(i -> {
+                System.out.print(i);
+                return i % 2 == 1;
+        });
+    }
+}
+
+What is the result?
+A. 45
+B. 5
+C. 4567
+D. Compilation fails

@@ -1,0 +1,30 @@
+5. Which of the following is a valid way to set a file's create time?
+
+A.
+
+FileTime time = FileTime.from(Instance.now());
+Files.getFileAttributeView(path,
+      BasicFileAttributeView.class)
+   .setTimes(null, time, null);
+
+B.
+
+Files.setCreateTime(path,
+   FileTime.from(Instance.now());
+
+C.
+
+Files.getFileAttributeView(path,
+      BasicFileAttributeView.class)
+   .setTimes(null, null, Instance.now());
+
+D.
+
+FileTime time = FileTime.from(Instance.now());
+Files.getFileAttributeView(path,
+      BasicFileAttributeView.class)
+   .setTimes(null, null, time);
+   
+The correct answer is D.
+A file creation time attribute can only be set with BasicFileAttributeView. The right way to do it is with a FileTime instance as shown in Option D.
+

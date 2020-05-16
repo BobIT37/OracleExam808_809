@@ -1,0 +1,40 @@
+Question 108
+
+Which two statements correctly describe checked exception?
+
+	A. These are exceptional conditions that a well-written application should anticipate and
+	recover from.
+	B. These are exceptional conditions that are external to the application, and that the
+	application usually cannot anticipate or recover from.
+	C. These are exceptional conditions that are internal to the application, and that the
+	application usually cannot anticipate or recover from.
+	D. Every class that is a subclass of RuntimeException and Error is categorized as checked
+	exception.
+	E. Every class that is a subclass of Exception, excluding RuntimeException and its
+	subclasses, is categorized as checked exception.
+
+
+
+
+-----------------------------
+
+Answer: A,E
+
+
+For B,D is unchecked Exception
+
+Explanation: Checked exceptions:
+* (B) represent invalid conditions in areas outside the immediate control of the program
+(invalid user input, database problems, network outages, absent files)
+* are subclasses of Exception
+It's somewhat confusing, but note as well that RuntimeException (unchecked) is itself a
+subclass of Exception (checked).
+* a method is obliged to establish a policy for all checked exceptions thrown by its
+implementation (either pass the checked exception further up the stack, or handle it
+somehow)
+
+Reference: Checked versus unchecked exceptions
+
+
+
+

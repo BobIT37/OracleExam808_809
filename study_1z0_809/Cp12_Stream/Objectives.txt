@@ -1,0 +1,3 @@
+Exam Objectives
+- Describe Stream interface and Stream pipeline.
+- Use method references with Streams.

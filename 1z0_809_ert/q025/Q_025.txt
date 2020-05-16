@@ -1,0 +1,42 @@
+Question No : 25 
+
+Student (id INTEGER, name VARCHAR)
+Given the records from the STUDENT table:
+	ID		NAME
+	102		Edwin
+	103		Edward
+	103		Edwin
+	
+Given the code fragment:
+Connection conn = DriverManager.getConnection(dbURL, userName, passWord);
+Statement st = conn.createStatement();
+String query = “DELETE FROM Student WHERE id = 103 “;
+System.out.println(“ Status : “ + st.execute(query )) ;
+Assume that:
+The required database driver is configured in the classpath.
+The appropriate database is accessible with the dbURL, userName, and passWord
+
+What is the result?
+
+A) A SQLException is thrown at runtime.
+B) The program prints Status: true and two records are deleted from the student 
+C) The program prints Status: false but the records from the Student table are
+D) The program prints Status: false and two records are deleted from the Student table.
+
+Answer D 
+	ID		NAME
+	102		Edwin
+	103		Edward
+	103		Edwin
+	
+	1) select * FROM Student WHERE id = 103
+		id = 103, name = Edward
+		id = 103, name = Edwin
+
+	2) DELETE FROM Student WHERE id = 103
+		Status : false
+
+	3) select * FROM Student WHERE id = 103
+		print nothing
+
+  

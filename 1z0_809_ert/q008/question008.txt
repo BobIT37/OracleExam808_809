@@ -1,0 +1,26 @@
+8. Given:
+
+class Engine {
+	double fuelLevel;
+	
+	Engine(int fuelLevel) { this.fuelLevel = fuelLevel; }
+	
+	public void start() {
+		//line n1
+		System.out.println(“Started”);
+	}
+	
+	public void stop() { System.out.println(“Stopped”); }
+}
+
+Your design requires that
+• fuelLevel of Engine must be greater than zero when the start() method is prints Started.
+• The code must terminate if fuelLevel of Engine is less than or equal to zero.
+
+Which code fragment should be added at line n1 to express this invariant condition?
+A) assert (fuelLevel) : “Terminating…”;
+B) assert fuelLevel < 0 : System.exit(0);
+C) assert (fuelLevel) > 0) : System.out.println(“Impossible fuel”);
+D) assert fuelLevel > 0 : “Impossible fuel”;
+
+Answer: D

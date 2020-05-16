@@ -1,0 +1,6 @@
+Exam Objectives
+
+Implement encapsulation.
+Create and use singleton classes and immutable classes.
+Develop code that uses static keyword on initialize blocks, variables, methods, and classes.
+Develop code that uses final keyword.

@@ -1,0 +1,5 @@
+[answer]
+D.
+
+[Explanation]
+Declaring override method exceptions must be equal or more specific (sub-class of exception) than the original method in super class.

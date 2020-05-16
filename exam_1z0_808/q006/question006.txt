@@ -1,0 +1,44 @@
+package clothing;
+class Shirt {
+	public static String getColor() {
+		return "Green";
+	}
+}
+
+package clothing.pants;
+// n1
+class Jean {
+	public void doStuff()
+	{
+		// n2
+		
+		if(color.equals("Green"))
+		{
+			System.out.println("Match");
+		}
+	}
+}
+
+public class test {
+
+	public static void main(String[] args) {
+		Test t = new Test();
+		t.doStuff();
+	}
+}
+
+What two of modification can compile and print Match?
+
+A. 	insert import clothing.* at n1
+	insert String color = Shirt.getColor() at n2
+
+B.	insert import static clothing.shirt.getColor; at n1
+	insert String color = getColor() at n2
+
+C.	no declaration
+	insert String color = Shirt.getColor() at n2
+
+D.	insert import clothing.shirt.*; at n1
+	insert String color = Shirt.getColor() at n2
+
+answer A B

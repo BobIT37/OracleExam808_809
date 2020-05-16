@@ -1,0 +1,19 @@
+Key Points
+
+peek() executes the provided Consumer and returns a new stream with the same elements of the original one. Most of the time, this method is used for debugging purposes.
+
+map() is used to transform the value or the type of the elements of a stream through a provided Function.
+
+flatMap() is used to "flatten" (or combine) the elements of a stream into one (new) stream. In contrast to map() (that returns a single value), flatMap() must return a Stream.
+
+A reduction is an operation that takes many elements and combines them (o reduce them) into a single value or object.
+
+reduce() performs a reduction on the elements of a stream using an accumulation function, an optional identity, and an also optional combiner function.
+
+collect() implements a type of reduction called mutable reduction, where a container (like a Collection) is used to accumulate the result of the operation.
+
+The Collectors class provides static methods such as toList() and toMap() to create a collection or a map from a stream and some calculation methods like averagingInt().
+
+Collectors.groupingBy() groups the elements of a stream using a given Function as a classifier. It can also receive a downstream collector to create another level of classification.
+
+You can also group (or partition) the elements in a stream based on a condition (Predicate) using the Collectors.partitioningBy() method.

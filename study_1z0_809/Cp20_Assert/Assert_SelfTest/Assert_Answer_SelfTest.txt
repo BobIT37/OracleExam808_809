@@ -1,0 +1,30 @@
+Answers
+
+1. The correct answer is C.
+The ++ operator increments the value of x to 1 before the condition is evaluated. Note that changing values of variables or objects in assertions is discouraged since there's no guarantee that assertions would be enabled when the program runs.
+
+
+
+2. The correct answer is A.
+You can disable assertion at the command-line. The other statements are false.
+
+
+
+3. The correct answer is B. --> D
+The command:
+java -esa -ea:com.example MainClass
+
+Enables assertions in system classes and classes in the com.example package.
+
+
+
+4. The correct answer is D.
+There's nothing wrong with the program, the method isValid() returns false, which makes the program to throw an AssertionError at runtime.
+
+
+
+5. The correct answer is C.
+assert false : "Assertion is false"
+
+It's equivalent to:
+if(false) throw new AssertionError("Asssertion is false");

@@ -1,0 +1,134 @@
+Self Test
+
+1. Given:
+
+public class Question_17_1 {
+    public static void main(String[] args) {
+        Map<Boolean, List<Integer>> map =
+           Stream.of(1, 2, 3, 4)
+              .collect(partitioningBy(i -> i < 5));
+        System.out.println(map);
+    }
+}
+
+What is the result?
+A. {true=[1,2, 3, 4]}
+B. {false=[], true=[1, 2, 3, 4]}
+C. {false=[1,2, 3, 4]}
+D. {false=[1, 2, 3, 4], true=[]}
+
+2. Given:
+
+groupingBy(i -> i%3, toList())
+
+Which of the following is equivalent?
+A. partitioningBy(i -> i%3 == 0, toList())
+B. partitioningBy(i -> i%3, toList())
+C. groupingBy(i -> i%3 == 0)
+D. groupingBy(i -> i%3)
+
+3. Given:
+
+public class Question_17_3 {
+    public static void main(String[] args) {
+        Stream.of("aaaaa", "bbbb", "ccc")
+           .map(s -> s.split(""))
+           .limit(1)
+           .forEach(System.out::print);
+    }
+}
+
+What is the result?
+A. aaaaa
+B. abc
+C. a
+D. None of the above
+
+4. Given:
+
+public class Question_17_4 {
+    public static void main(String[] args) {
+        System.out.println(
+            Stream.of("a", "b", "c")
+                .flatMap(s -> Stream.of(s, s , s))
+                .collect(Collectors.toList())
+        );
+    }
+}
+
+What is the result?
+A. [a, a, a, b, b, b, c, c, c]
+B. [a, a, a]
+C. [a, b, c]
+D. Compilation fails
+
+5. Which of the following is the right way to implement OptionalInt min() with a reduce operation?
+A. reduce((a,b) -> a > b)
+B. reduce(Math::min)
+C. reduce(Integer.MIN_VALUE, Math:min)
+D. collect(Collectors.minBy())
+
+6. Which of the following is a correct overload of the reduce() method?
+A.
+T reduce(BinaryOperator<T> accumulator)
+
+B.
+Optional<T> reduce(T identity,
+           BinaryOperator<T> accumulator)
+
+C.
+<U> U reduce(BinaryOperator<T> accumulator,
+               BinaryOperator<U> combiner)
+
+D.
+<U> U reduce(U identity,
+           BiFunction<U,? super T,U> accumulator,
+           BinaryOperator<U> combiner)
+
+7. Given:
+
+public class Question_17_7 {
+    public static void main(String[] args) {
+        Map<Integer, Map<String, List<Integer>>> map =
+            Stream.of(56, 54, 1, 31, 98, 98, 16)
+               .collect(groupingBy(
+                           i -> i%10,
+                           TreeMap::new,
+                           partitioningBy(i -> i > 5)
+                        )
+               );
+        System.out.println(map);
+    }
+}
+
+What is the result?
+A.
+{
+   6={false=[], true=[56, 16]},
+   4={false=[], true=[54]},
+   1={false=[1], true=[31]},
+   8={false=[], true=[98]}
+}
+
+B.
+{
+   1={false=[1], true=[31]},
+   4={false=[], true=[54]},
+   6={false=[], true=[56, 16]},
+   8={false=[], true=[98]}
+}
+
+C.
+{
+   1={false=[1], true=[31]},
+   4={false=[], true=[54]},
+   6={false=[], true=[56, 16]},
+   8={false=[], true=[98, 98]}
+}
+
+D.
+{
+   1={false=[1], true=[31]},
+   4={false=[], true=[54]}
+}
+

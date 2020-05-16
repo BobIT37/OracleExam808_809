@@ -1,0 +1,10 @@
+[Answer]
+C.
+
+[Explanation]
+Interface BiFunction<T, U, R> has 3 generic type which R is a return type
+BiFunction<Integer, Double, Integer> means anonymous method will has Integer return type
+but the anonymous method is return T + U which Double has more priority then after execute will be double which is not match with Integer, the compiler will detect that mistake
+
+[Error message]
+Type mismatch: cannot convert from double to Integer

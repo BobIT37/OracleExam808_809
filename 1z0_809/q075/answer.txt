@@ -1,0 +1,7 @@
+[Answer]
+C
+
+[Explanation]
+A. File.list return Stream<Path> and if path is not directory, NotDirectoryException will be thrown and NoSuchFileException if there no such file 
+B. Files.readAllLines(...) return List<>
+D. same as A.

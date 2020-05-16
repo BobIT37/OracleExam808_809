@@ -1,0 +1,28 @@
+61.
+
+Connection con = null;
+try{
+//line n1
+if(con != null){
+System.out.print(“Connection Established.”);
+}
+}catch(Exception e){
+System.out.print(e);
+}
+
+Assume that dbURL, userName, and password are valid
+Which code fragment can be inserted at line n1 to enable the code to print Connection Established?
+
+A) Properties prop = new Properties();
+prop.put(“user”, userName);
+prop.put(“password”, password);
+con = DriverManager.getConnection(dbURL, prop); 
+
+B) con = DriverManager.getConnection(dbURL); con.setClientInfo(“user”, userName); con.setClientInfo(“passwrod”, password);
+
+C) con = DriverManager.getConnection(userName, password, dbURL);
+
+D) Properties prop = new Properties();
+prop.put(“userid”, userName);
+prop.put(“password”, password);
+con = DriverManager.getConnection(dbURL, prop);

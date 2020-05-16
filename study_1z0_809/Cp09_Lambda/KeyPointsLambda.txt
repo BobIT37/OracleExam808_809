@@ -1,0 +1,19 @@
+Key Points
+•	Lambda expressions have three parts: a list of parameters, and arrow, and a body:
+    (Object o) -> System.out.println(o)
+    
+•	You can think of lambda expressions as anonymous methods (or functions) as they don't have a name.
+•	A lambda expression can have zero (represented by empty parentheses), one or more parameters.
+•	The type of the parameters can be declared explicitly, or it can be inferred from the context.
+•	If there is a single parameter, the type is inferred and is not mandatory to use parentheses.
+•	If the lambda expression uses as a parameter name which is the same as a variable name of the enclosing context, a compile error is generated.
+•	If the body has one statement, curly brackets are not required, and the value of the expression (if any) is returned.
+•	If the body has more than one statement, curly brackets are required, and if the expression returns a value, it must return with a return statement.
+•	If the lambda expression doesn't return a result, a return statement is optional.
+•	The signature of the abstract method of a functional interface provides the signature of a lambda expression (this signature is called a functional descriptor).
+•	This means that to use a lambda expression, you first need a functional interface.
+•	The type of the expression is deduced from the context in which the lambda is used. This type is called target type.
+•	The contexts where the target type of a lambda expression can be inferred include an assignment, method or constructor arguments, and a cast expression.
+•	Like anonymous classes, lambda expressions can access instance and static variables, but only final or effectively final local variables.
+•	Also, they cannot throw exceptions that are not defined in the throws clause of the function interface method.
+•	Default methods of a functional interface cannot be accessed from within lambda expressions.

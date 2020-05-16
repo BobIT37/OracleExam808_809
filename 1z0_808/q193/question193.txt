@@ -1,0 +1,28 @@
+Question No: 193
+
+Given:
+
+StringBuilder sb1 = new StringBuilder("Duke");
+String str1 = sb1.toString();
+// insert code here
+System.out.println(str1 == str2);
+
+	
+Which code fragment, when inserted at line 9, enables the code to print true?
+
+A. String str2 = str1;
+B. String str2 = new string (str1);
+C. String str2 = sb1.toString();
+D. String str2 = “Duke”;
+	
+--------------
+Answer: A
+--------------
+
+Desc:
+
+A >> initial str1 into str2 (str2 now is same address as str1 > str2 ref. by str1)
+B >> new String(str1) >> in case new object always be new address
+C >> str1.toString() >> same as new String();
+D >> str2 now is in the String-pool >> all of string in String-pool is not equals (=) Object String 
+

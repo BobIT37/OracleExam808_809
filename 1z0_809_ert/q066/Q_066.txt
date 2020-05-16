@@ -1,0 +1,10 @@
+Which statement is true about the DriverManager class?
+
+A) It is written by different vendors their specific database.
+B) It executes SQL statements against the database. 
+C) It returns an instance of Connection
+D) It only queries metadata of the database.
+
+-------------------------------------------------
+
+Answer C

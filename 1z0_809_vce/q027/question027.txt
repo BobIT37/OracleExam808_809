@@ -1,0 +1,23 @@
+Question No : 27 
+
+Given the code fragment:
+
+List<String> listVal = Arrays.asList("Joe","Paul","Alice","Tom");
+System.out.println(/* */); // line n1
+
+Which code fragment, when inserted at line n1, enables 
+the code to print the count of string elements 
+whose length is greater than three ?
+
+Answer: A (Duplicate 1z0-809 Question 3)
+
+Explanation: 
+
+// A. filter will print 2
+	System.out.println(listVal.stream().filter(x->x.length()>3).count());
+// B. map cannot filter and will print 4 
+	System.out.println(listVal.stream().map(x->x.length()>3).count());
+// C. syntax error
+	//listVal.stream().peek(x->x.length()>3).count().get(); 
+// D. syntax error cause cannot convert string to int
+	//listVal.stream().filter(x->x.length()>3).mapToInt(x->x).count();

@@ -1,0 +1,15 @@
+33. Given the code fragment:
+
+List<String> valList = Arrays.asList(“”, “George”, “”, “XX”);
+Long newVal = valList.stream() //line n1
+.filter(x -> !x.isEmpty())
+.count(); // line n2
+System.out.print(newVal);
+
+What is the result?
+A) A compilation error occurs at line n2. 
+B) 2
+C) 3
+D) A compilation error occurs at line n1.
+
+Answer: B

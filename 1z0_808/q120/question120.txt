@@ -1,0 +1,36 @@
+Question No : 120
+
+Given:
+class Mid {
+	public int findMid(int n1, int n2) {
+		return (n1 + n2) / 2;
+	}
+}
+public class Calc extends Mid {
+	public static void main(String[] args) {
+		int n1 = 22, n2 = 2;
+		// insert code here
+		System.out.print(n3);
+	}
+}
+
+Which two code fragments, when inserted at // insert code here, enable the code to
+compile and print 12?
+A. 	Calc c = new Calc();
+	int n3 = c.findMid(n1,n2);
+B. 	int n3 = super.findMid(n1,n3);
+C.  Calc c = new Mid();
+	int n3 = c.findMid(n1, n2);
+D. 	Mid m1 = new Calc();
+	int n3 = m1.findMid(n1, n2);
+E. 	int n3 = Calc.findMid(n1, n2);
+
+Answer: A,D
+Explanation:
+Incorrect:
+Not B: circular definition of n3.
+Not C: Compilation error. line Calc c = new Mid();
+required: Calc
+found: Mid
+Not E: Compilation error. line int n3 = Calc.findMid(n1, n2);
+non-static method findMid(int,int) cannot be referenced from a static context

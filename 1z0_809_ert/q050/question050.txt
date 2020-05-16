@@ -1,0 +1,28 @@
+50. Given that data.txt and alldata.txt are accessible, and the 
+	public void writeFiles() throws IOException {
+		BufferedReader br = new BufferedReader(new FileReader(getCurrentPath() + "/data.txt")); 
+		BufferedWriter bw = new BufferedWriter(new FileWriter(getCurrentPath() + "/alldata.txt")); 
+		String line = null;
+		while((line = br.readLine()) != null ){
+			bw.append(line + "\n");
+		}
+		//line n1
+	}
+
+What is required at line n1 to enable the code to overwrite all 
+A) bw.flush();
+B) br.close();
+C) br.flush();
+D) bw.writeln();
+
+----------------------------
+
+Answer A. bw.flush();
+
+
+In BufferedReader 
+ - close(): Closes the stream and releases any system resources associated with it.
+ 
+In BufferedWriter
+ - close(): Closes the stream, flushing it first.
+ - flush(): Flushes the stream.

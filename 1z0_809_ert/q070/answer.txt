@@ -1,0 +1,13 @@
+[Answer]
+A., B.
+
+[Explanation]
+
+A. and B.
+Correct answer
+
+C.
+when using map, value has been transformed to Steam<Integer> then the result will be 123
+
+D.
+There is not compare method in java.util.stream.Stream

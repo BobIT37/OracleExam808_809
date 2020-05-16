@@ -1,0 +1,29 @@
+Question No : 125
+
+Given:
+
+package p1;
+public class Test {
+	static double dvalue;
+	static Test ref;
+	public static void main(String[] args) {
+		System.out.println(ref);
+		System.out.println(dvalue);
+	}
+}
+
+What is the result?
+
+A. p1.Test.class
+0.0
+B. <the summary address refrenced by ref>
+0.000000
+C. Null
+0.0
+D. Compilation fails
+E. A NullPointerException is thrown at runtime
+
+Answer: C 
+
+Object's default value is Null 
+double's default value is 0.0

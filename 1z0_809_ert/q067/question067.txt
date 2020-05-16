@@ -1,0 +1,31 @@
+67. Given the content of the Book.java, EBook.java, Shop.java, and Customer.java
+// Book.java:
+public final class Book{
+	public void read() { }
+}
+//EBook.java:
+publice class EBook extends Book {
+	public final int print (int x, int y) {return 1;}
+	public void transfer() { }
+}
+// Shop.java:
+public class Shop{
+	prinvate Book b = new EBook();
+	prinvate final int quantity = 200;
+	public void read() {
+		b.print(13, 31);
+	}
+}
+//Customer.java
+public class Customer {
+	public final int read(int x, int y){return 1;}
+	public final void buy() { }
+}
+
+Which two classes compile? 
+A) Customer
+B) Shop 
+C) Book
+D) EBook
+
+Answer: A, C

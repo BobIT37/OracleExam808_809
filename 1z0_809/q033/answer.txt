@@ -1,0 +1,11 @@
+[answer] 
+B
+
+[Explanation]
+Paths.get(...) will combine all string with Separator which normally is "/", not open the file
+getNameCount() return the all element in path
+Path.getName(int index) return the specific element in the path, first index start at 0
+getFileName() return filename in the path (last element)
+
+[console]
+2:MyPic.jpeg:MyPic.jpeg

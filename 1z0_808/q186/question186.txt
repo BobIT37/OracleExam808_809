@@ -1,0 +1,25 @@
+import java.time.LocalDate;
+import java.time.Period;
+
+public class Whizlabs {
+	public static void main(String[] args) {
+		LocalDate date = LocalDate.of(2015, 3, 26);
+		Period p = Period.ofDays(1);
+		System.out.println(date.plus(p));
+	}
+}
+
+
+What is the output?
+A. 2015-03-27
+B. 2015-04-27
+C. 2015-02-27
+D. Compilation fails due to error at line 6. E. Compilation fails due to error at line 8.
+Answer: A
+Explanation:
+To create we have used following method with LocalDate class;
+public static LocalDate of(intyear, int month, int dayOfMonth)
+Here we need to remember that month is not zero based so if you pass 1 for month, then month will be January.
+Then we have used period object of 1 day and add to date object which makes current date to next day, so final output is 2015-03-27. 
+Hence option A is correct. 
+https://docs.oracle.com/javase/tutorial/datetime/iso/datetime.html

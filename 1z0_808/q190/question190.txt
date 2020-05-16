@@ -1,0 +1,28 @@
+Question No : 190
+Given the code fragment:
+
+System.out.println(2 + 4 * 9 - 3); //Line 21
+System.out.println((2 + 4) * 9 - 3); // Line 22
+System.out.println(2 + (4 * 9) - 3); // Line 23
+System.out.println(2 + 4 * (9 - 3)); // Line 24
+System.out.println((2 + 4 * 9) - 3); // Line 25
+
+Which line of codes prints the highest number?
+
+A. Line 21
+B. Line 22
+C. Line 23
+D. Line 24
+E. Line 25
+Answer: B
+
+Explanation: 
+จากโจทย์ถามว่า ผลลัพธ์ในบรรทัดไหนมีค่ามาที่สุด
+The following is printed:
+35
+51
+35
+26
+35
+
+ตอบ Line 22 ซึ่งก็คือข้อ B.

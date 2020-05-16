@@ -1,0 +1,97 @@
+**** duplicate 808 question 130
+
+Given the code fragment:
+
+String [] colors = {"red" , "blue" , "green" , "yellow" , "maroon" , "cyan"}
+
+Which code frament print blue , cyan , ?
+
+A) for(String c:colors){
+	if(c.length() != 4) {
+		continue;
+	}
+	System.out.print(c+", ");
+}
+
+B) for(String c:colors[]) {
+	if(c.length() <= 4) {
+		continue;
+	}
+	System.out.print(c+", ");
+}
+
+C) for(String c:String[] colors){
+	if(c.length() >= 3){
+		continue;
+	}
+	System.out.print(c+", ");
+}
+
+D) for(String c:colors){
+	if(c.length() != 4){
+		System.out.print(c+", ");
+		continue;
+	}
+}
+
+
+A. Option A 
+B. Option B 
+C. Option C 
+D. Option D
+Answer: A
+
+
+
+The for Statement
+
+The for statement provides a compact way to iterate over a range of values. Programmers often refer to it as the "for loop" because of the way in which it repeatedly loops until a particular condition is satisfied. The general form of the for statement can be expressed as follows:
+
+for (initialization; termination;
+     increment) {
+    statement(s)
+}
+When using this version of the for statement, keep in mind that:
+
+The initialization expression initializes the loop; it's executed once, as the loop begins.
+When the termination expression evaluates to false, the loop terminates.
+The increment expression is invoked after each iteration through the loop; it is perfectly acceptable for this expression to increment or decrement a value.
+
+The three expressions of the for loop are optional; an infinite loop can be created as follows:
+
+// infinite loop
+for ( ; ; ) {
+    
+    // your code goes here
+}
+
+
+
+The for statement also has another form designed for iteration through Collections and arrays This form is sometimes referred to as the enhanced for statement, and can be used to make your loops more compact and easy to read. To demonstrate, consider the following array, which holds the numbers 1 through 10:
+
+int[] numbers = {1,2,3,4,5,6,7,8,9,10};
+The following program, EnhancedForDemo, uses the enhanced for to loop through the array:
+
+
+class EnhancedForDemo {
+    public static void main(String[] args){
+         int[] numbers = 
+             {1,2,3,4,5,6,7,8,9,10};
+         for (int item : numbers) {
+             System.out.println("Count is: " + item);
+         }
+    }
+}
+In this example, the variable item holds the current value from the numbers array. The output from this program is the same as before:
+
+Count is: 1
+Count is: 2
+Count is: 3
+Count is: 4
+Count is: 5
+Count is: 6
+Count is: 7
+Count is: 8
+Count is: 9
+Count is: 10
+We recommend using this form of the for statement instead of the general form whenever possible.

@@ -1,0 +1,33 @@
+Question No : 86
+
+public class ForTest {
+	public static void main(String[] args) {
+		int[] arrar = {1,2,3};
+		for ( foo ) {
+		}
+	}
+}
+
+Which three are valid replacements for foo so that the program will compiled and run?
+
+A. int i: array
+B. int i = 0; i < 1; i++
+C. ;;
+D. ; i < 1; i++
+E. ; i < 1;
+
+Answer: A,B,C
+
+//A. int i: array --> correct, this is for each syntax
+		
+//B. int i = 0; i < 1; i++ --> correct, this is for-loop syntax
+
+//C. ;; --> correct, this is infinity loop ;; as same as true
+		
+// D. ; i < 1; i++ --> wrong with invalid syntax, not found variable i
+// Fix D. --> D will be correct as following code below
+	int j=0; for (; j < 1; j++) { }
+
+// E. ; i < 1; --> wrong with invalid syntax, not found variable i 
+// Fix E. --> E will be correct but it will be infinity loop cause k is not incremented as following code below
+	int k=0; for (; k < 1;) { }

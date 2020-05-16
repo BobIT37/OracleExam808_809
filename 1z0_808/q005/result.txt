@@ -1,0 +1,18 @@
+[Question]
+Which of the following exception will be thrown due to the statement given here?
+ 
+int array[] = new int[-2];
+ 
+A. NullPointerException 
+B. NegativeArraySizeException 
+C. ArrayIndexOutOfBoundsException 
+D. IndexOutOfBoundsException 
+E. This statement does not cause any exception. 
+
+[Answer] 
+B.
+
+[Running Result]
+
+Exception in thread "main" java.lang.NegativeArraySizeException
+	at com.wealth.certificate.dumps_1z0_808.question005.Main.main(Main.java:6)

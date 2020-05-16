@@ -1,0 +1,11 @@
+1. Which of the following is a valid way to create a PrintWriter object?
+A. new PrintWriter(new Writer("file.txt"));
+B. new PrintWriter();
+C. new PrintWriter(new FileReader("file.txt"));
+D. new PrintWriter(new OutputStream("file.txt"));
+
+The correct answer is D.
+Option A is not valid. Writer is an abstract class and cannot be instantiated.
+Option B is not valid. PrintWriter has no default constructor.
+Option C is not valid. PrintWriter doesn't accept a Reader as an argument in any of its constructors.
+Option D is valid. PrintWriter accepts an OutputStream as a constructor argument.

@@ -1,0 +1,13 @@
+Question No : 55 
+
+Which statement is true about java.time.Duration ? 
+
+A. It tracks time zones.
+B. It preservers daylight saving time
+C. It defines time-based values.
+D. It defines date-based values.
+
+Answer: C (Duplicate 1z0-809 Question 24 and 1z0-809_ps Question 33) 
+
+Explanation: 
+Reference: http://tutorials.jenkov.com/java-date-time/duration.html#accessing-the-time-of-a-duration

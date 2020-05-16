@@ -1,0 +1,31 @@
+class Foo {
+public void methodB(String s) { System.out.println("Foo " + s) ; }
+}
+public class Bar extends Foo {
+public void methodB(String s) { System.out.println("Bar " + s) ; }
+}
+public class Baz extends Bar {
+public void methodB(String s) { System.out.println("Baz " + s) ; }
+}
+public class Daze extends Baz {
+private Bar bb = new Bar();
+public void methodB(String s) {
+bb.methodB(s);
+super.methodB(s);
+}
+}
+public class TestClass {
+public static void main(String [] args) {
+Baz d = new Daze();
+d.methodB("Hello");
+}
+}
+What is the result?
+A) A compilation error occurs in the Daze class.
+B) Bar Hello
+ Foo Hello
+C) Baz Hello
+D) Bar Hello
+ Baz Hello
+ 
+ Answer : D

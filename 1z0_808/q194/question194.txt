@@ -1,0 +1,22 @@
+Given:public class Marklist {
+	int num;
+
+	public static void graceMarks(Test194 obj4) {
+		obj4.num += 10;
+	}
+
+	public static void main(String[] args) {
+		Marklist obj1 = new Marklist();
+		Marklist obj2 = obj1;
+		Marklist obj3 = null;
+
+		obj2.num = 60;
+		graceMarks(obj2);
+	}
+
+}
+
+How many MarkList instances are created in memory at runtime?A. 1 
+B. 2 
+C. 3 
+D. 4

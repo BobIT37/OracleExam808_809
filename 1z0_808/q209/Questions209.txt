@@ -1,0 +1,55 @@
+Questions No : 209
+
+Which two actions will improve the encapsulation of a class?
+
+A. Changing the access modifier of a field from public to private
+B. Removing the public modifier from a class declaration
+C. Changing the return type of a method to void
+D. Returning a copy of the contents of an array or ArrayList instead of a direct reference
+
+Answer: A,D
+
+Reference: http://www.tutorialspoint.com/java/java_access_modifiers.htm
+
+And choice D: 
+If I understand you correctly, you are trying to encapsulate a collection. 
+If you provide a direct reference, there is no encapsulation for the collection. 
+The user can do anything they want to the collection - even set it to null. 
+If you are providing a deep copy of the collection to the user, 
+then when they modify that copy, they are not modifying the collection in your class.
+
+The best practice is to encapsulate the whole collection by never giving the user 
+a reference to the collection. Instead, they will interface with it via the class methods. 
+If they need to iterate over the whole collection, then it is best to return an Iterator 
+over the collection, which will provide read-only access to it.
+
+Say for example we have a class BookCollection, which has a private List as a data member. 
+If we want consumers of the code to be able to add and remove books, etc., 
+we will provide methods for them to do so.
+
+public class BookCollection {
+    private List<Book> books;
+
+    public BookCollection() {
+        this.books = new ArrayList();
+    }
+
+    public void addBook(Book book) {
+        this.books.add(book);
+    }
+
+    public void removeBook(Book book) {
+        this.books.remove(book);
+    }
+
+    public Book get(int index) {
+        return this.books.get(index);
+    }
+
+    // etc.
+
+    public Iterator<Book> getIterator() {
+        return this.books.iterator();
+    }
+}
+

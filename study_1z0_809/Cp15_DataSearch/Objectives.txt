@@ -1,0 +1,2 @@
+Exam Objectives
+- Search for data by using search methods of the Stream classes including findFirst, findAny, anyMatch, allMatch, noneMatch.

@@ -1,0 +1,15 @@
+72. Given the code fragment:
+
+List<String> qwords = Arrays.asList(“why ”, “what ”, “when ”);
+BinaryOperator<String> operator =(s1, s2) ->s1.concat(s2); //line n1
+String sen = qwords.stream()
+.reduce(“Word: ”, operator);
+System.out.println(sen);
+
+What is the result? 
+A) Word: why what when
+B) Word: why Word: why what Word: why what when
+C) Word: why Word: what Word: when
+D) Compilation fails at line n1.
+
+Answer: A

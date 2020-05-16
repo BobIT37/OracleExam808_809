@@ -1,0 +1,23 @@
+Question 220
+
+public static void main(String[] args) {
+	int var = 9;
+	if (var++ < 10) {
+		System.out.println(var +" Hello World");
+	}else{
+		System.out.println(var +" Hello Universal");
+	}
+}
+
+
+What is the result if the integer aVar is 9?
+A. 10 Hello World!
+B. Hello Universe!
+C. Hello World!
+D. Compilation fails.
+
+---------------------------------
+Answer: A
+
+---------------------------------
+10 Hello World!

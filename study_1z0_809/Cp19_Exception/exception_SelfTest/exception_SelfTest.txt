@@ -1,0 +1,77 @@
+1. Given:
+
+public class Question_19_1 {
+    protected static int m1() {
+        try {
+            throw new RuntimeException();
+        } catch(RuntimeException e) {
+             return 1;
+        } finally {
+             return 2;
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println(m1());
+    }
+}
+
+What is the result?
+A. 1
+B. 2
+C. Compilation fails
+D. An exception occurs at runtime
+--------------------------------------------------------------------------------------
+2. Given:
+
+public class Question_19_2 {
+    public static void main(String[] args) {
+        try {
+            // Do nothing
+        } finally {
+            // Do nothing
+        }
+    }
+}
+
+What of the following is true?
+A. The code doesn't compile correctly
+B. The code would compile correctly if we add a catch block
+C. The code would compile correctly if we remove the finally block
+D. The code compiles correctly as it is
+---------------------------------------------------------------------------------------
+3. Which of the following statements are true?
+A. In a try-with-resources, the catch block is required.
+B. The throws keyword is used to throw an exception.
+C. In a try-with-resources block, if you declare more than one resource, they have to be separated by a semicolon.
+D. If a catch block is defined for an exception that couldn't be thrown by the code in the try block, a compile-time error is generated.
+---------------------------------------------------------------------------------------
+4. Given:
+
+class Connection implements java.io.Closeable {
+    public void close() throws IOException {
+        throw new IOException("Close Exception");
+    }
+}
+
+public class Question_19_4 {
+    public static void main(String[] args) {
+        try (Connection c = new Connection()) {
+            throw new RuntimeException("RuntimeException");
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+What is the result?
+A. Close Exception
+B. RuntimeException
+C. RuntimeException and then CloseException
+D. Compilation fails
+E. The stack trace of an uncaught exception is printed
+---------------------------------------------------------------------------------------
+5. Which of the following exceptions are direct subclasses of RuntimeException?
+A. java.io.FileNotFoundException
+B. java.lang.ArithmeticException
+C. java.lang.ClassCastException
+D. java.lang.InterruptedException

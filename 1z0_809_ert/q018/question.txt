@@ -1,0 +1,38 @@
+ Given the code fragments: 
+ 
+		public class Video {
+			
+			public void play() throws IOException {
+				System.out.println("Vedio played");
+			}
+		
+		}
+		
+		public class Game extends Video {
+		
+			public void play() throws Exception {
+				super.play();
+				System.out.println("Game played");
+			}
+		
+		}
+	
+and then
+	
+		try {
+			new Game().play();
+		} catch (Exception e) {
+			System.out.print(e.getClass()); 
+		}
+		
+What is the result ? 
+
+A) class java.lang.Exception 
+
+B) Video played.Game played. 
+
+C) class java.io.IOException 
+
+D) A compilation error occurs. 
+	
+

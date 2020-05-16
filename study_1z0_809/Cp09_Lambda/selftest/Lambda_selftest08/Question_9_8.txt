@@ -1,0 +1,18 @@
+8. Given:
+
+interface X {
+     int test(int i);
+}
+public class Question_9_8 {
+     int i = 0;
+     public static void main(String[] args) {
+         X x = i -> i * 2;
+         System.out.println(x.test(3));
+     }
+}
+
+What is the result?
+A. 0
+B. 3
+C. 6
+D. Compilation fails

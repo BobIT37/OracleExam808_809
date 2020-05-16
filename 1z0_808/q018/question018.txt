@@ -1,0 +1,53 @@
+package com.wealth.certificate.dumps_1z0_808.question018;
+
+class X {
+	int x1 , x2 , x3;
+}
+
+class Y extends X {
+	int y1;
+	Y() {
+		x1 = 1;
+		x2 = 2;
+		y1 = 10;
+	}
+}
+
+class Z extends Y {
+	int z1;
+	Z() {
+		x1 = 3;
+		y1 = 20;
+		z1 = 100;
+	}
+}
+
+And,
+
+public class Test3 {
+	public static void main(String[] args) {
+		Z obj = new Z();
+		System.out.println(obj.x3 + ", " + obj.y1 + ", " + obj.z1);
+	}
+}
+
+Which constructor initializes the variable x3?
+A. Only the default constructor of class X
+B. Only the no-argument constructor of class Y 
+C. Only the no-argument constructor of class Z 
+D. Only the default constructor of object class
+Answer: A
+
+A subclass inherits all the fields of its superclass. 
+So when the constructor of the subclass initializes the class properties, 
+the inherited superclass properties must be initialized too. To ensure this, 
+the constructor of the subclass calls the superclass's constructor first, then goes on with its own constructor.
+
+In your case, Z extends Y and Y extends X, so when you write new Z(), 
+it calls constructor Z(), which implicitly calls Y() which calls X(). 
+Now where is constructor X()? In java, when a class has no constructor, 
+the compiler adds a default no-argument constructor to it. So your class X has a constructor X() already. 
+This constructor will initialize x1, x2 and x3 to their default values, which is 0.
+
+So the situation is, in main, you're calling Z(), Z() is calling Y() and Y() is calling X(). 
+Ultimately the constructor X() initializes x3.

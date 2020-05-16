@@ -1,0 +1,6 @@
+4. Which of the following statements is true?
+
+A. HashSet is an implementation of Map.
+B. Objects used as values of a TreeMap are required to implement Comparable.
+C. Objects used as values of a TreeMap are required to implement the hashCode() method.
+D. Objects used as keys of a TreeMap are required to implement the hashCode() method.
